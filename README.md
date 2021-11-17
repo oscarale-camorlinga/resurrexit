@@ -1,5 +1,5 @@
 # resurrexit
-A multi-language songbook and toolset for psalms for the Neocatechumenal Way.
+A multi-language songbook and toolset for psalms for the Neocatechumenal Way. Built as a PWA with HTML, CSS, and Javascript.
 
 Current features:
 	- List of songs with verses and chords
