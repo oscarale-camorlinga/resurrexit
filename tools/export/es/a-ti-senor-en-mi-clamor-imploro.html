@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Resurrexit</title>
+	<link rel="canonical" href="https://resurrexit.app"/>
+	<link rel="manifest" href="/manifest.json">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/images/icons/res-icon-152.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="white">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Resurrexit">
+	<meta name="msapplication-TileImage" content="/images/icons/res-icon-144.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+	<link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<header class="full">
+		<div id="title-wrapper">
+			<a id="back-button" href="/es/"><img src="/images/back.svg"></a>
+		</div>
+		<div id="player">
+			<audio src="">Tu navegador no soporta audio</audio>
+			<button id="player-button" class="play"></button>
+			<div id="player-progress-wrapper">
+				<div id="player-progress"></div>
+				<p id="player-start">0:00</p>
+				<p id="player-end">0:00</p>
+			</div>
+		</div>
+		<div id="lang">
+			<a id="es" class="es lang active" href="/es/">Español</a>
+			<a id="en" class="en lang" href="/en/">English</a>
+			<button id="option-button"><img src="/images/option.svg" /></button>
+		</div>
+	</header>
+	<div id="option-menu">
+		<a class="es lang" href="/es/">Español</a>
+		<a class="en lang active" href="/en/">English</a>
+		<div class="spacer"></div>
+		<a id="reset-lang">Cambiar Preferencia de Idioma</a>
+		<a href="/es/contacto">Contacto</a>
+	</div>
+	<section id='psalm' class='pre qua'>
+		<h1 id='4'>A TI, SEÑOR, EN MI CLAMOR IMPLORO</h1>
+		<h2>Salmo 142 (141)</h2>
+		<p class='capo'>Capo 2</p>
+		<div id='text'>
+			<div id='col1' class='col'>
+				<p class='a'>
+					<span data-chord='Lam'></span>A TI, SEÑOR, EN MI CLAMOR IMPL<span data-chord='Rem'></span>ORO.<br>
+					A TI, SEÑOR, EN MI CLAMOR SUPL<span data-chord='Lam'></span>ICO.<br>
+					<span data-chord='Mi7'></span>A TI DERRAMO MI LAMENTO,<br>
+					<span data-chord='Fa'></span>A TI MI ANGUSTIA EXP<span data-chord='Mi'></span>ONGO.<br>
+				</p>
+				<p class='s'>
+					<span data-chord='Rem'></span>Siento que el espíritu en mí se apaga;<br>
+					mas tú conoces mi send<span data-chord='Mi7'></span>ero.<br>
+					<span data-chord='Lam'></span>Mira, Señor, que en el cam<span data-chord='Rem'></span>ino,<br>
+					mira, Señor, que me han tendido un l<span data-chord='Lam'></span>azo.<br>
+					<span data-chord='Mi'></span>Mira, Señor, que a la derecha no hay ning<span data-chord='Mi7'></span>uno,<br>
+					ning<span data-chord='Fa'></span>uno que me con<span data-chord='Mi'></span>ozca.<br>
+					<span data-chord='Rem'></span>Huye de mí todo consuelo,<br>
+					que no hay n<span data-chord='Fa'></span>adie que se cuide de mi <span data-chord='Mi7'></span>alma.<br>
+				</p>
+				<p class='a'>
+					<span data-chord='Lam'></span>A TI, YO CLAMO SEÑ<span data-chord='Sol'></span>OR;<br>
+					A TI, YO DIGO:<br>
+					¡TÚ SOLO ERES MI REF<span data-chord='Mi7'></span>UGIO,<br>
+					<span data-chord='Fa'></span>TÚ ERES MI PORCIÓN EN ESTA TIERRA,<br>
+					MI ÚNICA FELICID<span data-chord='Mi'></span>AD!<br>
+				</p>
+			</div>
+			<div id='col2' class='col'>
+				<p class='s'>
+					<span data-chord='Rem'></span>Escúchame, Señor, que estoy llor<span data-chord='Mi'></span>ando,<br>
+					<span data-chord='Fa'></span>que estoy tan deprim<span data-chord='Mi'></span>ido.<br>
+					<span data-chord='Fa'></span>¡Líbrame de estos enemigos<br>
+					<span data-chord='Sol'></span>que son más fuertes que y<span data-chord='Mi'></span>o!<br>
+					<span data-chord='Lam'></span>¡Saca mi alma de esta cárcel,<br>
+					<span data-chord='Sol'></span>y yo daré gracias a tu n<span data-chord='Mi'></span>ombre!<br>
+					<span data-chord='Rem'></span>En torno a mí los santos harán c<span data-chord='Fa'></span>orro,<br>
+					me felicitarán por tu favor hacia m<span data-chord='Mi'></span>í.<br>
+				</p>
+				<p class='a'>
+					<span data-chord='Lam'></span>A TI, SEÑOR, EN MI CLAMOR …<br>
+				</p>
+				<p class='a'>
+					<span data-chord='Lam'></span>A TI, YO CLAMO SEÑ<span data-chord='Sol'></span>OR …<br>
+				</p>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="/js/psalms.js"></script>
+<script src="/js/main.js"></script>
+<script>setLangHref();</script>
+</html>

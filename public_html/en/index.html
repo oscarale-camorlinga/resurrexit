@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Resurrexit</title>
+	<link rel="canonical" href="https://resurrexit.app"/>
+	<link rel="manifest" href="/manifest.json">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/images/icons/res-icon-152.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="white">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Resurrexit">
+	<meta name="msapplication-TileImage" content="/images/icons/res-icon-144.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+	<link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<form id="search" name="search" onsubmit="return false">
+			<button id="menu-button"><img src="/images/menu.svg" /></button>
+			<button id="search-button" name="search-button"><img src="/images/search.svg" /></button>
+			<input id="search-field" type="text" name="search-field">
+		</form>
+		<div id="lang">
+			<a id="es" class="lang" href="/es/">Español</a>
+			<a id="en" class="lang active" href="/en/">English</a>
+			<button id="option-button"><img src="/images/option.svg" /></button>
+		</div>
+	</header>
+	<div id="option-menu">
+		<a class="lang" href="/es/">Español</a>
+		<a class="lang active" href="/en/">English</a>
+		<div class="spacer"></div>
+		<a id="reset-lang">Reset Language Preference</a>
+		<a href="/en/contact">Contact</a>
+	</div>
+	<aside>
+		<a id="title" class="short" href="/en/">He Rose From Death</a>
+		<a id="close-button">&times;</a>
+		<p class="spacer"></p>
+		<div id="steps">
+			<button id="pre" name="pre" class="step-button"><span>P</span>Precatechumenate</button>
+			<button id="cat" name="cat" class="step-button"><span>C</span>Catechumenate</button>
+			<button id="ele" name="ele" class="step-button"><span>E</span>Election</button>
+			<button id="lit" name="lit" class="step-button"><span>L</span>Liturgy</button>
+		</div>
+		<p>Categories</p>
+		<div id="tags">
+			<button id="adv" name="adv" class="tag-button">Advent</button>
+			<button id="nat" name="nat" class="tag-button">Christmas</button>
+			<button id="qua" name="qua" class="tag-button">Lent</button>
+			<button id="pas" name="pas" class="tag-button">Easter</button>
+			<button id="pen" name="pen" class="tag-button">Pentecost</button>
+			<button id="mat" name="mat" class="tag-button">Mary</button>
+			<button id="pue" name="pue" class="tag-button">Children</button>
+			<button id="off" name="off" class="tag-button">Office</button>
+			<button id="ini" name="ini" class="tag-button">Entrance</button>
+			<button id="pax" name="pax" class="tag-button">Peace</button>
+			<button id="pan" name="pan" class="tag-button">Bread</button>
+			<button id="com" name="com" class="tag-button">Communion</button>
+			<button id="fin" name="fin" class="tag-button">Final</button>
+		</div>
+	</aside>
+	<section id="psalmlist">
+		<div id="no-results">No results</div>
+		<a id='151' class='psalm lit' href='/en/alleluia-interlectional.html'>ALLELUIA - INTERLECTIONAL<span>Melodies appropriate for Advent, Christmas and Ordinary times</span></a>
+		<a id='219' class='psalm ele pas off ini' href='/en/at-the-banquet-of-the-lamb.html'>AT THE BANQUET OF THE LAMB<span>Hymn for Vespers from Easter to the Ascension</span></a>
+		<a id='2' class='psalm pre' href='/en/brothers.html'>BROTHERS<span>2 Corinthians 6,3ff</span></a>
+		<a id='191' class='psalm cat qua' href='/en/thus-speak-the-amen.html'>THUS SPEAK THE AMEN<span>Revelations 3,14-22</span></a>
+		<a id='1' class='psalm pre pas pen ini com off' href='/en/to-the-paschal-victim.html'>TO THE PASCHAL VICTIM<span>Easter Sequence</span></a>
+		<a id='3' class='psalm pre qua' href='/en/to-you-i-lift-up-my-eyes.html'>TO YOU I LIFT UP MY EYES<span>Psalm 123 (122)</span></a>
+		<a id='4' class='psalm pre qua' href='/en/to-you-o-lord-with-my-voice-i-cry-for-help.html'>TO YOU, O LORD, WITH MY VOICE I CRY FOR HELP<span>Psalm 142 (141)</span></a>
+	</section>
+	<div id="overlay"></div>
+</body>
+<script src="/js/register-sw.js"></script>
+<script src="/js/main.js"></script>
+</html>

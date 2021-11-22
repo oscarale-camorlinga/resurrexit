@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Resurrexit</title>
+	<link rel="canonical" href="https://resurrexit.app"/>
+	<link rel="manifest" href="/manifest.json">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/images/icons/res-icon-152.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="white">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Resurrexit">
+	<meta name="msapplication-TileImage" content="/images/icons/res-icon-144.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+	<link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<header class="full">
+		<div id="title-wrapper">
+			<a id="back-button" href="/es/"><img src="/images/back.svg"></a>
+		</div>
+		<div id="player">
+			<audio src="">Tu navegador no soporta audio</audio>
+			<button id="player-button" class="play"></button>
+			<div id="player-progress-wrapper">
+				<div id="player-progress"></div>
+				<p id="player-start">0:00</p>
+				<p id="player-end">0:00</p>
+			</div>
+		</div>
+		<div id="lang">
+			<a id="es" class="es lang active" href="/es/">Español</a>
+			<a id="en" class="en lang" href="/en/">English</a>
+			<button id="option-button"><img src="/images/option.svg" /></button>
+		</div>
+	</header>
+	<div id="option-menu">
+		<a class="es lang" href="/es/">Español</a>
+		<a class="en lang active" href="/en/">English</a>
+		<div class="spacer"></div>
+		<a id="reset-lang">Cambiar Preferencia de Idioma</a>
+		<a href="/es/contacto">Contacto</a>
+	</div>
+	<section id='psalm' class='pre qua'>
+		<h1 id='3'>A TI LEVANTO MIS OJOS</h1>
+		<h2>Salmo 123 (122)</h2>
+		<p class='capo'>Capo 3</p>
+		<div id='text'>
+			<div id='col1' class='col'>
+				<p class='b'>
+					<span data-chord='Rem'></span>A TI LEVANTO MIS <span data-chord='La7'></span>OJOS,<br>
+					<span data-chord='Solm'></span>A TI QUE HABITAS EN EL C<span data-chord='La7'></span>IELO.<br>
+				</p>
+				<p class='s'>
+					<span data-chord='Rem'></span>Como los ojos de los siervos miran a las manos de sus señ<span data-chord='La7'></span>ores,<br>
+					<span data-chord='Solm'></span>como los ojos de la esclava a las manos de su señ<span data-chord='La7'></span>ora,<br>
+					<span data-chord='Sib7'></span>así nuestros ojos miran al Señ<span data-chord='La7'></span>or,<br>
+					esper<span data-chord='Sib7'></span>ando que tenga pied<span data-chord='La7'></span>ad, esper<span data-chord='Sib7'></span>ando que tenga pied<span data-chord='La7'></span>ad.<br>
+				</p>
+				<p class='a'>
+					Mujeres: <span data-chord='Rem'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>
+					Hombres: <span data-chord='Sib7'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>
+					Mujeres: <span data-chord='Rem'></span>¡QUE DEMASIADO SE HAN BURLADO DE NOS<span data-chord='La7'></span>OTROS,<br>
+					Hombres: QUE NUESTRA <span data-chord='Sib7'></span>ALMA ESTÁ SACIADA DE DESPR<span data-chord='La7'></span>ECIOS!<br>
+					Mujeres: <span data-chord='Rem'></span>¡DE LAS BURLAS DE LOS SATISF<span data-chord='La7'></span>ECHOS,<br>
+					Hombres: DEL DESPR<span data-chord='Sib7'></span>ECIO DE LOS SOB<span data-chord='La7'></span>ERBIOS!<br>
+					Mujeres: <span data-chord='Rem'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>
+					Hombres: <span data-chord='Sib7'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>
+				</p>
+				<p class='a'>
+					<span data-chord='Rem'></span>A TI LEVANTO MIS <span data-chord='La7'></span>OJOS …<br>
+				</p>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="/js/psalms.js"></script>
+<script src="/js/main.js"></script>
+<script>setLangHref();</script>
+</html>

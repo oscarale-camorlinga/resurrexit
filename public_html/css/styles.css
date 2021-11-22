@@ -1,0 +1,704 @@
+/*
+COLORS
+		Normal		Dark		RGB
+BLUE	#99EEFF		#89D6E5		153, 238, 255
+GREEN 	#96FFAA		#8AE599		153, 255, 170
+YELLOW	#F6FF99		#DDE58A		246, 255, 153
+MAROON	#8E110B		#750E09		143, 17, 11
+GRAY	#F2F2F2		#D9D9D9		242, 242, 242
+*/
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: .875rem;
+	background-color: #F2F2F2;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0; padding: 0;
+}
+
+a { text-decoration: none; }
+
+#choose #logo {
+	display: inline-block;
+	width: 128px;
+	height: 128px;
+}
+
+#choose {
+	background-color: white;
+	color: #333;
+	height: 500px;
+	margin: -250px 0 0 -250px;
+	padding: 20px;
+	position: fixed;
+	text-align: center;
+	top: 50%; left: 50%;
+	width: 500px;
+}
+
+#choose p {
+	margin-bottom: 20px;
+}
+
+#choose button {
+	background-color: white;
+	border: none;
+	color: #333;
+	cursor: pointer;
+	display: block;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: bold;
+	margin: 0 auto 20px;
+	padding: 20px;
+	width: 200px;
+}
+
+#choose button:first-of-type {
+	margin-top: 80px;
+}
+
+#choose button:hover {
+	background-color: #D9D9D9;
+}
+
+#choose a {
+	background-color: transparent;
+	color: #8E110B;
+	display: block;
+	padding: 20px 0;
+	text-decoration: none;
+	transition: .3s;
+}
+
+#choose a:hover {
+	color: #777;
+}
+
+header {
+	background: white;
+	display: flex;
+	height: 100px;
+	justify-content: space-between;
+	padding: 0 20px;
+	position: fixed;
+	top: 0; left: 320px; right: 0;
+	align-items: center;
+	z-index: 4;
+}
+
+header.full {
+	left: 0;
+}
+
+button, input {
+	outline: none;
+}
+
+#menu-button, #close-button, #option-button {
+	cursor: pointer;
+}
+
+#menu-button {
+	background: none;
+	border: none;
+	display: none;
+	height: 21px;
+	margin-right: 10px;
+	position: absolute;
+	top: 7px;
+	width: 21px;
+}
+
+#menu-button img, #option-button img {
+	height: 100%;
+	transition: .3s filter;
+}
+
+#menu-button:hover img, #option-button:hover img {
+	filter: grayscale(100%) brightness(300%);
+}
+
+#title-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+#title {
+	font-size: 2.1rem;
+	font-weight: bold;
+	color: #8E110B;
+	transition: .3s;
+}
+
+#title.short {
+	font-size: 1.4rem;
+}
+
+#title:hover {
+	color: #777;
+}
+
+#lang {
+	display: flex;
+	align-items: center;
+}
+
+#lang a {
+	border-top: 3px solid white;
+	border-bottom: 3px solid white;
+	color: #8E110B;
+	display: inline-block;
+	font-weight: bold;
+	padding: 5px;
+	transition: .3s;
+}
+
+#lang a:first-of-type {
+	margin-right: 20px;
+}
+
+#lang a.active {
+	border-bottom: 3px solid #8E110B;
+	/*text-decoration: underline;*/
+}
+
+#lang a:hover {
+	color: #777;
+}
+
+#lang a.active:hover {
+	border-bottom: 3px solid #777;
+}
+
+#option-button {
+	background: none;
+	border: none;
+	display: inline-block;
+	height: 21px;
+	margin-left: 20px;
+	width: 21px;
+}
+
+#option-menu {
+	background-color: white;
+	display: block;
+	padding: 10px 20px;
+	position: fixed;
+	text-align: right;
+	top: -140px;
+	right: 0;
+	z-index: 3;
+}
+
+#option-menu a {
+	color: #777;
+	cursor: pointer;
+	display: block;
+	padding: 10px 0;
+	transition: .3s;
+}
+
+#option-menu a:first-of-type {
+
+}
+
+#option-menu a.lang {
+	border-top: none;
+	color: #8E110B;
+	margin-top: 0;
+}
+
+#option-menu a:hover {
+	color: #333;
+}
+
+#option-menu a.lang:hover {
+	color: #777;
+}
+
+#option-menu .spacer {
+	background-color: #F2F2F2;
+	display: block;
+	height: 1px;
+	margin: 10px 0;
+	width: 100%;
+}
+
+#reset-lang {
+
+}
+
+#back-button {
+	display: inline-block;
+	height: 21px;
+	margin-right: 20px;
+	width: 21px;
+}
+
+#back-button img {
+	height: 100%;
+	transition: .3s filter;
+}
+
+#back-button:hover img {
+	filter: grayscale(100%) brightness(300%);
+}
+
+#search {
+	display: inline-block;
+	position: relative;
+	width: 70%;
+}
+
+#search-field {
+	background: rgba(143, 17, 11, .05);
+	border: none;
+	border-radius: 17px;
+	color: #8E110B;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	height: 35px;
+	margin-right: 10px;
+	padding: 2px 10px 2px 40px;
+	width: 100%;
+}
+
+#search-field::-webkit-input-placeholder { color: rgba(255, 255, 255, .5); }
+#search-field::-moz-placeholder { color: rgba(255, 255, 255, .9); }
+#search-field::-ms-input-placeholder { color: rgba(255, 255, 255, .9); }
+#search-field:-moz-placeholder { color: rgba(255, 255, 255, .9); }
+
+#search-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	height: 20px;
+	position: absolute;
+	top: 8px; left: 10px;
+}
+
+#search-button img {
+	height: 100%;
+	transition: .3s filter;
+}
+
+#search-button:hover img {
+	filter: grayscale(100%) brightness(300%);
+}
+
+#player {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	left: 50%;
+	margin-left: -220px;
+	position: absolute;
+}
+
+#player button {
+	border: none;
+	color: white;
+	cursor: pointer;
+	height: 21px;
+	margin-right: 15px;
+	width: 21px;
+	transition: .3s filter;
+}
+
+#player button:hover {
+	filter: grayscale(100%) brightness(300%);
+}
+
+#player .play {
+	background: url(../images/play.svg) no-repeat center/100%;
+}
+
+#player .pause {
+	background: url(../images/pause.svg) no-repeat center/100%;
+}
+
+#player-progress-wrapper {
+	background-color: rgba(143, 17, 11, .05);
+	border-radius: 5px;
+	cursor: pointer;
+	height: 10px;
+	position: relative;
+	width: 400px;
+}
+
+#player-progress {
+	background-color: #8E110B;
+	border-radius: 5px;
+	height: 10px;
+	width: 0;
+}
+
+#player-progress-wrapper p {
+	bottom: -15px;
+	color: #777;
+	font-size: .6rem;
+	position: absolute;
+}
+
+#player-start {
+	left: 0;
+}
+
+#player-end {
+	right: 0;
+}
+
+#no-audio {
+	color: #D9D9D9;
+	font-weight: bold;
+}
+
+aside {
+	position: fixed;
+	left: 0; top: 0;
+	width: 320px; height: 100%;
+	background-color: white;
+	z-index: 6;
+}
+
+#close-button {
+	display: none;
+	position: absolute;
+	top: 19px; right: 20px;
+	font-size: 2.1rem;
+	color: #D9D9D9;
+	transition: .3s;
+}
+
+#close-button:hover {
+	color: #777;
+}
+
+aside #title {
+	height: 100px;
+	line-height: 100px;
+	padding-left: 20px;
+}
+
+aside p {
+	border-bottom: 1px solid #F2F2F2;
+	color: #777;
+	display: block;
+	margin: 0 0 20px 20px;
+	padding: 10px 0;
+	width: 280px;
+}
+
+aside p.spacer {
+	padding: 0;
+}
+
+#psalmlist {
+	padding: 120px 20px 0 340px;
+	position: relative;
+	z-index: 2;
+}
+
+header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #option-menu {
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	-ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	-o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+/*
+#psalmlist a:hover {
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	-ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	-o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}*/
+
+#steps {
+	margin: 20px 0;
+}
+
+.step-button, .tag-button {
+	display: block;
+	padding: 10px 0;
+	text-align: left;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	background: white;
+	color: #777;
+}
+
+.step-button {
+	width: 100%;
+	padding-left: 20px;
+	transition: all 0.25s ease-in-out;
+}
+
+.step-button span {
+	display: inline-block;
+	width: 25px; height: 25px;
+	margin-right: 10px;
+	/*font-family: 'Libre Franklin', sans-serif;*/
+	line-height: 25px;
+	text-align: center;
+	color: white;
+	border-radius: 50%;
+	transition: 0.3s;
+	background-color: #777;
+}
+
+.step-button:hover {
+	background-color: #D9D9D9;
+}
+
+#tags {
+	margin-left: 20px;
+}
+
+.tag-button {
+	float: left;
+	width: 137px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+}
+
+.tag-button:nth-child(even) {
+	margin-right: 0;
+}
+
+.tag-button:hover {
+	background-color: #D9D9D9;
+}
+
+#steps .selected { color: #8E110B; }
+#steps .selected span { background-color: #8E110B; }
+
+#tags .selected { color: white; background-color: #8E110B; }
+#tags .selected:hover { background-color: #750E09; }
+
+#psalmlist .pre, #psalm.pre { background-color: white; }
+#psalmlist .lit, #psalm.lit { background-color: #F6FF99; }
+#psalmlist .cat, #psalm.cat { background-color: #99EEFF; }
+#psalmlist .ele, #psalm.ele { background-color: #96FFAA; }
+
+#psalmlist .pre:hover { background-color: #D9D9D9; }
+#psalmlist .lit:hover { background-color: #DDE58A; }
+#psalmlist .cat:hover { background-color: #89D6E5; }
+#psalmlist .ele:hover { background-color: #8AE599; }
+
+#no-results {
+	color: #777;
+	display: block;
+	left: 320px; right: 0;
+	padding: 15px;
+	position: absolute;
+	text-align: center;
+	z-index: -1;
+}
+
+#psalmlist a {
+	display: block;
+	width: 100%;
+	max-width: 1200px;
+	padding: 15px;
+	margin-bottom: 3px;
+	text-align: left;
+	color: rgba(20, 20, 20, 0.7);
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	transition-duration: 0.3s;
+	z-index: 2;
+}
+
+#psalmlist a span {
+	float: right;
+	font-size: 0.8rem;
+	font-weight: normal;
+	color: #777;
+}
+
+#psalm {
+	position: relative;
+	margin: 0 20%;
+	padding-top: 100px;
+	padding-bottom: 40px;
+}
+
+#psalm h1 {
+	display: block;
+	padding: 40px 5% 10px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	text-align: center;
+	color: #8E110B;
+}
+
+#psalm h2 {
+	color: #777;
+	display: block;
+	font-size: 1rem;
+	font-weight: normal;
+	padding: 10px 5%;
+	text-align: center;
+}
+
+#text {
+	display: flex;
+	padding: 0 5%;
+}
+
+.col {
+	flex: 50%;
+}
+
+#psalm p {
+	padding-top: 2.5rem;
+	line-height: 2.5rem;
+}
+
+#psalm p.a {
+	font-weight: bold;
+}
+
+#psalm p.l {
+	line-height: 1.5rem;
+}
+
+#psalm p.capo {
+	position: absolute;
+	left: 5%; top: 130px;
+	padding-top: 0;
+	font-size: 0.8rem;
+	color: #777;
+}
+
+#psalm p span[data-chord]:before {
+	display: inline-block;
+	position: relative;
+	top: -1.25rem;
+	width: 0;
+	content: attr(data-chord);
+	white-space: nowrap;
+	font-weight: bold;
+	color: #8E110B;
+	overflow: visible;
+}
+
+#overlay {
+	position: fixed;
+	display: none;
+	width: 100%; height: 100%;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: rgba(12, 12, 12, 0.4);
+	z-index: 5;
+}
+
+@media only screen and (max-width: 1400px) {
+	#psalm { margin: 0 10%; }
+}
+
+@media only screen and (max-width: 1000px) {
+	header {
+		border: none;
+		height: 80px;
+		left: 0;
+	}
+	#title { display: inline-block; font-size: 1.6rem; }
+	#menu-button { display: block; }
+	#search-button { left: 45px; }
+	#search-field { margin-left: 35px }
+	#player { margin-left: 0; left: inherit; right: inherit; position: static; }
+	#player-progress-wrapper { width: 300px; }
+	#player button { width: 1.1rem; height: 1.1rem; }
+	#back-button img { height: 1.1rem; }
+	#close-button { display: block; }
+	#psalmlist { padding: 80px 0 20px; }
+	#no-results { left: 0; }
+	aside {
+		position: fixed;
+		top: 0; left: -320px;
+		height: 100%;
+		padding: 0 0 10px;
+		background-color: white;
+		overflow-x: hidden;
+		transition: 0.3s;
+	}
+	aside #title {
+		height: 80px;
+		line-height: 80px;
+	}
+	#language { bottom: 20px; }
+	#tags, aside p { margin-left: 20px; }
+	#psalmlist a { padding: 15px 5%; }
+	#psalmlist a span { display: block; float: none; margin-top: 5px; }
+	#psalm { padding-top: 80px; margin: 0 5%; }
+	#psalm a.psalm { font-size: 1.3rem; }
+	#psalm p.capo { left: 5%; top: 80px; }
+}
+
+@media only screen and (max-width: 800px) {
+	#player-progress-wrapper { width: 200px; }
+	#text { display: block; }
+	#psalm { margin: 0 0; }
+	#psalm p.capo {
+		position: static;
+		padding-left: 5%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	header { height: 60px; }
+	#choose {
+		background-color: transparent;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-ms-box-shadow: none;
+		-o-box-shadow: none;
+		box-shadow: none;
+		height: 100%;
+		margin: 0;
+		padding: 80px 20px 0;
+		position: static;
+		top: inherit; left: inherit;
+		width: 100%;
+	}
+	#close-button { top: 9px; }
+	#lang a { display: none; }
+	aside #title {
+		display: block;
+		font-size: 1.6rem;
+		height: 60px;
+		line-height: 60px;
+	}
+	#player-progress-wrapper { width: 200px; }
+	#title, #search-field, { font-size: 1rem; }
+	#psalmlist { padding: 60px 0 20px; }
+}
+
+@media only screen and (max-width: 400px) {
+	#search { width: 60%; }
+	#player-progress-wrapper { width: 120px; }
+}
+
+@media only screen and (max-width: 300px) {
+	#player-progress-wrapper { display: none; }
+}

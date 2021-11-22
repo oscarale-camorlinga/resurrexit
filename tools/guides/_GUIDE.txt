@@ -1,0 +1,34 @@
+TITLE
+Subtitle
+ID
+Step & tags
+Capo
+
+[				Begin column
+(a				Begin section (a:assembly, c:cantor, s:salmista, l:line only)
+Even lines			chords
+Odd lines			verse
+)				End section
+]				End column
+*				Note
+
+STEPS
+Precatechumenate		pre
+Catechumenate			cat
+Election			ele
+Liturgy				lit
+
+TAGS
+Advent				adv
+Christmas			nat
+Lent				qua
+Easter				pas
+Pentecost			pen
+Mary				mat
+Children			pue
+Office				off
+Entrance			ini
+Peace				pax
+Bread				pan
+Communion			com
+Final				fin

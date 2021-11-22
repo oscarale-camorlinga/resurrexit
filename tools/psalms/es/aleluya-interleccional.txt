@@ -1,0 +1,89 @@
+ALELUYA INTERLECCIONAL
+Melodías apropiadas para los tiempos de Adviento, Navidad y Ordinario
+151
+lit
+
+[
+(a
+
+Modelo I
+
+
+)
+(s
+Sol                   Do Re    Sol
+ALELUYA, ALELUYA, ALELUYA, ALELUYA.
+)
+(a
+                      Do Re    Sol
+ALELUYA, ALELUYA, ALELUYA, ALELUYA.
+)
+(s
+Mim        Re                         Mim
+Yo soy la vid, vosotros los sarmientos.
+                     Re        Mim
+El que permanece en mí y yo en él,
+Re                Mim
+ese da fruto abundante.
+)
+(a
+Sol
+ALELUYA ...
+)
+(a
+
+Modelo II
+
+Con la música del “Aleluya, ya llegó el reino”
+
+
+)
+(s
+Do           Mi      Lam [Sol7]
+ALELUYA, ALELUYA, ALELUYA.
+)
+(a
+Do           Mi      Lam
+ALELUYA, ALELUYA, ALELUYA.
+)
+(s
+Do         Mi                   Lam
+Yo soy la vid, vosotros los sarmientos.
+Do                             Mi
+El que permanece en mí y yo en él,
+                  Lam [Sol7]
+ese da fruto abundante.
+)
+(a
+Do
+ALELUYA ...
+)
+]
+[
+(a
+
+Modelo III
+
+
+)
+(s
+Mim          Re         Mim
+ALELUYA, ALELUYA, ALELUYA.
+)
+(a
+             Re         Mim
+ALELUYA, ALELUYA, ALELUYA.
+)
+(s
+Mim        Lam                  Mim
+Yo soy la vid, vosotros los sarmientos.
+                               Lam
+El que permanece en mí y yo en él,
+                  Mim
+ese da fruto abundante.
+)
+(a
+Mim
+ALELUYA ...
+)
+]

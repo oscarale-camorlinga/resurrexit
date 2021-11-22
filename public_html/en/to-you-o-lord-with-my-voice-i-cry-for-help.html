@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Resurrexit</title>
+	<link rel="canonical" href="https://resurrexit.app"/>
+	<link rel="manifest" href="/manifest.json">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/images/icons/res-icon-152.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="white">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Resurrexit">
+	<meta name="msapplication-TileImage" content="/images/icons/res-icon-144.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+	<link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<header class="full">
+		<div id="title-wrapper">
+			<a id="back-button" href="/en/"><img src="/images/back.svg"></a>
+		</div>
+		<div id="player">
+			<audio src="">Your browser does not support audio</audio>
+			<button id="player-button" class="play"></button>
+			<div id="player-progress-wrapper">
+				<div id="player-progress"></div>
+				<p id="player-start">0:00</p>
+				<p id="player-end">0:00</p>
+			</div>
+		</div>
+		<div id="lang">
+			<a id="es" class="es lang" href="/es/">Español</a>
+			<a id="en" class="en lang active" href="/en/">English</a>
+			<button id="option-button"><img src="/images/option.svg" /></button>
+		</div>
+	</header>
+	<div id="option-menu">
+		<a class="es lang" href="/es/">Español</a>
+		<a class="en lang active" href="/en/">English</a>
+		<div class="spacer"></div>
+		<a id="reset-lang">Reset Language Preference</a>
+		<a href="/en/contact">Contact</a>
+	</div>
+	<section id='psalm' class='pre qua'>
+		<h1 id='4'>TO YOU, O LORD, WITH MY VOICE I CRY FOR HELP</h1>
+		<h2>Psalm 142 (141)</h2>
+		<p class='capo'>Capo 2</p>
+		<div id='text'>
+			<div id='col1' class='col'>
+				<p class='a'>
+					<span data-chord='Am'></span>TO YOU, O LORD,<br>
+					WITH MY VOICE I CRY FOR H<span data-chord='Dm'></span>ELP<br>
+					TO YOU O LORD,<br>
+					IN MY PLEADING I ENTR<span data-chord='Am'></span>EAT YOU.<br>
+					TO Y<span data-chord='E7'></span>OU I POUR OUT MY LAMENT,<br>
+					TO Y<span data-chord='F'></span>OU, MY ANGUISH I UNF<span data-chord='E'></span>OLD.<br>
+				</p>
+				<p class='c'>
+					<span data-chord='Dm'></span>I feel that my spirit fails;<br>
+					but you know my p<span data-chord='E7'></span>ath.<br>
+					<span data-chord='Am'></span>Look Lord, on the w<span data-chord='Dm'></span>ay,<br>
+					look, they have laid a snare for m<span data-chord='Am'></span>e.<br>
+					<span data-chord='E'></span>Look at my right hand there is no <span data-chord='E7'></span>one,<br>
+					no <span data-chord='F'></span>one that kn<span data-chord='E'></span>ows me.<br>
+					<span data-chord='Dm'></span>Every consolation flees from me,<br>
+					for there is no one who cares for my s<span data-chord='E7'></span>oul.<br>
+				</p>
+			</div>
+			<div id='col2' class='col'>
+				<p class='a'>
+					<span data-chord='F'></span>TO YOU I CRY, O L<span data-chord='G'></span>ORD;<br>
+					TO YOU I SAY:<br>
+					«YOU ALONE ARE MY R<span data-chord='E7'></span>EFUGE,<br>
+					YOU <span data-chord='F'></span>ARE MY LOT ON THIS EARTH,<br>
+					MY ONLY H<span data-chord='E'></span>APPINESS!»<br>
+				</p>
+				<p class='c'>
+					<span data-chord='Dm'></span>Listen, Lord, to my cl<span data-chord='E'></span>amor<br>
+					bec<span data-chord='Dm'></span>ause I am so depr<span data-chord='E'></span>essed.<br>
+					Fr<span data-chord='F'></span>ee me from my enemie<span data-chord='G'></span>s<br>
+					who are stronger than m<span data-chord='E'></span>e!<br>
+					<span data-chord='F'></span>Snatch my soul from this prison<span data-chord='G'></span>,<br>
+					and I will give thanks to your n<span data-chord='E'></span>ame.<br>
+					<span data-chord='F'></span>Then the saints will gather around me,<br>
+					they will rejoice for your love towards m<span data-chord='E'></span>e.<br>
+				</p>
+				<p class='a'>
+					<span data-chord='Am'></span>TO YOU, O LORD WITH MY VOICE …<br>
+				</p>
+				<p class='a'>
+					<span data-chord='Am'></span>TO YOU I CRY, O L<span data-chord='G'></span>ORD …<br>
+				</p>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="/js/psalms.js"></script>
+<script src="/js/main.js"></script>
+<script>setLangHref();</script>
+</html>
