@@ -4,69 +4,59 @@ Easter Sequence
 pre pas pen ini com off
 Capo 5
 [
-(c
-Am                 A7
-To the paschal victim
-
+Am                 A7^
+C. To the paschal victim
 today let us raise
-                   Dm
+                   Dm^
 the sacrifice of praise.
-Fmaj7                       E
+Fmaj7                       E^
 The lamb has redeemed His flock
-Dm               Fmaj7
+Dm                Fmaj7^
 the innocent has reconciled
-                   E
+                   E^
 us sinners to the Father.
-Am         A7
+Am         A7^
 Death and life faced each other
-               Dm
+               Dm^
 in a wondrous duel.
-Fmaj7                   E
+Fmaj7                   E^
 The author of life was dead,
-     Dm         Fmaj7     E
+    Dm          Fmaj7     E^
 but now He is alive and triumphs.
-A7
+A7^
 Tell us Mary:
-
 what did you see on the way?
-Dm                      E
+Dm                      E^
 «Empty the tomb of the Lord,
-      Dm                           E
+      Dm                           E^
 the Glory of the Lord and Christ alive,
-    F                             E
+    F                             E^
 the angels, the shroud and the sudarium.»
-)
 ]
 [
-(c
-Dm              E
-For Christ, my hope is risen!
-F                        E
+Dm                 E^
+C. For Christ, my hope is risen!
+F                        E^
 and He precedes us into Galilee,
-)
-(a
-F                        E
-AND HE PRECEDES US INTO GALILEE.
-)
-(c
-Dm           E
-Yes, we are sure,
-F                E
+
+F                        E^
+A. AND HE PRECEDES US INTO GALILEE.
+
+Dm           E^
+C. Yes, we are sure,
+F                E^
 Christ is truly risen!
-)
-(a
-Dm           E
-YES, WE ARE SURE,
-   F             E
+
+Dm           E^
+A. YES, WE ARE SURE,
+   F             E^
 CHRIST IS TRULY RISEN!
-F                        E
+F                        E^
 AND HE PRECEDES US INTO GALILEE,
-F                        E
+F                        E^
 AND HE PRECEDES US INTO GALILEE.*
-)
-(c
-F                               E
-You, immortal King, give us salvation!
-)
+
+F                                  E^
+C. You, immortal King, give us salvation!
 ]
 *Assembly may repeat the first four verses of the song.
