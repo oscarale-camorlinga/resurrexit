@@ -49,7 +49,7 @@ function checkLanguage() {
 	defaultLang = document.cookie.split("=")[1];
 	if(defaultLang) {
 		console.log("Redirecting to " + defaultLang);
-		window.location.replace("https://resurrexit.app/" + defaultLang);
+		window.location.replace("/" + defaultLang);
 	} else {
 		console.log("Need to set language preference");
 	}
@@ -61,7 +61,7 @@ function setLanguage(e) {
 	e.stopImmediatePropagation();
 	setCookie("lang", this.name, 30);
 	console.log("Set default language to: " + this.name);
-	window.location.replace("https://resurrexit.app/" + this.name);
+	window.location.replace("/" + this.name);
 }
 
 function toggleOptionDiv() {
@@ -88,7 +88,7 @@ function resetLanguage(e) {
 	e.stopPropagation();
 	e.stopImmediatePropagation();
 	setCookie("lang", "", -1);
-	window.location.href = "https://resurrexit.app";
+	window.location.href = "/";
 }
 
 function loadAudio() {
