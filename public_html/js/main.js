@@ -14,8 +14,15 @@ const resetLangBtn = document.querySelector("#reset-lang"); // reset preferred l
 const headerDiv = document.querySelector("header"); // header
 const langLinkES = document.querySelectorAll(".es.lang"); // language es link
 const langLinkEN = document.querySelectorAll(".en.lang"); // language es link
+const psalmSection = document.querySelector("#psalm"); // psalm title for id
 const psalmTitle = document.querySelector("#psalm h1"); // psalm title for id
+const psalmSubtitle = document.querySelector("#psalm h2"); // psalm title for id
+const psalmCapo = document.querySelector("#psalm .capo"); // psalm title for id
+const psalmCol1 = document.querySelector("#psalm #col1"); // psalm title for id
+const psalmCol2 = document.querySelector("#psalm #col2"); // psalm title for id
 const searchInput = document.querySelector("input");
+const psalmList = document.querySelector("#psalmlist"); // full psalm list div
+const noResults = document.querySelector("#no-results"); // no results div in order to insert adjacent
 
 /*----------------------------- PWS -----------------------------*/
 
@@ -89,6 +96,48 @@ function resetLanguage(e) {
 	e.stopImmediatePropagation();
 	setCookie("lang", "", -1);
 	window.location.href = "/";
+}
+
+function generatePsalmList(lang) {
+	console.log(lang);
+	console.log(psalms);
+	psalms[lang].forEach(psalm => {
+		noResults.insertAdjacentHTML("afterend",
+			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}<span>${psalm.subtitle}</span></a>`);
+	});
+}
+
+function generatePsalm(lang) {
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const psalmId = urlParams.get("id");
+	console.log(psalmId);
+
+	const psalm = psalms[lang].find(psalm => psalm.id == "1");
+	if(psalm) {
+		psalmSection.className = psalm.classes
+		psalmTitle.innerHTML = psalm.title;
+		psalmSubtitle.innerHTML = psalm.subtitle;
+		psalmCapo.innerHTML = psalm.capo;
+		psalm.psalm.col1.forEach(verse => {
+			psalmCol1.innerHTML += `<p class='${verse.type}'>${verse.verse}</p>`;
+		});
+		if(psalm.psalm.col2) {
+			psalm.psalm.col2.forEach(verse => {
+				psalmCol2.innerHTML += `<p class='${verse.type}'>${verse.verse}</p>`;
+			});
+		}
+		langLinkEN.forEach(link => {
+			link.href = `/en/psalmus.html?id=${psalm.id}`;
+		});
+		langLinkES.forEach(link => {
+			link.href = `/es/psalmus.html?id=${psalm.id}`;
+		});
+	} else {
+		console.log(`Could not find psalm with id: ${psalmId}`);
+		if(lang == "en") psalmSubtitle.innerHTML = "Could not reproduce psalm";
+		if(lang == "es") psalmSubtitle.innerHTML = "No se pudo reproducir el salmo";
+	}
 }
 
 function loadAudio() {

@@ -1,4 +1,4 @@
-{
+psalms = {
     "es": [
         {
             "title": "A LA VÍCTIMA PASCUAL",

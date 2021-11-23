@@ -99,7 +99,7 @@ for language in languages: # run loop for all languages
 	print()
 
 # write psalm array of objects to json file
-jsonDataFile = open("export/psalms.json", "w", encoding="utf8")
+jsonDataFile = open("export/psalms.js", "w", encoding="utf8")
 jsonDataFile.write(json.dumps(psalms, ensure_ascii=False, indent=4))
 jsonDataFile.close()
 

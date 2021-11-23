@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<title>Resurrexit</title>
-	<link rel="canonical" href="https://resurrexit.app"/>
+	<link rel="canonical" href="https://resurrexit.app/es/psalmus.html"/>
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="/images/icons/res-icon-152.png" />
@@ -22,10 +22,10 @@
 <body>
 	<header class="full">
 		<div id="title-wrapper">
-			<a id="back-button" href="/en/"><img src="/images/back.svg"></a>
+			<a id="back-button" href="/es/"><img src="/images/back.svg"></a>
 		</div>
 		<div id="player">
-			<audio src="">Your browser does not support audio</audio>
+			<audio src="">Tu navegador no soporta audio</audio>
 			<button id="player-button" class="play"></button>
 			<div id="player-progress-wrapper">
 				<div id="player-progress"></div>
@@ -34,17 +34,17 @@
 			</div>
 		</div>
 		<div id="lang">
-			<a id="es" class="es lang" href="/es/">Español</a>
-			<a id="en" class="en lang active" href="/en/">English</a>
+			<a id="es" class="es lang active" href="">Español</a>
+			<a id="en" class="en lang" href="/en/">English</a>
 			<button id="option-button"><img src="/images/option.svg" /></button>
 		</div>
 	</header>
 	<div id="option-menu">
-		<a class="es lang" href="/es/">Español</a>
-		<a class="en lang active" href="/en/">English</a>
+		<a class="es lang active" href="/es/">Español</a>
+		<a class="en lang" href="/en/">English</a>
 		<div class="spacer"></div>
-		<a id="reset-lang">Reset Language Preference</a>
-		<a href="/en/contact">Contact</a>
+		<a id="reset-lang">Cambiar preferencia de idioma</a>
+		<a href="/es/contacto">Contacto</a>
 	</div>
 	<section id="psalm" class="">
 		<h1></<h1>
@@ -58,5 +58,5 @@
 </body>
 <script src="/js/psalms.js"></script>
 <script src="/js/main.js"></script>
-<script>setLangHref();</script>
+<script>generatePsalm("es");</script>
 </html>
