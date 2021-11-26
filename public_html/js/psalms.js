@@ -1,6 +1,47 @@
 psalms = {
     "es": [
         {
+            "title": "A LA CENA DEL CORDERO",
+            "subtitle": "Himno de Vísperas del tiempo Pascual hasta la Ascensión",
+            "id": "219",
+            "classes": "ele pas off ini",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A LA CENA DEL CORD<span data-chord='Sol'></span>ERO<br>VESTIDOS CON BLANCAS T<span data-chord='Lam'></span>ÚNICAS,<br><span data-chord='Fa'></span>ATRAVESADO EL MAR ROJO<br><span data-chord='Mi'></span>CANTAMOS A CRISTO, EL SEÑOR.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Lam'></span>Su Cuerpo, lleno de am<span data-chord='Sol'></span>or,<br>sobre la mesa es el pan v<span data-chord='Lam'></span>ivo;<br>su Sangre, sobre el alt<span data-chord='Sol'></span>ar,<br>es el cáliz del nuevo p<span data-chord='Lam'></span>acto.<br><br>Manso cordero inmol<span data-chord='Sol'></span>ado<br>es Cristo, nuestra P<span data-chord='Lam'></span>ascua;<br>su cuerpo ador<span data-chord='Sol'></span>able<br>es el verdadero pan <span data-chord='Lam'></span>ácimo.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A LA CENA DEL CORD<span data-chord='Sol'></span>ERO …<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Lam'></span>En esta hora admir<span data-chord='Sol'></span>able<br>retornan los antiguos prod<span data-chord='Lam'></span>igios;<br>su brazo potente nos s<span data-chord='Sol'></span>alva<br>del ángel de la m<span data-chord='Lam'></span>uerte.<br><br>Irradia sobre la Igl<span data-chord='Sol'></span>esia<br>el gozo pascual, oh Señ<span data-chord='Lam'></span>or,<br>y une a tu gran vict<span data-chord='Sol'></span>oria<br>a los que han renovado el Baut<span data-chord='Lam'></span>ismo.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A LA CENA DEL CORD<span data-chord='Sol'></span>ERO …<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Lam'></span>Sea honor, alabanza y gl<span data-chord='Sol'></span>oria<br>a Cristo victorioso de la m<span data-chord='Lam'></span>uerte,<br>al Padre y al Santo Esp<span data-chord='Sol'></span>íritu<br>ahora y por los siglos et<span data-chord='Lam'></span>ernos.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Sol'></span>AMÉN<span data-chord='Lam'></span>.<br>"
+                    }
+                ]
+            }
+        },
+        {
             "title": "A LA VÍCTIMA PASCUAL",
             "subtitle": "Secuencia de Pascua",
             "id": "1",
@@ -24,9 +65,204 @@ psalms = {
                     }
                 ]
             }
+        },
+        {
+            "title": "ALELUYA PASCUAL",
+            "subtitle": "Apropiado para el tiempo Pascual *",
+            "id": "152",
+            "classes": "lit",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='La'></span>Cristo Jesús <span data-chord='Mi'></span>ha resucitado<span data-chord='La'></span>.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "A1: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>A2: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>A3: ALELUYA, <span data-chord='Mi'></span>ALELUYA, <span data-chord='La'></span>ALELUYA.<br>AA: ALELUYA, <span data-chord='Mi'></span>ALELUYA, <span data-chord='La'></span>ALELUYA.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='La'></span>Cristo Jes<span data-chord='Mi'></span>ús ha resucit<span data-chord='La'></span>ado.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "A2: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>A3: ALELUYA, <span data-chord='Mi'></span>ALELUYA, <span data-chord='La'></span>ALELUYA.<br>A1: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>AA: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='La'></span>Cristo Jes<span data-chord='Mi'></span>ús ha resucit<span data-chord='La'></span>ado.<br>A3: ALELUYA, <span data-chord='Mi'></span>ALELUYA, <span data-chord='La'></span>ALELUYA.<br>A1: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>A2: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>AA: ALELUYA, ALEL<span data-chord='Mi'></span>UYA, ALEL<span data-chord='La'></span>UYA.<br>"
+                    }
+                ],
+                "col2": []
+            }
+        },
+        {
+            "title": "ASÍ HABLA EL AMÉN",
+            "subtitle": "Apocalipsis 3,14-22",
+            "id": "191",
+            "classes": "cat qua",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Mim'></span>ASÍ HABLA EL AMÉN,<br>EL TESTI<span data-chord='Do'></span>GO FIEL Y VER<span data-chord='Re7'></span>AZ,<br>EL PRINCIPIO<br>DE LAS CRIATURAS DE D<span data-chord='Mim'></span>IOS.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Mim'></span>Conozco tu conducta:<br><span data-chord='Sol'></span>no eres ni frío ni caliente.<br>¡Ojalá fueras frío o cal<span data-chord='Re7'></span>iente<br>y no t<span data-chord='Si7'></span>ibio,<br>porque voy a vomitarte de mi b<span data-chord='Mim'></span>oca!<br><br><span data-chord='Mim'></span>Tú dices: «yo soy rico; nada me falta».<br>Sol<br>Y no te das cuenta<br>de que eres un desgraci<span data-chord='Re7'></span>ado,<br>digno de compasi<span data-chord='Si7'></span>ón,<br>pobre, ciego y desn<span data-chord='Mim'></span>udo.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Mim'></span>ASÍ HABLA EL AMÉN …<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Mim'></span>Te aconsejo que me compres<br><span data-chord='Sol'></span>oro acrisolado al fuego<br>para que te enriq<span data-chord='Re7'></span>uezcas,<br>y vestidos bl<span data-chord='Si7'></span>ancos<br>para cubrir tu desnud<span data-chord='Mim'></span>ez.<br><br><span data-chord='Mim'></span>Mira que estoy a la puerta y llamo;<br><span data-chord='Sol'></span>si alguno oye mi voz y me abre,<br>entraré en su <span data-chord='Re7'></span>casa<span data-chord='Si7'></span>,<br>y cenaré con él y él conm<span data-chord='Mim'></span>igo.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Mim'></span>ASÍ HABLA EL AMÉN …<br>"
+                    }
+                ]
+            }
         }
     ],
     "en": [
+        {
+            "title": "ALLELUIA - EASTER",
+            "subtitle": "Appropriate during Easter Time *",
+            "id": "152",
+            "classes": "lit",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='A'></span>Christ Jes<span data-chord='E'></span>us is r<span data-chord='A'></span>isen!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "A1: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>A2: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>A3: ALLELUIA, <span data-chord='E'></span>ALLELUIA, <span data-chord='A'></span>ALLELUIA.<br>AA: ALLELUIA, <span data-chord='E'></span>ALLELUIA, <span data-chord='A'></span>ALLELUIA.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='A'></span>Christ Jes<span data-chord='E'></span>us is r<span data-chord='A'></span>isen!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "A2: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>A3: ALLELUIA, <span data-chord='E'></span>ALLELUIA, <span data-chord='A'></span>ALLELUIA.<br>A1: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>AA: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='A'></span>Christ Jes<span data-chord='E'></span>us is r<span data-chord='A'></span>isen!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='E'></span>A3: ALLELUIA, <span data-chord='A'></span>ALLELUIA, ALLELUIA.<br>A1: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>A2: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>AA: ALLELUIA, ALLEL<span data-chord='E'></span>UIA, ALLEL<span data-chord='A'></span>UIA.<br>"
+                    }
+                ],
+                "col2": []
+            }
+        },
+        {
+            "title": "AT THE BANQUET OF THE LAMB",
+            "subtitle": "Hymn for Vespers from Easter to the Ascension",
+            "id": "219",
+            "classes": "ele pas off ini",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>AT THE BANQUET OF THE L<span data-chord='G'></span>AMB,<br>ARRAYED IN WHITE R<span data-chord='Am'></span>OBES,<br><span data-chord='F'></span>HAVING CROSSED THE RED SEA,<br>WE SING TO CHRIST THE L<span data-chord='E'></span>ORD.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Am'></span>His body, enflamed with l<span data-chord='G'></span>ove,<br>living bread upon the cr<span data-chord='Am'></span>oss;<br>His blood on the <span data-chord='G'></span>altar,<br>chalice of the New C<span data-chord='Am'></span>ovenant.<br><br>In this paschal vesper sh<span data-chord='G'></span>eltered,<br>for the angel of d<span data-chord='Am'></span>estruction;<br>we have been del<span data-chord='G'></span>ivered<br>from Pharaoh’s harsh d<span data-chord='Am'></span>ominion.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>AT THE BANQUET OF THE L<span data-chord='G'></span>AMB …<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "C",
+                        "verse": "Innocent, slaughtered lamb<br>Christ is our Passover;<br>He, who offered his own body,<br>is true unleavened bread.<br><br>O true and worthy bread<br>you unlock the gate of hell,<br>rescue people in fetters<br>award fullness of life.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>AT THE BANQUET OF THE L<span data-chord='G'></span>AMB …<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "Christ, victoriuos from the abyss,<br>resurrecting from the tomb,<br>He subdues with chains the tyrant<br>restituting Paradise.<br><br>Let the paschal Joy, O Jesus<br>be forever in our souls:<br>to new life reborn in baptism,<br>to your victory unite us.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>AT THE BANQUET OF THE L<span data-chord='G'></span>AMB …<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "Praise and honor be to Christ<br>who is triumphant over death,<br>with the Father and the Spirit<br>now and forever.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='G'></span>AM<span data-chord='Am'></span>ÉN.<br>"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "THUS SPEAK THE AMEN",
+            "subtitle": "Revelations 3,14-22",
+            "id": "191",
+            "classes": "cat qua",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Em'></span>THUS SPEAK THE AMEN,<br>THE F<span data-chord='C'></span>AITHFUL AND TRUTHFUL W<span data-chord='D7'></span>ITNESS,<br>THE BEGINNING<br>OF THE CREATURES OF G<span data-chord='Em'></span>OD.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Em'></span>I know your behavior:<br>you <span data-chord='G'></span>are neither hot nor cold.<br>I wish you were cold or h<span data-chord='D7'></span>ot<br>and not l<span data-chord='B7'></span>ukewarm,<br>because I am going<br>to vomit you from my m<span data-chord='Em'></span>outh!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Em'></span>THUS SPEAK THE AMEN …<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Em'></span>You say: «I am rich, I lack nothing».<br>And <span data-chord='G'></span>you are not aware<br>that you are wr<span data-chord='D7'></span>etched,<br>worthy of comp<span data-chord='B7'></span>assion,<br>poor, blind and n<span data-chord='Em'></span>aked.<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Em'></span>I counsel you to buy from me<br>gold refined by f<span data-chord='D7'></span>ire<br>white g<span data-chord='B7'></span>arments<br>and eye-salve<br>so that you may s<span data-chord='Em'></span>ee.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Em'></span>THUS SPEAK THE AMEN …<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Em'></span>Those I love I correct;<br>be then z<span data-chord='G'></span>ealous and rep<span data-chord='D'></span>ent,<br>listen to my v<span data-chord='B7'></span>oice, listen to my v<span data-chord='Em'></span>oice.<br><br>Behold: I am at the door and knock<br>if anyone hears my v<span data-chord='G'></span>oice<br>and opens the d<span data-chord='D7'></span>oor,<br>I will enter his h<span data-chord='B7'></span>ouse<br>and I will dine with him and he w<span data-chord='Em'></span>ith me.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Em'></span>THUS SPEAK THE AMEN …<br>"
+                    }
+                ]
+            }
+        },
         {
             "title": "TO THE PASCHAL VICTIM",
             "subtitle": "Easter Sequence",

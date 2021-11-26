@@ -10,6 +10,7 @@ def normalize(text):
 # START
 print()
 print("STARTING PSALM JSON GENERATION")
+print()
 
 for language in languages: # run loop for all languages
 	fileList = sorted(next(os.walk("psalms/" + language), (None, None, []))[2]) # get list of txt files in alphabetical order
@@ -18,9 +19,7 @@ for language in languages: # run loop for all languages
 
 	for file in fileList: # process all psalm text files and create json
 		with open("psalms/" + language + '/' + file, encoding="utf8") as reader:
-			print()
 			print("OPENING FILE: " + file)
-			print()
 			# Get titles
 			title = reader.readline().split('\n')[0]
 			subtitle = reader.readline().split('\n')[0]
