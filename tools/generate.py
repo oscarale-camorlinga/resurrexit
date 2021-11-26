@@ -48,13 +48,10 @@ for language in languages: # run loop for all languages
 						chords = line.split('^')[0]
 					else: # Line must be a verse, process and add it to the column array
 						if state == 'verse-start': # If it is the beginning of a verse, store the first letter and then clear the next 3 characters (A. )
-							#print()
-							#print("VERSE STARTED")
-							#print()
 							verseType = line[0]
 							line = line[3:]
 							state = 'verse-reading'
-							#print("--Verse type: " + verseType)
+
 						if chords: # If there are chords to be inserted
 							chords = chords.rstrip()
 							while chords:
@@ -64,7 +61,7 @@ for language in languages: # run loop for all languages
 								chords = chords[:i].rstrip()
 							chords = ''
 						verse += line + "<br>"
-						#print("--Inserted line: " + line)
+
 				else: # If we have reached the end of a section, write verses to the column array
 					if colCount == 1:
 						psalm["col1"].append({
@@ -79,12 +76,7 @@ for language in languages: # run loop for all languages
 					sectionType = ''
 					verse = ''
 					state = 'verse-start'
-					#print()
-					#print("VERSE ENDED")
-					#print()
-			#print("PSALM:")
-			#print(json.dumps(psalms, ensure_ascii=False, indent=2))
-			#Write psalm to psalms array
+
 			psalms[language].append({
 				"title": title,
 				"subtitle": subtitle,
@@ -98,9 +90,17 @@ for language in languages: # run loop for all languages
 	print("CREATED " + language + " PSALM ARRAY")
 	print()
 
-# write psalm array of objects to json file
+# write psalm array of objects to js file
 jsonDataFile = open("export/psalms.js", "w", encoding="utf8")
 jsonDataFile.write(json.dumps(psalms, ensure_ascii=False, indent=4))
 jsonDataFile.close()
+
+# write 'psalms = ' at beginning of file to create a javascript object
+with open("export/psalms.js", encoding="utf8") as f:
+	newFile = f.read()
+
+newFile = "psalms = " + newFile
+with open("export/psalms.js", "w", encoding="utf8") as f:
+	f.write(newFile)
 
 print("SUCCESSFULLY CREATED JSON PSALM LIST")
