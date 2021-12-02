@@ -1,0 +1,5 @@
+---
+    deployment:
+        tasks:
+            - export DEPLOYPATH=/home/oscarca1/resurrexit/
+            - /bin/cp -R * $DEPLOYPATH
