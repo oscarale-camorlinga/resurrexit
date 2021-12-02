@@ -90,16 +90,17 @@ for language in languages: # run loop for all languages
 	print()
 
 # write psalm array of objects to js file
-jsonDataFile = open("export/psalms.js", "w", encoding="utf8")
+psalmsFile = "../public_html/js/psalms.js"
+jsonDataFile = open(psalmsFile, "w", encoding="utf8")
 jsonDataFile.write(json.dumps(psalms, ensure_ascii=False, indent=4))
 jsonDataFile.close()
 
 # write 'psalms = ' at beginning of file to create a javascript object
-with open("export/psalms.js", encoding="utf8") as f:
+with open(psalmsFile, encoding="utf8") as f:
 	newFile = f.read()
 
 newFile = "psalms = " + newFile
-with open("export/psalms.js", "w", encoding="utf8") as f:
+with open(psalmsFile, "w", encoding="utf8") as f:
 	f.write(newFile)
 
 print("SUCCESSFULLY CREATED JSON PSALM LIST")
