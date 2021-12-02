@@ -116,6 +116,46 @@ psalms = {
             }
         },
         {
+            "title": "A TI LEVANTO MIS OJOS",
+            "subtitle": "Salmo 123 (122)",
+            "id": "3",
+            "classes": "pre qua",
+            "capo": "Capo 3",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>A TI LEVANTO MIS <span data-chord='La7'></span>OJOS,<br><span data-chord='Solm'></span>A TI QUE HABITAS EN EL C<span data-chord='La7'></span>IELO.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>Como los ojos de los siervos miran a las manos de sus señore<span data-chord='La7'></span>s,<br><span data-chord='Solm'></span>como los ojos de la esclava a las manos de su señ<span data-chord='La7'></span>ora,<br><span data-chord='Sib7'></span>así nuestros ojos miran al Señ<span data-chord='La7'></span>or,<br>esper<span data-chord='Sib7'></span>ando que tenga pied<span data-chord='La7'></span>ad, esper<span data-chord='Sib7'></span>ando que tenga pied<span data-chord='La7'></span>ad.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Mujeres: <span data-chord='Rem'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>Hombres: <span data-chord='Sib7'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Mujeres: <span data-chord='Rem'></span>¡QUE DEMASIADO SE HAN BURLADO DE NOS<span data-chord='La7'></span>OTROS,<br>Hombres: <span data-chord='Sib7'></span>QUE NUESTRA ALMA ESTÁ SACIADA DE DESPR<span data-chord='La7'></span>ECIOS!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Mujeres: <span data-chord='Rem'></span>¡DE LAS BURLAS DE LOS SATISF<span data-chord='La7'></span>ECHOS,<br>Hombres: DEL DESPR<span data-chord='Sib7'></span>ECIO DE LOS SOB<span data-chord='La7'></span>ERBIOS!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Mujeres: <span data-chord='Rem'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>Hombres: <span data-chord='Sib7'></span>¡PIEDAD DE NOSOTROS, SEÑ<span data-chord='La7'></span>OR!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Rem'></span>A TI LEVANTO MIS <span data-chord='La7'></span>OJOS …<br>"
+                    }
+                ],
+                "col2": []
+            }
+        },
+        {
             "title": "ALELUYA PASCUAL",
             "subtitle": "Apropiado para el tiempo Pascual *",
             "id": "152",
@@ -404,6 +444,46 @@ psalms = {
                         "verse": "<span data-chord='F'></span>You, immortal King, give us salvati<span data-chord='E'></span>on!<br>"
                     }
                 ]
+            }
+        },
+        {
+            "title": "TO YOU I LIFT UP MY EYES",
+            "subtitle": "Psalm 123 (122)",
+            "id": "3",
+            "classes": "pre qua",
+            "capo": "Capo 3",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>TO YOU I LIFT UP MY <span data-chord='A7'></span>EYES,<br>TO Y<span data-chord='Gm'></span>OU WHO HAVE Y<span data-chord='A7'></span>OUR HOME HEAVEN<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>As the eyes of the servants are fixed on the hands of their mast<span data-chord='A7'></span>ers,<br><span data-chord='Gm'></span>as the eyes of a slave girl on the hands of her m<span data-chord='A7'></span>istress,<br><span data-chord='Bb7'></span>so our eyes are on the L<span data-chord='A7'></span>ord,<br><span data-chord='Bb7'></span>waiting for Him to have m<span data-chord='A7'></span>ercy, w<span data-chord='Bb7'></span>aiting for Him to have m<span data-chord='A7'></span>ercy.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Women: <span data-chord='Dm'></span>HAVE MERCY ON US, O L<span data-chord='A7'></span>ORD!<br>Men: <span data-chord='Bb7'></span>HAVE MERCY ON US, O L<span data-chord='A7'></span>ORD!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Women: <span data-chord='Dm'></span>OUR SOUL IS SATED WITH SC<span data-chord='A7'></span>ORN,<br>Men: <span data-chord='Bb7'></span>WE HAVE HAD OUR FILL OF CONT<span data-chord='A7'></span>EMPT!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Women: <span data-chord='Dm'></span>OF THE SCORN OF THE PR<span data-chord='A7'></span>OUD,<br>Men: <span data-chord='Bb7'></span>OF THE JEERS OF THE CONC<span data-chord='A7'></span>EITED!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "Women: HAV<span data-chord='Dm'></span>E MERCY ON US, O LORD<span data-chord='A7'></span>!<br>Men: <span data-chord='Bb7'></span>HAVE MERCY ON US, O L<span data-chord='A7'></span>ORD!<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Dm'></span>TO YOU, I LIFT UP MY <span data-chord='A7'></span>EYES …<br>"
+                    }
+                ],
+                "col2": []
             }
         }
     ]
