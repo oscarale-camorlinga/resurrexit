@@ -10,6 +10,7 @@ def normalize(text):
 # START
 print()
 print("STARTING PSALM JSON GENERATION")
+print()
 
 for language in languages: # run loop for all languages
 	fileList = sorted(next(os.walk("psalms/" + language), (None, None, []))[2]) # get list of txt files in alphabetical order
@@ -18,9 +19,7 @@ for language in languages: # run loop for all languages
 
 	for file in fileList: # process all psalm text files and create json
 		with open("psalms/" + language + '/' + file, encoding="utf8") as reader:
-			print()
 			print("OPENING FILE: " + file)
-			print()
 			# Get titles
 			title = reader.readline().split('\n')[0]
 			subtitle = reader.readline().split('\n')[0]
@@ -91,16 +90,17 @@ for language in languages: # run loop for all languages
 	print()
 
 # write psalm array of objects to js file
-jsonDataFile = open("export/psalms.js", "w", encoding="utf8")
+psalmsFile = "../public_html/js/psalms.js"
+jsonDataFile = open(psalmsFile, "w", encoding="utf8")
 jsonDataFile.write(json.dumps(psalms, ensure_ascii=False, indent=4))
 jsonDataFile.close()
 
 # write 'psalms = ' at beginning of file to create a javascript object
-with open("export/psalms.js", encoding="utf8") as f:
+with open(psalmsFile, encoding="utf8") as f:
 	newFile = f.read()
 
 newFile = "psalms = " + newFile
-with open("export/psalms.js", "w", encoding="utf8") as f:
+with open(psalmsFile, "w", encoding="utf8") as f:
 	f.write(newFile)
 
 print("SUCCESSFULLY CREATED JSON PSALM LIST")

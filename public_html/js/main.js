@@ -111,11 +111,12 @@ function generatePsalm(lang) {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 	const psalmId = urlParams.get("id");
-	console.log(psalmId);
+	console.log(`ID: ${psalmId}`);
 
-	const psalm = psalms[lang].find(psalm => psalm.id == "1");
+	const psalm = psalms[lang].find(psalm => psalm.id == psalmId);
 	if(psalm) {
-		psalmSection.className = psalm.classes
+		console.log(`Opening psalm: ${psalm.title}`);
+		psalmSection.className = psalm.classes;
 		psalmTitle.innerHTML = psalm.title;
 		psalmSubtitle.innerHTML = psalm.subtitle;
 		psalmCapo.innerHTML = psalm.capo;
