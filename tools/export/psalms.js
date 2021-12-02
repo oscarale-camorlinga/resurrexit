@@ -67,6 +67,55 @@ psalms = {
             }
         },
         {
+            "title": "A NADIE DEMOS OCASIÓN DE TROPIEZO",
+            "subtitle": "2 Corintios 6,3ss",
+            "id": "2",
+            "classes": "pre",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Lam'></span>Hermanos, a nadie demos ocasión de trop<span data-chord='Rem'></span>iezo,<br>herm<span data-chord='Mi'></span>anos, vivamos aceptando las tribulac<span data-chord='Lam'></span>iones;<br><span data-chord='Rem'></span>necesidades, angustias y fat<span data-chord='Mi'></span>igas;<br><span data-chord='Rem'></span>viviendo en pureza, paciencia y bond<span data-chord='Mi'></span>ad;<br>en el Espíritu S<span data-chord='Fa'></span>anto, y en el poder de D<span data-chord='Mi'></span>ios;<br>con las armas de la just<span data-chord='Fa'></span>icia:<br>las de la derecha y las de la izqu<span data-chord='Mi'></span>ierda.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>HERMANOS, A NADIE DEMOS<br>OCASIÓN DE TROP<span data-chord='Rem'></span>IEZO,<br>HERM<span data-chord='Mi'></span>ANOS, VIVAMOS ACEPTANDO<br>LAS TRIBULAC<span data-chord='Lam'></span>IONES,<br><span data-chord='Rem'></span>NECESIDADES, ANGUSTIAS Y FAT<span data-chord='Mi'></span>IGAS.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>En calumnias y en buena f<span data-chord='Mi'></span>ama,<br><span data-chord='Rem'></span>en gloria e ignom<span data-chord='Mi'></span>inia; como p<span data-chord='Rem'></span>obres,<br>aunque enriqueciendo a m<span data-chord='Mi'></span>uchos;<br>como quienes nada t<span data-chord='Fa'></span>ienen,<br>aunque lo poseemos t<span data-chord='Mi'></span>odo.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>HERMANOS, A NADIE DEMOS …<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='La7'></span>¡Hermanos!, os hemos hablado con franq<span data-chord='Rem'></span>ueza;<br>os hemos hablado con la verd<span data-chord='Mi'></span>ad.<br><span data-chord='Rem'></span>¡No unciros al yugo desigual con los pag<span data-chord='Mi'></span>anos!<br><span data-chord='Rem'></span>¿Qué participación hay entre el fiel y el inf<span data-chord='Mi'></span>iel?<br>¿Qué unión entre el santuario de D<span data-chord='Fa'></span>ios<br>y el santuario de los <span data-chord='Mi'></span>ídolos?<br><span data-chord='Rem'></span>Porque somos el santuario de D<span data-chord='Mi'></span>ios.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>HERMANOS, A NADIE DEMOS …<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='La7'></span>Tengo plena confianza en el hablaro<span data-chord='Rem'></span>s;<br>porque estoy orgulloso de vos<span data-chord='Mi'></span>otros.<br><span data-chord='Rem'></span>¡No unciros al yugo desigual con los pag<span data-chord='Mi'></span>anos!<br><span data-chord='Rem'></span>¿Qué participación hay entre el fiel y el inf<span data-chord='Mi'></span>iel?<br>                                  Fa<br>¿Qué unión entre el santuario de Dios<br>y el santuario de los <span data-chord='Mi'></span>ídolos?<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>HERMANOS, A NADIE DEMOS …<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>En pureza, paciencia y bondad;<span data-chord='Mi'></span><br>en el Espíritu S<span data-chord='Fa'></span>anto, y en el poder de D<span data-chord='Mi'></span>ios.<br>"
+                    }
+                ]
+            }
+        },
+        {
             "title": "ALELUYA PASCUAL",
             "subtitle": "Apropiado para el tiempo Pascual *",
             "id": "152",
@@ -214,6 +263,63 @@ psalms = {
                     {
                         "type": "A",
                         "verse": "<span data-chord='G'></span>AM<span data-chord='Am'></span>ÉN.<br>"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "BROTHERS",
+            "subtitle": "2 Corinthians 6,3ff",
+            "id": "2",
+            "classes": "pre",
+            "capo": "",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>BROTHERS! LET US GIVE NO ONE<br>OCCASION FOR ST<span data-chord='Dm'></span>UMBLING,<br><span data-chord='E'></span>BROTHERS, ALWAYS<br>ACCEPTING TRIBUL<span data-chord='Am'></span>ATONS,<br><span data-chord='Dm'></span>NECESSITIES, ANGUISHES AND T<span data-chord='E'></span>OIL.<br>WITH P<span data-chord='Dm'></span>ATIENCE PURITY AND G<span data-chord='E'></span>OODNESS,<br>IN THE H<span data-chord='F'></span>OLY SPIRIT AND<br>IN THE POWER OF G<span data-chord='E'></span>OD.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>Using the weapons of j<span data-chord='E'></span>ustice,<br><span data-chord='Dm'></span>those of the right as those of the l<span data-chord='E'></span>eft;<br><span data-chord='Dm'></span>in glory and disgr<span data-chord='E'></span>ace,<br><span data-chord='Dm'></span>in calumnies and in good f<span data-chord='E'></span>ame,<br><span data-chord='F'></span>as imposters and yet truthful,<br>as he who has nothing<br>yet he owns <span data-chord='E'></span>everything.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>BROTHERS …<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='A7'></span>Brothers! We speak to you with fr<span data-chord='Dm'></span>ankness,<br><span data-chord='F'></span>we speak to you in all tr<span data-chord='E'></span>uth:<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>DO NOT TIE YOURSELVES TO<br>AN UNEQUAL YOKE WITH THE P<span data-chord='E'></span>AGANS.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>Which understanding is there<br>between the faithful and the unf<span data-chord='E'></span>aithful?<br><span data-chord='F'></span>What union between the temple<br>of God and that of the <span data-chord='E'></span>idols?<br><span data-chord='Dm'></span>Because we are the temple of G<span data-chord='E'></span>od.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>BROTHERS …<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='A7'></span>Brothers! We h<span data-chord='Dm'></span>ave full confidence<br>in speaking to you,<br><span data-chord='F'></span>because we are pr<span data-chord='E'></span>oud of you;<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>DO NOT TIE YOURSELVES TO<br>AN UNEQUAL YOKE WITH THE P<span data-chord='E'></span>AGANS.<br>"
+                    },
+                    {
+                        "type": "W",
+                        "verse": "<span data-chord='F'></span>t union between the temple<br>of God and that of the <span data-chord='E'></span>idols?<br><span data-chord='Dm'></span>Because we are the temple of G<span data-chord='E'></span>od.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>BROTHERS …<br>"
                     }
                 ]
             }
