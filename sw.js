@@ -5,15 +5,13 @@ var filesToCache = [
 	'/en/',
 	'/index.html',
 	'/es/index.html',
-	'/es/psalmis.html',
-	'/es/psalmis.json',
+	'/es/psalmus.html',
 	'/en/index.html',
-	'/en/psalmis.html',
-	'/en/psalmis.json',
+	'/en/psalmus.html',
 	'/css/styles.css',
 	'/js/main.js',
 	'/js/search.js',
-	'/js/player.js'
+	'/js/psalms.js'
 ];
 
 /* Start the service worker and cache all of the app's content */

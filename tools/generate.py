@@ -90,7 +90,7 @@ for language in languages: # run loop for all languages
 	print()
 
 # write psalm array of objects to js file
-psalmsFile = "../public_html/js/psalms.js"
+psalmsFile = "../js/psalms.js"
 jsonDataFile = open(psalmsFile, "w", encoding="utf8")
 jsonDataFile.write(json.dumps(psalms, ensure_ascii=False, indent=4))
 jsonDataFile.close()
