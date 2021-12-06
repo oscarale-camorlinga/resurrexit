@@ -156,6 +156,43 @@ psalms = {
             }
         },
         {
+            "title": "A TI, SEÑOR, EN MI CLAMOR IMPLORO",
+            "subtitle": "Salmo 142 (141)",
+            "id": "4",
+            "classes": "pre qua",
+            "capo": "Capo 2",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A TI, SEÑOR, EN MI CLAMOR IMPL<span data-chord='Rem'></span>ORO.<br>A TI, SEÑOR, EN MI CLAMOR SUPL<span data-chord='Lam'></span>ICO.<br><span data-chord='Mi7'></span>A TI DERRAMO MI LAMENTO,<br><span data-chord='Fa'></span>A TI MI ANGUSTIA EXP<span data-chord='Mi'></span>ONGO.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>Siento que el espíritu en mí se apaga;<br>mas tú conoces mi send<span data-chord='Mi7'></span>ero.<br><span data-chord='Lam'></span>Mira, Señor, que en el cam<span data-chord='Rem'></span>ino,<br>mira, Señor, que me han tendido un l<span data-chord='Lam'></span>azo.<br><span data-chord='Mi'></span>Mira, Señor, que a la derecha no hay ning<span data-chord='Mi7'></span>uno,<br>ning<span data-chord='Fa'></span>uno que me con<span data-chord='Mi'></span>ozca.<br><span data-chord='Rem'></span>Huye de mí todo consuelo,<br>que no hay n<span data-chord='Fa'></span>adie que se cuide de mi <span data-chord='Mi7'></span>alma.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A TI, YO CLAMO SEÑ<span data-chord='Sol'></span>OR;<br>A TI, YO DIGO:<br>¡TÚ SOLO ERES MI REF<span data-chord='Mi7'></span>UGIO,<br><span data-chord='Fa'></span>TÚ ERES MI PORCIÓN EN ESTA TIERRA,<br>MI ÚNICA FELICID<span data-chord='Mi'></span>AD!<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>Escúchame, Señor, que estoy llorand<span data-chord='Mi'></span>o,<br><span data-chord='Fa'></span>que estoy tan deprim<span data-chord='Mi'></span>ido.<br><span data-chord='Fa'></span>¡Líbrame de estos enemigos<br><span data-chord='Sol'></span>que son más fuertes que y<span data-chord='Mi'></span>o!<br><span data-chord='Lam'></span>¡Saca mi alma de esta cárcel,<br><span data-chord='Sol'></span>y yo daré gracias a tu n<span data-chord='Mi'></span>ombre!<br><span data-chord='Rem'></span>En torno a mí los santos harán c<span data-chord='Fa'></span>orro,<br>me felicitarán por tu favor hacia m<span data-chord='Mi'></span>í.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A TI, SEÑOR, EN MI CLAMOR …<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A TI, YO CLAMO SEÑ<span data-chord='Sol'></span>OR …<br>"
+                    }
+                ]
+            }
+        },
+        {
             "title": "ALELUYA PASCUAL",
             "subtitle": "Apropiado para el tiempo Pascual *",
             "id": "152",
@@ -484,6 +521,43 @@ psalms = {
                     }
                 ],
                 "col2": []
+            }
+        },
+        {
+            "title": "TO YOU, O LORD, WITH MY VOICE I CRY FOR HELP",
+            "subtitle": "Psalm 142 (141)",
+            "id": "4",
+            "classes": "pre qua",
+            "capo": "Capo 2",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>TO YOU, O LORD,<br>WITH MY VOICE I CRY FOR H<span data-chord='Dm'></span>ELP<br>TO YOU O LORD,<br>IN MY PLEADING I ENTR<span data-chord='Am'></span>EAT YOU.<br>TO Y<span data-chord='E7'></span>OU I POUR OUT MY LAMENT,<br>TO Y<span data-chord='F'></span>OU, MY ANGUISH I UNF<span data-chord='E'></span>OLD.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>I feel that my spirit fails;<br>but you know my p<span data-chord='E7'></span>ath.<br><span data-chord='Am'></span>Look Lord, on the w<span data-chord='Dm'></span>ay,<br>look, they have laid a snare for m<span data-chord='Am'></span>e.<br><span data-chord='E'></span>Look at my right hand there is no <span data-chord='E7'></span>one,<br>no <span data-chord='F'></span>one that kn<span data-chord='E'></span>ows me.<br><span data-chord='Dm'></span>Every consolation flees from me,<br>for there is no one who cares for my s<span data-chord='E7'></span>oul.<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='F'></span>TO YOU I CRY, O L<span data-chord='G'></span>ORD;<br>TO YOU I SAY:<br>«YOU ALONE ARE MY R<span data-chord='E7'></span>EFUGE,<br>YOU <span data-chord='F'></span>ARE MY LOT ON THIS EARTH,<br>MY ONLY H<span data-chord='E'></span>APPINESS!»<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>Listen, Lord, to my cl<span data-chord='E'></span>amor<br>bec<span data-chord='Dm'></span>ause I am so depr<span data-chord='E'></span>essed.<br>Fr<span data-chord='F'></span>ee me from my enemie<span data-chord='G'></span>s<br>who are stronger than m<span data-chord='E'></span>e!<br><span data-chord='F'></span>Snatch my soul from this prison<span data-chord='G'></span>,<br>and I will give thanks to your n<span data-chord='E'></span>ame.<br>Th<span data-chord='F'></span>en the saints will gather around me,<br>they will rejoice for your love towards m<span data-chord='E'></span>e.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>TO YOU, O LORD WITH MY VOICE …<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>TO YOU I CRY, O L<span data-chord='G'></span>ORD …<br>"
+                    }
+                ]
             }
         }
     ]
