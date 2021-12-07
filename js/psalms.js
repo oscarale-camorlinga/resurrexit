@@ -193,6 +193,38 @@ psalms = {
             }
         },
         {
+            "title": "A TI, SEÑOR, LEVANTO MI ALMA",
+            "subtitle": "Salmo 25 (24)",
+            "id": "5",
+            "classes": "pre qua",
+            "capo": "Capo 3",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Lam'></span>A TI, SEÑOR, LEVANTO MI <span data-chord='Mi'></span>ALMA,<br>A TI, <span data-chord='Rem'></span>OH D<span data-chord='Fa'></span>IOS M<span data-chord='Mi'></span>ÍO.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Lam'></span>En ti confío, Señ<span data-chord='Mi'></span>or,<br>¡no triunfen sobre m<span data-chord='Rem'></span>í mis <span data-chord='Fa'></span>enem<span data-chord='Mi'></span>igos!<br><span data-chord='Lam'></span>Muéstrame, Señor, tu cam<span data-chord='Mi'></span>ino,<br>enséñame, Señor,<span data-chord='Rem'></span> tu s<span data-chord='Fa'></span>end<span data-chord='Mi'></span>ero.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A TI, SEÑOR, LEVANTO MI <span data-chord='Mi'></span>ALMA ...<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Lam'></span>Acuérdate, Señor, de tu tern<span data-chord='Mi'></span>ura,<br>de tu inmensa compasión, q<span data-chord='Rem'></span>ue s<span data-chord='Fa'></span>on de s<span data-chord='Mi'></span>iempre.<br><span data-chord='Lam'></span>De mis pecados, Señor, no te ac<span data-chord='Mi'></span>uerdes,<br>acuérdate, Señor, q<span data-chord='Rem'></span>ue e<span data-chord='Fa'></span>res miseric<span data-chord='Mi'></span>ordia.<br><br><span data-chord='Fa'></span>Rocíame, Señor, de tu miseric<span data-chord='Mi'></span>ordia.<br>Sum<span data-chord='Fa'></span>érgeme, Señor, en tu miseric<span data-chord='Mi'></span>ordia.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Lam'></span>A TI, SEÑOR, LEVANTO MI <span data-chord='Mi'></span>ALMA ...<br>"
+                    }
+                ],
+                "col2": []
+            }
+        },
+        {
             "title": "ALELUYA PASCUAL",
             "subtitle": "Apropiado para el tiempo Pascual *",
             "id": "152",
@@ -518,6 +550,38 @@ psalms = {
                     {
                         "type": "A",
                         "verse": "<span data-chord='Dm'></span>TO YOU, I LIFT UP MY <span data-chord='A7'></span>EYES …<br>"
+                    }
+                ],
+                "col2": []
+            }
+        },
+        {
+            "title": "TO YOU, O LORD, I LIFT UP MY SOUL",
+            "subtitle": "Psalm 25 (24)",
+            "id": "5",
+            "classes": "pre qua",
+            "capo": "Capo 3",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>TO YOU, O LORD, I LIFT UP MY S<span data-chord='E'></span>OUL,<br>TO YOU, <span data-chord='Dm'></span>O M<span data-chord='F'></span>Y G<span data-chord='E'></span>OD<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Am'></span>In you I trust, O L<span data-chord='E'></span>ord,<br>do not let my enemies tr<span data-chord='Dm'></span>ium<span data-chord='F'></span>ph over m<span data-chord='E'></span>e!<br><span data-chord='Am'></span>Show me, O Lord, your w<span data-chord='E'></span>ay,<br>teach me, O Lord, y<span data-chord='Dm'></span>our<span data-chord='F'></span> p<span data-chord='E'></span>ath.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>TO YOU, O LORD, I LIFT UP MY S<span data-chord='E'></span>OUL ...<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Am'></span>Remember, O Lord, your tend<span data-chord='E'></span>erness,<br>your immense compassion wh<span data-chord='Dm'></span>ich<span data-chord='F'></span> is et<span data-chord='E'></span>ernal.<br><span data-chord='Am'></span>My sins, O Lord, do not rem<span data-chord='E'></span>ember,<br>remember, O Lord, th<span data-chord='Dm'></span>at <span data-chord='F'></span>you are m<span data-chord='E'></span>ercy.<br><br><span data-chord='F'></span>Sprinkle me, O Lord, with your m<span data-chord='E'></span>ercy.<br>Subm<span data-chord='F'></span>erge me, O Lord, in your m<span data-chord='E'></span>ercy.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Am'></span>TO YOU, O LORD, I LIFT UP MY S<span data-chord='E'></span>OUL ...<br>"
                     }
                 ],
                 "col2": []
