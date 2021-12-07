@@ -1,16 +1,15 @@
-var cacheName = 'resurrexit-v01';
+var cacheName = 'resurrexit-v0.1.0';
 var filesToCache = [
 	'/',
-	'/es/',
 	'/en/',
+	'/es/',
 	'/index.html',
-	'/es/index.html',
-	'/es/psalmus.html',
 	'/en/index.html',
+	'/es/index.html',
 	'/en/psalmus.html',
+	'/es/psalmus.html',
 	'/css/styles.css',
 	'/js/main.js',
-	'/js/search.js',
 	'/js/psalms.js'
 ];
 
