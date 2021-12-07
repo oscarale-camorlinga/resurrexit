@@ -100,12 +100,11 @@ function resetLanguage(e) {
 }
 
 function generatePsalmList(lang) {
-	console.log(lang);
-	console.log(psalms);
-	psalms[lang].forEach(psalm => {
+	psalms[lang].reduceRight((_, psalm) => {
+		console.log(`Inserting: ${psalm.title}`);
 		noResults.insertAdjacentHTML("afterend",
 			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}<span>${psalm.subtitle}</span></a>`);
-	});
+	}, null);
 }
 
 function generatePsalm(lang) {
