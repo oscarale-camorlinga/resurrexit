@@ -225,6 +225,43 @@ psalms = {
             }
         },
         {
+            "title": "A TI, SEÑOR, SE DEBE LA ALABANZA EN SIÓN",
+            "subtitle": "Salmo 65 (64)",
+            "id": "6",
+            "classes": "pre qua off",
+            "capo": "Capo 3",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>A ti, Señor, se debe la alabanza, en Si<span data-chord='La7'></span>ón.<br>A ti se te cumple el voto, en Jerusal<span data-chord='Rem'></span>én.<br><span data-chord='Solm'></span>A ti que escuchas la oraci<span data-chord='Rem'></span>ón<br>viene todo mort<span data-chord='La7'></span>al, viene todo mort<span data-chord='Rem'></span>al.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Sib'></span>A TI QUE ESCUCHAS LA ORACI<span data-chord='La7'></span>ÓN<br><span data-chord='Sib'></span>VIENE TODO MORTAL,<br>VIENE TODO MORT<span data-chord='La7'></span>AL.<br>"
+                    },
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>Pesan sobre nosotros nuestros pec<span data-chord='La7'></span>ados,<br>mas tú perdonas nuestras c<span data-chord='Rem'></span>ulpas.<br>Dichoso el que tú eliges, el que tú ll<span data-chord='La7'></span>amas,<br>vivirá en tus <span data-chord='Rem'></span>atrios.<br><span data-chord='Solm'></span>A ti que escuchas la oraci<span data-chord='Rem'></span>ón<br>viene todo mort<span data-chord='La7'></span>al, viene todo mort<span data-chord='Rem'></span>al.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Sib'></span>A TI QUE ESCUCHAS LA ORACI<span data-chord='La7'></span>ÓN …<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "S",
+                        "verse": "<span data-chord='Rem'></span>¡Nos saciaremos de los bienes de tu c<span data-chord='La7'></span>asa,<br>de la santidad de tu t<span data-chord='Rem'></span>emplo!<br>Con los prodigios de tu amor<br>tú nos h<span data-chord='La7'></span>ablas,<br>con los portentos de tu justicia<br>nos resp<span data-chord='Rem'></span>ondes.<br><span data-chord='Solm'></span>A ti que escuchas la oraci<span data-chord='Rem'></span>ón<br>viene todo mort<span data-chord='La7'></span>al, viene todo mort<span data-chord='Rem'></span>al.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Sib'></span>A TI QUE ESCUCHAS LA ORACI<span data-chord='La7'></span>ÓN …<br>"
+                    }
+                ]
+            }
+        },
+        {
             "title": "ALELUYA PASCUAL",
             "subtitle": "Apropiado para el tiempo Pascual *",
             "id": "152",
@@ -620,6 +657,43 @@ psalms = {
                     {
                         "type": "A",
                         "verse": "<span data-chord='Am'></span>TO YOU I CRY, O L<span data-chord='G'></span>ORD …<br>"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "TO YOU, O LORD",
+            "subtitle": "Psalm 65 (64)",
+            "id": "6",
+            "classes": "pre qua off",
+            "capo": "Capo 3",
+            "psalm": {
+                "col1": [
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>To you, O Lord, praise is due in Zion<span data-chord='A7'></span>.<br>to you the vow is performed in Jer<span data-chord='Dm'></span>usalem.<br>To y<span data-chord='Gm'></span>ou who listen to the pr<span data-chord='Dm'></span>ayer,<br>every mortal c<span data-chord='A7'></span>omes, every mortal c<span data-chord='Dm'></span>omes.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Bb'></span>TO YOU WHO LISTEN TO THE PR<span data-chord='A7'></span>AYER,<br><span data-chord='Bb'></span>EVERY MORTAL COMES,<br>EVERY MORTAL C<span data-chord='A7'></span>OMES.<br>"
+                    },
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>Our faults burden <span data-chord='A7'></span>us,<br>but you forgive our s<span data-chord='Dm'></span>ins.<br>Blessed is the one you’ve chosen,<br>and call n<span data-chord='A7'></span>ear;<br>he will dwell in your c<span data-chord='Dm'></span>ourts.<br>To y<span data-chord='Gm'></span>ou who listen to the pr<span data-chord='Dm'></span>ayer<br>every mortal c<span data-chord='A7'></span>omes, every mortal c<span data-chord='Dm'></span>omes.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Bb'></span>TO YOU WHO LISTEN TO THE PR<span data-chord='A7'></span>AYER …<br>"
+                    }
+                ],
+                "col2": [
+                    {
+                        "type": "C",
+                        "verse": "<span data-chord='Dm'></span>We shall be filled with the goods of your h<span data-chord='A7'></span>ouse,<br>with the holiness of your t<span data-chord='Dm'></span>emple!<br>With the wonders of your love<br>you sp<span data-chord='A7'></span>eak to us,<br>with the wonders of your justice<br>you <span data-chord='Dm'></span>answer us.<br><span data-chord='Gm'></span>To you who listen to the pr<span data-chord='Dm'></span>ayer<br>every mortal c<span data-chord='A7'></span>omes, every mortal c<span data-chord='Dm'></span>omes.<br>"
+                    },
+                    {
+                        "type": "A",
+                        "verse": "<span data-chord='Bb'></span>TO YOU WHO LISTEN TO THE PR<span data-chord='A7'></span>AYER …<br>"
                     }
                 ]
             }

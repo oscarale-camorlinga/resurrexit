@@ -13,7 +13,9 @@ const optionDiv = document.querySelector("#option-menu"); // option menu div
 const resetLangBtn = document.querySelector("#reset-lang"); // reset preferred language button
 const headerDiv = document.querySelector("header"); // header
 const langLinkES = document.querySelectorAll(".es.lang"); // language es link
-const langLinkEN = document.querySelectorAll(".en.lang"); // language es link
+const langLinkEN = document.querySelectorAll(".en.lang"); // language en link
+const headerLangLinkES = document.querySelector("#es"); // language es link in header
+const headerLangLinkEN = document.querySelector("#en"); // language en link in header
 const psalmSection = document.querySelector("#psalm"); // psalm title for id
 const psalmTitle = document.querySelector("#psalm h1"); // psalm title for id
 const psalmSubtitle = document.querySelector("#psalm h2"); // psalm title for id
@@ -23,6 +25,10 @@ const psalmCol2 = document.querySelector("#psalm #col2"); // psalm title for id
 const searchInput = document.querySelector("input");
 const psalmList = document.querySelector("#psalmlist"); // full psalm list div
 const noResults = document.querySelector("#no-results"); // no results div in order to insert adjacent
+const menuBtn = document.querySelector("#menu-button"); // left side hamburger menu button
+const closeBtn = document.querySelector("#close-button"); // left side menu close button
+const aside = document.querySelector("aside"); //left side menu
+const overlay = document.querySelector("#overlay"); // black transparent overlay when menus is open
 
 /*----------------------------- PWS -----------------------------*/
 
@@ -44,6 +50,8 @@ if(langBtn) langBtn.forEach(function(button) {
 if(optionBtn) optionBtn.addEventListener("click", toggleOptionDiv);
 if(resetLangBtn) resetLangBtn.addEventListener("click", resetLanguage);
 if(searchInput) searchInput.addEventListener("input", search);
+if(menuBtn) menuBtn.addEventListener("click", openMenu);
+if(closeBtn) closeBtn.addEventListener("click", closeMenu);
 
 /*----------------------------- FUNCTIONS -----------------------------*/
 
@@ -99,9 +107,20 @@ function resetLanguage(e) {
 	window.location.href = "/";
 }
 
+function openMenu(e) {
+	aside.style.left = "0";
+	overlay.style.display = "block";
+	menuOpen = true;
+}
+
+function closeMenu(e) {
+	aside.style.left = "-320px";
+	overlay.style.display = "none";
+	menuOpen = false;
+}
+
 function generatePsalmList(lang) {
 	psalms[lang].reduceRight((_, psalm) => {
-		console.log(`Inserting: ${psalm.title}`);
 		noResults.insertAdjacentHTML("afterend",
 			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}<span>${psalm.subtitle}</span></a>`);
 	}, null);
@@ -217,15 +236,10 @@ function loadAudio() {
 function setLangHref() {
 	if(langLinkEN && langLinkES) {
 		var currentPsalm = parseInt(psalmTitle.id);
-		console.log(currentPsalm);
-		console.log(typeof currentPsalm);
 		let psalmEN = psalmsEN.find(psalmEN => psalmEN.id === currentPsalm);
 		let psalmES = psalmsES.find(psalmES => psalmES.id === currentPsalm);
-		console.log(psalmEN);
-		console.log(psalmES);
 		linkEN = psalmEN.link;
 		linkES = psalmES.link;
-
 		langLinkEN.forEach(function(link) {
 			link.href = "/en/" + linkEN + ".html";
 		});
@@ -238,6 +252,27 @@ function setLangHref() {
 function search(e) {
 	if(e.target.value) console.log(e.target.value);
 }
+
+function windowResize() {
+	if(window.innerWidth < 1000) {
+	 	if(!menuOpen) {
+			closeMenu(null);
+		}
+		headerLangLinkES.innerHTML = "ES";
+		headerLangLinkEN.innerHTML = "EN";
+	} else {
+		aside.style.left = "0";
+		overlay.style.display = "none";
+		menuOpen = false;
+		headerLangLinkES.innerHTML = "Español";
+		headerLangLinkEN.innerHTML = "English";
+	}
+}
+
+/*----------------------------- MAIN -----------------------------*/
+
+windowResize();
+window.onresize = windowResize;
 
 /*
 function changeHeader(headerColor) {
@@ -382,49 +417,5 @@ $(document).ready(function() {
 		}
 		console.log(tagList);
 		showPsalms();
-	});
-
-	$("#menu-button").click(function(e) {
-		$("aside").css("left", "0");
-		$("#overlay").css("display", "block");
-		menuOpen = true;
-	});
-
-	$("#close-button").click(function(e) {
-		$("aside").css("left", "-320px");
-		$("#overlay").css("display", "none");
-		menuOpen = false;
-	});
-
-//	if($(window).width() < 600) {
-//		if($(window).width() < 600) {
-//			$("#search-field").attr("placeholder", "Resurrexit");
-//		}
-	}
-
-	if($(window).width() < 600) {
-
-	} else if($(window).width() < 1000) {
-		$("#es").html("ES");
-		$("#en").html("EN");
-	} else {
-
-	}
-
-	$(window).resize(function() {
-		if($(window).width() < 1000) {
-			if(!menuOpen) {
-				$("aside").css("left", "-320px");
-				$("#overlay").css("display", "none");
-			}
-			$("#es").html("ES");
-			$("#en").html("EN");
-		} else {
-			$("aside").css("left", "0");
-			$("#overlay").css("display", "none");
-			$("#es").html("Español");
-			$("#en").html("English");
-			menuOpen = false;
-		}
 	});
 });*/
