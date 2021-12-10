@@ -84,7 +84,6 @@ function toggleOptionDiv() {
 	// Open/close the option-menu div
 	var headerHeight = parseInt(getComputedStyle(headerDiv).height.replace("px", ""));
 	var optionDivTop = getComputedStyle(optionDiv).top;
-	console.log("Clicked option button");
 	if(window.innerWidth < 600) {
 		if(optionDivTop == "-140px") {
 			optionDiv.style.top = headerHeight + "px";
@@ -228,7 +227,6 @@ function loadAudio() {
 	});
 
 	timeline.click(function(e) {
-		console.log(clickPercent(e));
 		player.currentTime = duration * clickPercent(e);
 	});
 }
