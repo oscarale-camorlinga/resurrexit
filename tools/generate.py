@@ -5,7 +5,7 @@ psalms = {}
 languages = ["es", "en"]
 
 def normalize(text):
-	return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
+	return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn').lower()
 
 # START
 print()
@@ -34,6 +34,7 @@ for language in languages: # run loop for all languages
 			verse = ''
 			chords = ''
 			verseType = ''
+			text = title + " " + subtitle
 
 			# Read file line by line
 			for line in reader.readlines():
@@ -56,10 +57,13 @@ for language in languages: # run loop for all languages
 							while chords:
 								i = chords.rfind(' ') + 1
 								chord = chords[i:]
-								line = line[:i] + "<span data-chord='" + chord + "'></span>" + line[i:]
+								chordLine = line[:i] + "<span data-chord='" + chord + "'></span>" + line[i:]
 								chords = chords[:i].rstrip()
 							chords = ''
-						verse += line + "<br>"
+							verse += chordLine + "<br>"
+						else:
+							verse += line + "<br>"
+						text += " " + line
 
 				else: # If we have reached the end of a section, write verses to the column array
 					if colCount == 1:
@@ -82,7 +86,8 @@ for language in languages: # run loop for all languages
 				"id": id,
 				"classes": classes,
 				"capo": capo,
-				"psalm": psalm
+				"psalm": psalm,
+				"text": normalize(text)
 			})
 
 	print()
