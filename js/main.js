@@ -292,7 +292,6 @@ function showPsalms(queryList) {
 }
 
 function updatePsalmList(e) {
-	console.log(this.parentNode);
 	if(this.parentNode.id == "tags") {
 		if(tagList.indexOf(this.id) >= 0) { // if the tag already exists
 			tagList.splice(tagList.indexOf(this.id),1); // delete it from the array
@@ -331,165 +330,15 @@ function updatePsalmList(e) {
 			});
 		}
 		query = query.slice(0,-2);
-		console.log(query);
 		selectedPsalms = document.querySelectorAll(query);
 		showPsalms(selectedPsalms);
 	} else {
 		showPsalms(allPsalms);
 	}
-
-
-
-	console.log(stepList);
+	//console.log(stepList);
 }
 
 /*----------------------------- MAIN -----------------------------*/
 
 windowResize();
 window.onresize = windowResize;
-
-/*
-function changeHeader(headerColor) {
-	$("header").css("background-color", headerColor);
-}
-
-function loadPsalm(lang) {
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
-	if(urlParams.has('id')) {
-		var psalmId = urlParams.get('id');
-		// console.log(psalmId);
-		$.getJSON("/" + lang + "/psalmis.json", function(psalmis) {
-			var psalm = psalmis.psalms[psalmis.psalms.findIndex(obj => obj.id == psalmId)];
-			$("#psalm").addClass(psalm.step);
-			$("#psalm").append("<h1>" + psalm.title + "</h1>");
-			$("#psalm").append("<h2>" + psalm.subtitle + "</h2>");
-			if(psalm.capo) {
-				$("#psalm").append("<p class='capo'>Capo " + psalm.capo + "</p>");
-			}
-			$("#psalm").append("<div id='text'></div>");
-			$("#text").append("<div id='col1' class='col'></div><div id='col2' class='col'></div>");
-			psalm.column1.forEach(function(p) {
-				p.verse = p.verse.replaceAll("[", "<span data-chord='");
-				p.verse = p.verse.replaceAll("]", "'></span>");
-				$("#col1").append("<p class='" + p.style + "'>" + p.verse + "</p>");
-			});
-			psalm.column2.forEach(function(p) {
-				p.verse = p.verse.replaceAll("[", "<span data-chord='");
-				p.verse = p.verse.replaceAll("]", "'></span>");
-				$("#col2").append("<p class='" + p.style + "'>" + p.verse + "</p>");
-			});
-			$(".es").attr("href", "/es/psalmis.html?id=" + psalmId);
-			$(".en").attr("href", "/en/psalmis.html?id=" + psalmId);
-			var audioLink = "/audio/" + lang + "/" + psalm.link + ".mp3";
-			if(checkUrl(audioLink)) {
-				$("audio").attr("src", audioLink);
-				loadAudio();
-			} else {
-				if(lang == "es") {
-					$("#player").replaceWith("<div id='no-audio'>NO SE ENCUENTRA EL AUDIO</div>");
-				} else if(lang == "en") {
-					$("#player").replaceWith("<div id='no-audio'>AUDIO NOT FOUND</div>");
-				}
-				console.log("audio not found");
-			}
-		});
-	}
-}
-
-function hideAll() {
-	console.log("Hiding all");
-	$(".psalm").each(function() {
-		$(this).hide();
-	});
-}
-
-function showAll() {
-	console.log("Showing all");
-	$(".psalm").each(function() {
-		$(this).show();
-	});
-}
-
-function showPsalms() {
-	hideAll();
-	//console.log(searchList);
-	//console.log(stepList);
-	//console.log(tagList);
-	if(searchList.length && stepList.length && tagList.length) {
-		searchList.forEach(function(id) {
-			stepList.forEach(function(step) {
-				tagList.forEach(function(tag) {
-					$("#" + id + "." + step + "." + tag).show();
-				});
-			});
-		});
-	} else if(searchList.length && stepList.length) {
-		searchList.forEach(function(id) {
-			stepList.forEach(function(step) {
-				$("#" + id + "." + step).show();
-			});
-		});
-	} else if (searchList.length && tagList.length) {
-		searchList.forEach(function(id) {
-			tagList.forEach(function(tag) {
-				$("#" + id + "." + tag).show();
-			});
-		});
-	} else if(stepList.length && tagList.length) {
-		// Steps and tags selected, show only psalms with selected steps and tags
-		stepList.forEach(function(step) {
-			tagList.forEach(function(tag) {
-				$("." + step + "." + tag).show();
-			});
-		});
-	} else if(searchList.length) {
-		// Steps selected, show only psalms with selected steps
-		searchList.forEach(function(id) {
-			$("#" + id).show();
-		});
-	} else if(stepList.length) {
-		// Steps selected, show only psalms with selected steps
-		stepList.forEach(function(step) {
-			$("." + step).show();
-		});
-	} else if(tagList.length) {
-		// Tags selected, show only psalms with selected tags
-		tagList.forEach(function(tag) {
-			$("." + tag).show();
-		});
-	} else if(!searched) {
-		// No steps or tags selected, show all psalms
-		showAll();
-	}
-}
-
-$(document).ready(function() {
-	$(".step-button").on("click", function(e) {
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		if(stepList.includes($(this).attr("name"))) {
-			stepList.splice(stepList.indexOf($(this).attr("name")), 1);
-			$(this).removeClass('selected');
-		} else {
-			stepList.push($(this).attr("name"));
-			$(this).addClass('selected');
-		}
-		console.log(stepList);
-		showPsalms();
-	});
-
-	$(".tag-button").on("click", function(e) {
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		if(tagList.includes($(this).attr("name"))) {
-			tagList.splice(tagList.indexOf($(this).attr("name")), 1);
-			$(this).removeClass('selected');
-		} else {
-			tagList.push($(this).attr("name"));
-			$(this).addClass('selected');
-		}
-		console.log(tagList);
-		showPsalms();
-	});
-});*/
