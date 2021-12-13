@@ -29,6 +29,8 @@ const menuBtn = document.querySelector("#menu-button"); // left side hamburger m
 const closeBtn = document.querySelector("#close-button"); // left side menu close button
 const aside = document.querySelector("aside"); //left side menu
 const overlay = document.querySelector("#overlay"); // black transparent overlay when menus is open
+const tagBtns = document.querySelectorAll(".tag-button");
+const stepBtns = document.querySelectorAll(".step-button");
 
 /*----------------------------- PWS -----------------------------*/
 
@@ -52,6 +54,14 @@ if(resetLangBtn) resetLangBtn.addEventListener("click", resetLanguage);
 if(searchInput) searchInput.addEventListener("input", search);
 if(menuBtn) menuBtn.addEventListener("click", openMenu);
 if(closeBtn) closeBtn.addEventListener("click", closeMenu);
+
+if(stepBtns) stepBtns.forEach(function(button) {
+	button.addEventListener("click", updatePsalmList);
+});
+
+if(tagBtns) tagBtns.forEach(function(button) {
+	button.addEventListener("click", updatePsalmList);
+});
 
 /*----------------------------- FUNCTIONS -----------------------------*/
 
@@ -121,7 +131,7 @@ function closeMenu(e) {
 function generatePsalmList(lang) {
 	psalms[lang].reduceRight((_, psalm) => {
 		noResults.insertAdjacentHTML("afterend",
-			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}<span>${psalm.subtitle}</span></a>`);
+			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}[${psalm.classes}]<span>${psalm.subtitle}</span></a>`);
 	}, null);
 }
 
@@ -252,19 +262,85 @@ function search(e) {
 }
 
 function windowResize() {
-	if(window.innerWidth < 1000) {
-	 	if(!menuOpen) {
-			closeMenu(null);
+	if(aside) {
+		if(window.innerWidth < 1000) {
+		 	if(!menuOpen) {
+				closeMenu(null);
+			}
+			headerLangLinkES.innerHTML = "ES";
+			headerLangLinkEN.innerHTML = "EN";
+		} else {
+			aside.style.left = "0";
+			overlay.style.display = "none";
+			menuOpen = false;
+			headerLangLinkES.innerHTML = "Español";
+			headerLangLinkEN.innerHTML = "English";
 		}
-		headerLangLinkES.innerHTML = "ES";
-		headerLangLinkEN.innerHTML = "EN";
-	} else {
-		aside.style.left = "0";
-		overlay.style.display = "none";
-		menuOpen = false;
-		headerLangLinkES.innerHTML = "Español";
-		headerLangLinkEN.innerHTML = "English";
 	}
+}
+
+function hidePsalms(queryList) {
+	queryList.forEach(function(psalm) {
+		psalm.classList.add("hide");
+	});
+}
+
+function showPsalms(queryList) {
+	queryList.forEach(function(psalm) {
+		psalm.classList.remove("hide");
+	});
+}
+
+function updatePsalmList(e) {
+	console.log(this.parentNode);
+	if(this.parentNode.id == "tags") {
+		if(tagList.indexOf(this.id) >= 0) { // if the tag already exists
+			tagList.splice(tagList.indexOf(this.id),1); // delete it from the array
+			this.classList.remove("selected");
+		} else {
+			tagList.push(this.id); // else add the tag to the end of the array
+			this.classList.add("selected");
+		}
+	} else if(this.parentNode.id == "steps") {
+		if(stepList.indexOf(this.id) >= 0) { // if the step already exists
+			stepList.splice(stepList.indexOf(this.id),1); // delete it from the array
+			this.classList.remove("selected");
+		} else {
+			stepList.push(this.id); // else add the step to the end of the array
+			this.classList.add("selected");
+		}
+	}
+
+	allPsalms = document.querySelectorAll("#psalmlist a");
+	if(tagList.length || stepList.length) {
+		hidePsalms(allPsalms);
+		query = "";
+		if(stepList.length) {
+			stepList.forEach(function(step) {
+				if(tagList.length) {
+					tagList.forEach(function(tag) {
+						query += "." + step + "." + tag + ", ";
+					});
+				} else {
+					query += "." + step + ", "
+				}
+			});
+		} else {
+			tagList.forEach(function(tag) {
+				query += "." + tag + ", "
+			});
+		}
+		query = query.slice(0,-2);
+		console.log(query);
+		selectedPsalms = document.querySelectorAll(query);
+		showPsalms(selectedPsalms);
+	} else {
+		showPsalms(allPsalms);
+	}
+
+
+
+	console.log(stepList);
 }
 
 /*----------------------------- MAIN -----------------------------*/
