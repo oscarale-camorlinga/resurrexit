@@ -311,10 +311,10 @@ function updatePsalmList(e) {
 	}
 
 	allPsalms = document.querySelectorAll("#psalmlist a");
-	if(tagList.length || stepList.length) {
+	if(tagList.length || stepList.length) { // if there are tags or steps selected
 		hidePsalms(allPsalms);
 		query = "";
-		if(stepList.length) {
+		if(stepList.length) { // create query of tags, step&&tag || step&&tag || ...
 			stepList.forEach(function(step) {
 				if(tagList.length) {
 					tagList.forEach(function(tag) {
@@ -329,10 +329,10 @@ function updatePsalmList(e) {
 				query += "." + tag + ", "
 			});
 		}
-		query = query.slice(0,-2);
+		query = query.slice(0,-2); // remove last comma and space
 		selectedPsalms = document.querySelectorAll(query);
 		showPsalms(selectedPsalms);
-	} else {
+	} else { // if no tags or steps selected show all the psalms
 		showPsalms(allPsalms);
 	}
 	//console.log(stepList);
