@@ -6,6 +6,7 @@ Built as a PWA with HTML, CSS, and Javascript.
 - List of songs with verses and chords
 - Change between languages
 - View psalms by step or category
+- Search for keywords in psalms
 
 **Current languages:**
 - English (US)
@@ -15,7 +16,6 @@ Built as a PWA with HTML, CSS, and Javascript.
 - Implement full list of psalms
 - Upload audio
 - Integrate audio player
-- Integrate search
 - View chord diagrams
 - Setup database for user preferences
 - User custom categories (favorites, etc.)

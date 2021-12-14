@@ -264,7 +264,9 @@ function search(e) {
 	searchList = []; // clear out the search list
 	if(e.target.value.length > 2 && lang) { //search must contain atleast 3 letters
 		searching = true;
-		matches = psalms[lang].filter(psalm => psalm.text.includes(e.target.value.toLowerCase())); // return array of all matches
+		query = e.target.value.toLowerCase();
+		regex = new RegExp("\\b" + query.normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+		matches = psalms[lang].filter(psalm => psalm.text.match(regex)); // return array of all matches
 		matches.forEach(function(psalm) {
 			searchList.push("#" + psalm.id); // add each matched psalm id to the search list array
 		});
