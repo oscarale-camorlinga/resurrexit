@@ -1,9 +1,10 @@
 console.log("Started script");
+var lang = "";
 var tagList = [];
 var stepList = [];
 var searchList = [];
-var searched = false;
 var menuOpen = false;
+var searching = false;
 
 /*----------------------------- CONSTANTS -----------------------------*/
 
@@ -13,7 +14,9 @@ const optionDiv = document.querySelector("#option-menu"); // option menu div
 const resetLangBtn = document.querySelector("#reset-lang"); // reset preferred language button
 const headerDiv = document.querySelector("header"); // header
 const langLinkES = document.querySelectorAll(".es.lang"); // language es link
-const langLinkEN = document.querySelectorAll(".en.lang"); // language es link
+const langLinkEN = document.querySelectorAll(".en.lang"); // language en link
+const headerLangLinkES = document.querySelector("#es"); // language es link in header
+const headerLangLinkEN = document.querySelector("#en"); // language en link in header
 const psalmSection = document.querySelector("#psalm"); // psalm title for id
 const psalmTitle = document.querySelector("#psalm h1"); // psalm title for id
 const psalmSubtitle = document.querySelector("#psalm h2"); // psalm title for id
@@ -23,6 +26,12 @@ const psalmCol2 = document.querySelector("#psalm #col2"); // psalm title for id
 const searchInput = document.querySelector("input");
 const psalmList = document.querySelector("#psalmlist"); // full psalm list div
 const noResults = document.querySelector("#no-results"); // no results div in order to insert adjacent
+const menuBtn = document.querySelector("#menu-button"); // left side hamburger menu button
+const closeBtn = document.querySelector("#close-button"); // left side menu close button
+const aside = document.querySelector("aside"); //left side menu
+const overlay = document.querySelector("#overlay"); // black transparent overlay when menus is open
+const tagBtns = document.querySelectorAll(".tag-button");
+const stepBtns = document.querySelectorAll(".step-button");
 
 /*----------------------------- PWS -----------------------------*/
 
@@ -44,6 +53,16 @@ if(langBtn) langBtn.forEach(function(button) {
 if(optionBtn) optionBtn.addEventListener("click", toggleOptionDiv);
 if(resetLangBtn) resetLangBtn.addEventListener("click", resetLanguage);
 if(searchInput) searchInput.addEventListener("input", search);
+if(menuBtn) menuBtn.addEventListener("click", openMenu);
+if(closeBtn) closeBtn.addEventListener("click", closeMenu);
+
+if(stepBtns) stepBtns.forEach(function(button) {
+	button.addEventListener("click", updatePsalmList);
+});
+
+if(tagBtns) tagBtns.forEach(function(button) {
+	button.addEventListener("click", updatePsalmList);
+});
 
 /*----------------------------- FUNCTIONS -----------------------------*/
 
@@ -76,7 +95,6 @@ function toggleOptionDiv() {
 	// Open/close the option-menu div
 	var headerHeight = parseInt(getComputedStyle(headerDiv).height.replace("px", ""));
 	var optionDivTop = getComputedStyle(optionDiv).top;
-	console.log("Clicked option button");
 	if(window.innerWidth < 600) {
 		if(optionDivTop == "-140px") {
 			optionDiv.style.top = headerHeight + "px";
@@ -99,15 +117,28 @@ function resetLanguage(e) {
 	window.location.href = "/";
 }
 
-function generatePsalmList(lang) {
+function openMenu(e) {
+	aside.style.left = "0";
+	overlay.style.display = "block";
+	menuOpen = true;
+}
+
+function closeMenu(e) {
+	aside.style.left = "-320px";
+	overlay.style.display = "none";
+	menuOpen = false;
+}
+
+function generatePsalmList(l) {
+	lang = l;
 	psalms[lang].reduceRight((_, psalm) => {
-		console.log(`Inserting: ${psalm.title}`);
 		noResults.insertAdjacentHTML("afterend",
-			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}<span>${psalm.subtitle}</span></a>`);
+			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}[${psalm.classes}]<span>${psalm.subtitle}</span></a>`);
 	}, null);
 }
 
-function generatePsalm(lang) {
+function generatePsalm(l) {
+	lang = l;
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 	const psalmId = urlParams.get("id");
@@ -209,7 +240,6 @@ function loadAudio() {
 	});
 
 	timeline.click(function(e) {
-		console.log(clickPercent(e));
 		player.currentTime = duration * clickPercent(e);
 	});
 }
@@ -217,15 +247,10 @@ function loadAudio() {
 function setLangHref() {
 	if(langLinkEN && langLinkES) {
 		var currentPsalm = parseInt(psalmTitle.id);
-		console.log(currentPsalm);
-		console.log(typeof currentPsalm);
 		let psalmEN = psalmsEN.find(psalmEN => psalmEN.id === currentPsalm);
 		let psalmES = psalmsES.find(psalmES => psalmES.id === currentPsalm);
-		console.log(psalmEN);
-		console.log(psalmES);
 		linkEN = psalmEN.link;
 		linkES = psalmES.link;
-
 		langLinkEN.forEach(function(link) {
 			link.href = "/en/" + linkEN + ".html";
 		});
@@ -236,195 +261,104 @@ function setLangHref() {
 }
 
 function search(e) {
-	if(e.target.value) console.log(e.target.value);
-}
-
-/*
-function changeHeader(headerColor) {
-	$("header").css("background-color", headerColor);
-}
-
-function loadPsalm(lang) {
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
-	if(urlParams.has('id')) {
-		var psalmId = urlParams.get('id');
-		// console.log(psalmId);
-		$.getJSON("/" + lang + "/psalmis.json", function(psalmis) {
-			var psalm = psalmis.psalms[psalmis.psalms.findIndex(obj => obj.id == psalmId)];
-			$("#psalm").addClass(psalm.step);
-			$("#psalm").append("<h1>" + psalm.title + "</h1>");
-			$("#psalm").append("<h2>" + psalm.subtitle + "</h2>");
-			if(psalm.capo) {
-				$("#psalm").append("<p class='capo'>Capo " + psalm.capo + "</p>");
-			}
-			$("#psalm").append("<div id='text'></div>");
-			$("#text").append("<div id='col1' class='col'></div><div id='col2' class='col'></div>");
-			psalm.column1.forEach(function(p) {
-				p.verse = p.verse.replaceAll("[", "<span data-chord='");
-				p.verse = p.verse.replaceAll("]", "'></span>");
-				$("#col1").append("<p class='" + p.style + "'>" + p.verse + "</p>");
-			});
-			psalm.column2.forEach(function(p) {
-				p.verse = p.verse.replaceAll("[", "<span data-chord='");
-				p.verse = p.verse.replaceAll("]", "'></span>");
-				$("#col2").append("<p class='" + p.style + "'>" + p.verse + "</p>");
-			});
-			$(".es").attr("href", "/es/psalmis.html?id=" + psalmId);
-			$(".en").attr("href", "/en/psalmis.html?id=" + psalmId);
-			var audioLink = "/audio/" + lang + "/" + psalm.link + ".mp3";
-			if(checkUrl(audioLink)) {
-				$("audio").attr("src", audioLink);
-				loadAudio();
-			} else {
-				if(lang == "es") {
-					$("#player").replaceWith("<div id='no-audio'>NO SE ENCUENTRA EL AUDIO</div>");
-				} else if(lang == "en") {
-					$("#player").replaceWith("<div id='no-audio'>AUDIO NOT FOUND</div>");
-				}
-				console.log("audio not found");
-			}
+	searchList = []; // clear out the search list
+	if(e.target.value.length > 2 && lang) { //search must contain atleast 3 letters
+		searching = true;
+		query = e.target.value.toLowerCase();
+		regex = new RegExp("\\b" + query.normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+		matches = psalms[lang].filter(psalm => psalm.text.match(regex)); // return array of all matches
+		matches.forEach(function(psalm) {
+			searchList.push("#" + psalm.id); // add each matched psalm id to the search list array
 		});
-	}
-}
-
-function hideAll() {
-	console.log("Hiding all");
-	$(".psalm").each(function() {
-		$(this).hide();
-	});
-}
-
-function showAll() {
-	console.log("Showing all");
-	$(".psalm").each(function() {
-		$(this).show();
-	});
-}
-
-function showPsalms() {
-	hideAll();
-	//console.log(searchList);
-	//console.log(stepList);
-	//console.log(tagList);
-	if(searchList.length && stepList.length && tagList.length) {
-		searchList.forEach(function(id) {
-			stepList.forEach(function(step) {
-				tagList.forEach(function(tag) {
-					$("#" + id + "." + step + "." + tag).show();
-				});
-			});
-		});
-	} else if(searchList.length && stepList.length) {
-		searchList.forEach(function(id) {
-			stepList.forEach(function(step) {
-				$("#" + id + "." + step).show();
-			});
-		});
-	} else if (searchList.length && tagList.length) {
-		searchList.forEach(function(id) {
-			tagList.forEach(function(tag) {
-				$("#" + id + "." + tag).show();
-			});
-		});
-	} else if(stepList.length && tagList.length) {
-		// Steps and tags selected, show only psalms with selected steps and tags
-		stepList.forEach(function(step) {
-			tagList.forEach(function(tag) {
-				$("." + step + "." + tag).show();
-			});
-		});
-	} else if(searchList.length) {
-		// Steps selected, show only psalms with selected steps
-		searchList.forEach(function(id) {
-			$("#" + id).show();
-		});
-	} else if(stepList.length) {
-		// Steps selected, show only psalms with selected steps
-		stepList.forEach(function(step) {
-			$("." + step).show();
-		});
-	} else if(tagList.length) {
-		// Tags selected, show only psalms with selected tags
-		tagList.forEach(function(tag) {
-			$("." + tag).show();
-		});
-	} else if(!searched) {
-		// No steps or tags selected, show all psalms
-		showAll();
-	}
-}
-
-$(document).ready(function() {
-	$(".step-button").on("click", function(e) {
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		if(stepList.includes($(this).attr("name"))) {
-			stepList.splice(stepList.indexOf($(this).attr("name")), 1);
-			$(this).removeClass('selected');
-		} else {
-			stepList.push($(this).attr("name"));
-			$(this).addClass('selected');
-		}
-		console.log(stepList);
-		showPsalms();
-	});
-
-	$(".tag-button").on("click", function(e) {
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		if(tagList.includes($(this).attr("name"))) {
-			tagList.splice(tagList.indexOf($(this).attr("name")), 1);
-			$(this).removeClass('selected');
-		} else {
-			tagList.push($(this).attr("name"));
-			$(this).addClass('selected');
-		}
-		console.log(tagList);
-		showPsalms();
-	});
-
-	$("#menu-button").click(function(e) {
-		$("aside").css("left", "0");
-		$("#overlay").css("display", "block");
-		menuOpen = true;
-	});
-
-	$("#close-button").click(function(e) {
-		$("aside").css("left", "-320px");
-		$("#overlay").css("display", "none");
-		menuOpen = false;
-	});
-
-//	if($(window).width() < 600) {
-//		if($(window).width() < 600) {
-//			$("#search-field").attr("placeholder", "Resurrexit");
-//		}
-	}
-
-	if($(window).width() < 600) {
-
-	} else if($(window).width() < 1000) {
-		$("#es").html("ES");
-		$("#en").html("EN");
 	} else {
+		searching = false;
+	}
+	updatePsalmList(e);
+	// console.log(searchList);
+}
 
+function windowResize() {
+	if(aside) {
+		if(window.innerWidth < 1000) {
+		 	if(!menuOpen) {
+				closeMenu(null);
+			}
+			headerLangLinkES.innerHTML = "ES";
+			headerLangLinkEN.innerHTML = "EN";
+		} else {
+			aside.style.left = "0";
+			overlay.style.display = "none";
+			menuOpen = false;
+			headerLangLinkES.innerHTML = "Español";
+			headerLangLinkEN.innerHTML = "English";
+		}
+	}
+}
+
+function hidePsalms(queryList) {
+	queryList.forEach(function(psalm) {
+		psalm.classList.add("hide");
+	});
+}
+
+function showPsalms(queryList) {
+	queryList.forEach(function(psalm) {
+		psalm.classList.remove("hide");
+	});
+}
+
+const combine = ([head, ...[headTail, ...tailTail]]) => {
+	if(!headTail) return head;
+	const combined = headTail.reduce((acc, x) => {
+		return acc.concat(head.map(h => `${h}${x}`))
+	}, []);
+	return combine([combined, ...tailTail]);
+}
+
+function updatePsalmList(e) {
+	if(this.parentNode) {
+		if(this.parentNode.id == "tags") {
+			if(tagList.indexOf("." + this.id) >= 0) { // if the tag already exists
+				tagList.splice(tagList.indexOf("." + this.id),1); // delete it from the array
+				this.classList.remove("selected");
+			} else {
+				tagList.push("." + this.id); // else add the tag to the end of the array
+				this.classList.add("selected");
+			}
+		} else if(this.parentNode.id == "steps") {
+			if(stepList.indexOf("." + this.id) >= 0) { // if the step already exists
+				stepList.splice(stepList.indexOf("." + this.id),1); // delete it from the array
+				this.classList.remove("selected");
+			} else {
+				stepList.push("." + this.id); // else add the step to the end of the array
+				this.classList.add("selected");
+			}
+		}
 	}
 
-	$(window).resize(function() {
-		if($(window).width() < 1000) {
-			if(!menuOpen) {
-				$("aside").css("left", "-320px");
-				$("#overlay").css("display", "none");
-			}
-			$("#es").html("ES");
-			$("#en").html("EN");
-		} else {
-			$("aside").css("left", "0");
-			$("#overlay").css("display", "none");
-			$("#es").html("Español");
-			$("#en").html("English");
-			menuOpen = false;
+	allPsalms = document.querySelectorAll("#psalmlist a");
+	if(tagList.length || stepList.length || searchList.length || searching) { // if there are tags or steps selected or a search was made
+		hidePsalms(allPsalms);
+		query = [];
+		if(tagList.length && stepList.length && searchList.length) query = combine([searchList, stepList, tagList]);
+		else if(tagList.length && stepList.length) query = combine([stepList, tagList]);
+		else if(tagList.length && searchList.length) query = combine([searchList, tagList]);
+		else if(stepList.length && searchList.length) query = combine([searchList, stepList]);
+		else if(tagList.length) query = tagList;
+		else if(stepList.length) query = stepList;
+		else if(searchList.length) query = searchList;
+		if(query.length) {
+			query = query.join(", ")
+			selectedPsalms = psalmList.querySelectorAll(query);
+			showPsalms(selectedPsalms);
 		}
-	});
-});*/
+	} else { // if no tags or steps selected show all the psalms
+		showPsalms(allPsalms);
+	}
+	//console.log(stepList);
+}
+
+/*----------------------------- MAIN -----------------------------*/
+
+windowResize();
+window.onresize = windowResize;

@@ -1,10 +1,12 @@
-## Resurrexit v0.1.0
+## Resurrexit v0.2.0
 ### A multi-language songbook and toolset for psalms for the Neocatechumenal Way.
 Built as a PWA with HTML, CSS, and Javascript.
 
 **Current features:**
 - List of songs with verses and chords
 - Change between languages
+- View psalms by step or category
+- Search functionality
 
 **Current languages:**
 - English (US)
@@ -12,10 +14,8 @@ Built as a PWA with HTML, CSS, and Javascript.
 
 **To-Do:**
 - Implement full list of psalms
-- View psalms by step or category
 - Upload audio
 - Integrate audio player
-- Integrate search
 - View chord diagrams
 - Setup database for user preferences
 - User custom categories (favorites, etc.)
@@ -23,6 +23,10 @@ Built as a PWA with HTML, CSS, and Javascript.
 - Celebration psalm list
 
 ---
+
+**v0.2.0**
+- Search functionality
+- View psalms by step or category
 
 **v0.1.0:**
 - Creation of repository
