@@ -141,10 +141,6 @@ button, input {
 	font-size: 1.4rem;
 }
 
-#title:hover {
-	color: #777;
-}
-
 #lang {
 	display: flex;
 	align-items: center;
@@ -363,6 +359,7 @@ button, input {
 	display: block;
 	font-weight: bold;
 	margin: auto;
+	text-align: center;
 }
 
 aside {
@@ -646,7 +643,6 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	#menu-button { display: inline-block;; }
 	#search-button { left: 45px; }
 	#search-field { margin-left: 35px; width: calc(100% - 35px); }
-	#player { margin-left: 0; left: inherit; right: inherit; position: static; }
 	#player-progress-wrapper { width: 300px; }
 	#player button { width: 1.1rem; height: 1.1rem; }
 	#back-button img { height: 1.1rem; }

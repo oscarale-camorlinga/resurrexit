@@ -283,20 +283,20 @@ function search(e) {
 }
 
 function windowResize() {
-	if(aside) {
-		if(window.innerWidth < 1000) {
-		 	if(!menuOpen) {
-				closeMenu(null);
-			}
-			headerLangLinkES.innerHTML = "ES";
-			headerLangLinkEN.innerHTML = "EN";
-		} else {
+	if(window.innerWidth < 1000) {
+	 	if(aside && !menuOpen) {
+			closeMenu(null);
+		}
+		headerLangLinkES.innerHTML = "ES";
+		headerLangLinkEN.innerHTML = "EN";
+	} else {
+		if(aside) {
 			aside.style.left = "0";
 			overlay.style.display = "none";
 			menuOpen = false;
-			headerLangLinkES.innerHTML = "Español";
-			headerLangLinkEN.innerHTML = "English";
 		}
+		headerLangLinkES.innerHTML = "Español";
+		headerLangLinkEN.innerHTML = "English";
 	}
 }
 
