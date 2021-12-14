@@ -5,6 +5,7 @@ var stepList = [];
 var searchList = [];
 var menuOpen = false;
 var searching = false;
+var duration;
 
 /*----------------------------- CONSTANTS -----------------------------*/
 
@@ -32,6 +33,13 @@ const aside = document.querySelector("aside"); //left side menu
 const overlay = document.querySelector("#overlay"); // black transparent overlay when menus is open
 const tagBtns = document.querySelectorAll(".tag-button");
 const stepBtns = document.querySelectorAll(".step-button");
+const playerWrapper = document.querySelector("#player");
+const player = document.querySelector("audio");
+const playerButton = document.querySelector("#player-button");
+const audioProgress = document.querySelector("#player-progress");
+const timeline = document.querySelector("#player-progress-wrapper");
+const playingTime = document.querySelector("#player-start");
+const endingTime = document.querySelector("#player-end");
 
 /*----------------------------- PWS -----------------------------*/
 
@@ -63,6 +71,23 @@ if(stepBtns) stepBtns.forEach(function(button) {
 if(tagBtns) tagBtns.forEach(function(button) {
 	button.addEventListener("click", updatePsalmList);
 });
+
+if(playerButton) playerButton.addEventListener("click", playAudio);
+
+if(player) {
+	player.addEventListener("timeupdate", timeUpdate, false);
+	player.addEventListener("canplaythrough", function() {
+		duration = player.duration;
+	});
+	player.addEventListener("error", playerError);
+}
+
+if(timeline) {
+	timeline.addEventListener("click", function(e) {
+		player.currentTime = duration * clickPercent(e);
+		player.currentTime = String(duration * clickPercent(e));
+	});
+}
 
 /*----------------------------- FUNCTIONS -----------------------------*/
 
@@ -165,6 +190,12 @@ function generatePsalm(l) {
 		langLinkES.forEach(link => {
 			link.href = `/es/psalmus.html?id=${psalm.id}`;
 		});
+		if(player) {
+			player.src = "/audio/" + lang + "/" +
+				psalm.title.replace(/\s/g, "-").toLowerCase()
+				.normalize("NFD").replace(/[\u0300-\u036f]/g, "") + ".mp3";
+			console.log(player.src);
+		}
 	} else {
 		console.log(`Could not find psalm with id: ${psalmId}`);
 		if(lang == "en") psalmSubtitle.innerHTML = "Could not reproduce psalm";
@@ -172,76 +203,50 @@ function generatePsalm(l) {
 	}
 }
 
-function loadAudio() {
-	console.log("Audio found!");
-	var player = $("audio")[0],
-	playerButton = $("#player-button"),
-	duration,
-	audioProgress = $("#player-progress"),
-	timeline = $("#player-progress-wrapper"),
-	playingTime = $("#player-start"),
-	endingTime = $("#player-end");
+function playerError(e) {
+	if(lang == "en") playerWrapper.innerHTML = "<p id='no-audio'>AUDIO COULD NOT BE REPRODUCED</p>"
+	if(lang == "es") playerWrapper.innerHTML = "<p id='no-audio'>EL AUDIO NO SE PUDO REPRODUCIR</p>"
+}
 
-	function playAudio() {
-		if(player.paused) {
-			player.play();
-			playerButton.removeClass("play");
-			playerButton.addClass("pause");
-		} else {
-			player.pause();
-			playerButton.removeClass("pause");
-			playerButton.addClass("play");
-		}
+function playAudio() {
+	if(player.paused) {
+		player.play();
+		playerButton.classList.remove("play");
+		playerButton.classList.add("pause");
+	} else {
+		player.pause();
+		playerButton.classList.remove("pause");
+		playerButton.classList.add("play");
 	}
+}
 
-	function timePadding(string, pad, length) {
-		return(new Array(length + 1).join(pad) + string).slice(-length);
+function timePadding(string, pad, length) {
+	return(new Array(length + 1).join(pad) + string).slice(-length);
+}
+
+function formatSeconds(s) {
+	return(s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s;
+}
+
+function timeUpdate() {
+	var playPercent = 100 * (player.currentTime / duration);
+	audioProgress.style.width = playPercent + "%";
+	if(duration) {
+		var playingMinutes = Math.floor(player.currentTime / 60),
+			playingSeconds = player.currentTime - playingMinutes * 60,
+			endingMinutes = Math.floor(duration / 60),
+			endingSeconds = duration - endingMinutes * 60;
+		playingTime.innerHTML = formatSeconds(Math.floor(player.currentTime));
+		endingTime.innerHTML = formatSeconds(Math.floor(duration));
 	}
+}
 
-	function formatSeconds(s) {
-		return(s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s;
-	}
+function getPosition(el) {
+	return el.getBoundingClientRect().left;
+}
 
-	function timeUpdate() {
-		var playPercent = 100 * (player.currentTime / duration);
-		audioProgress.css("width", playPercent + "%");
-		if(duration) {
-			var playingMinutes = Math.floor(player.currentTime / 60),
-				playingSeconds = player.currentTime - playingMinutes * 60,
-				endingMinutes = Math.floor(duration / 60),
-				endingSeconds = duration - endingMinutes * 60;
-			playingTime.html(formatSeconds(Math.floor(player.currentTime)));
-			endingTime.html(formatSeconds(Math.floor(duration)));
-		}
-	}
-
-	function getPosition(el) {
-		return el.getBoundingClientRect().left;
-	}
-
-	function clickPercent(e) {
-		return(e.clientX - getPosition(timeline[0])) / timeline.width();
-	}
-
-	/*function movePlayhead(e) {
-		var newTimelineWidth = clickPercent(e);
-		if(newTimelineWidth == 0 && newTimelineWidth == timelineWidth) {
-			audioProgress.css("width",
-		}
-	}*/
-
-	playerButton.click(function(e) {
-		playAudio();
-	});
-
-	player.addEventListener("timeupdate", timeUpdate, false);
-	player.addEventListener("canplaythrough", function() {
-		duration = player.duration;
-	});
-
-	timeline.click(function(e) {
-		player.currentTime = duration * clickPercent(e);
-	});
+function clickPercent(e) {
+	return (e.clientX - getPosition(timeline)) / timeline.offsetWidth;
 }
 
 function setLangHref() {
