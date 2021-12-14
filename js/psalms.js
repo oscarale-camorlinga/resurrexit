@@ -3,7 +3,7 @@ psalms = {
         {
             "title": "A LA CENA DEL CORDERO",
             "subtitle": "Himno de Vísperas del tiempo Pascual hasta la Ascensión",
-            "id": "219",
+            "id": "p219",
             "classes": "ele pas off ini",
             "capo": "",
             "psalm": {
@@ -45,7 +45,7 @@ psalms = {
         {
             "title": "A LA VÍCTIMA PASCUAL",
             "subtitle": "Secuencia de Pascua",
-            "id": "1",
+            "id": "p1",
             "classes": "pre pas pen ini com off",
             "capo": "Capo 5",
             "psalm": {
@@ -71,7 +71,7 @@ psalms = {
         {
             "title": "A NADIE DEMOS OCASIÓN DE TROPIEZO",
             "subtitle": "2 Corintios 6,3ss",
-            "id": "2",
+            "id": "p2",
             "classes": "pre",
             "capo": "",
             "psalm": {
@@ -121,7 +121,7 @@ psalms = {
         {
             "title": "A TI LEVANTO MIS OJOS",
             "subtitle": "Salmo 123 (122)",
-            "id": "3",
+            "id": "p3",
             "classes": "pre qua",
             "capo": "Capo 3",
             "psalm": {
@@ -162,7 +162,7 @@ psalms = {
         {
             "title": "A TI, SEÑOR, EN MI CLAMOR IMPLORO",
             "subtitle": "Salmo 142 (141)",
-            "id": "4",
+            "id": "p4",
             "classes": "pre qua",
             "capo": "Capo 2",
             "psalm": {
@@ -200,7 +200,7 @@ psalms = {
         {
             "title": "A TI, SEÑOR, LEVANTO MI ALMA",
             "subtitle": "Salmo 25 (24)",
-            "id": "5",
+            "id": "p5",
             "classes": "pre qua",
             "capo": "Capo 3",
             "psalm": {
@@ -233,7 +233,7 @@ psalms = {
         {
             "title": "A TI, SEÑOR, SE DEBE LA ALABANZA EN SIÓN",
             "subtitle": "Salmo 65 (64)",
-            "id": "6",
+            "id": "p6",
             "classes": "pre qua off",
             "capo": "Capo 3",
             "psalm": {
@@ -271,7 +271,7 @@ psalms = {
         {
             "title": "ALELUYA PASCUAL",
             "subtitle": "Apropiado para el tiempo Pascual *",
-            "id": "152",
+            "id": "p152",
             "classes": "lit",
             "capo": "",
             "psalm": {
@@ -304,7 +304,7 @@ psalms = {
         {
             "title": "ASÍ HABLA EL AMÉN",
             "subtitle": "Apocalipsis 3,14-22",
-            "id": "191",
+            "id": "p191",
             "classes": "cat qua",
             "capo": "",
             "psalm": {
@@ -340,7 +340,7 @@ psalms = {
         {
             "title": "ALLELUIA - EASTER",
             "subtitle": "Appropriate during Easter Time *",
-            "id": "152",
+            "id": "p152",
             "classes": "lit",
             "capo": "",
             "psalm": {
@@ -377,7 +377,7 @@ psalms = {
         {
             "title": "AT THE BANQUET OF THE LAMB",
             "subtitle": "Hymn for Vespers from Easter to the Ascension",
-            "id": "219",
+            "id": "p219",
             "classes": "ele pas off ini",
             "capo": "",
             "psalm": {
@@ -427,7 +427,7 @@ psalms = {
         {
             "title": "BROTHERS",
             "subtitle": "2 Corinthians 6,3ff",
-            "id": "2",
+            "id": "p2",
             "classes": "pre",
             "capo": "",
             "psalm": {
@@ -485,7 +485,7 @@ psalms = {
         {
             "title": "THUS SPEAK THE AMEN",
             "subtitle": "Revelations 3,14-22",
-            "id": "191",
+            "id": "p191",
             "classes": "cat qua",
             "capo": "",
             "psalm": {
@@ -531,7 +531,7 @@ psalms = {
         {
             "title": "TO THE PASCHAL VICTIM",
             "subtitle": "Easter Sequence",
-            "id": "1",
+            "id": "p1",
             "classes": "pre pas pen ini com off",
             "capo": "Capo 5",
             "psalm": {
@@ -569,7 +569,7 @@ psalms = {
         {
             "title": "TO YOU I LIFT UP MY EYES",
             "subtitle": "Psalm 123 (122)",
-            "id": "3",
+            "id": "p3",
             "classes": "pre qua",
             "capo": "Capo 3",
             "psalm": {
@@ -610,7 +610,7 @@ psalms = {
         {
             "title": "TO YOU, O LORD, I LIFT UP MY SOUL",
             "subtitle": "Psalm 25 (24)",
-            "id": "5",
+            "id": "p5",
             "classes": "pre qua",
             "capo": "Capo 3",
             "psalm": {
@@ -643,7 +643,7 @@ psalms = {
         {
             "title": "TO YOU, O LORD, WITH MY VOICE I CRY FOR HELP",
             "subtitle": "Psalm 142 (141)",
-            "id": "4",
+            "id": "p4",
             "classes": "pre qua",
             "capo": "Capo 2",
             "psalm": {
@@ -681,7 +681,7 @@ psalms = {
         {
             "title": "TO YOU, O LORD",
             "subtitle": "Psalm 65 (64)",
-            "id": "6",
+            "id": "p6",
             "classes": "pre qua off",
             "capo": "Capo 3",
             "psalm": {
