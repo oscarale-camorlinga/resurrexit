@@ -1,16 +1,16 @@
 var cacheName = 'resurrexit-v0.3.2';
 var filesToCache = [
-	'/',
-	'/es/',
-	'/en/',
-	'/index.html',
-	'/en/index.html',
-	'/es/index.html',
-	'/en/psalmus.html',
-	'/es/psalmus.html',
-	'/css/styles.css',
-	'/js/main.js',
-	'/js/psalms.js'
+	// '/',
+	// '/es/',
+	// '/en/',
+	// '/index.html',
+	// '/en/index.html',
+	// '/es/index.html',
+	// '/en/psalmus.html',
+	// '/es/psalmus.html',
+	// '/css/styles.css',
+	// '/js/main.js',
+	// '/js/psalms.js'
 ];
 
 /* Start the service worker and cache all of the app's content */
