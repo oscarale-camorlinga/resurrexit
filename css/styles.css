@@ -38,6 +38,10 @@ body {
 
 a { text-decoration: none; }
 
+button, input {
+	outline: none;
+}
+
 #choose #logo {
 	display: inline-block;
 	width: 128px;
@@ -80,16 +84,6 @@ a { text-decoration: none; }
 	background-color: var(--clr-gray-light-h);
 }
 
-#header-background {
-	background-color: white;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	right: -2000px;
-	top: 0;
-	z-index: 4;
-}
-
 header {
 	border-bottom: 1px solid var(--clr-gray-light);
 	display: flex;
@@ -106,11 +100,22 @@ header {
 }
 
 header.full {
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
-button, input {
-	outline: none;
+#header-background {
+	background-color: white;
+	height: 100%;
+	left: -2000px;
+	position: absolute;
+	right: -2000px;
+	top: 0;
+	z-index: 4;
+}
+
+header.full #header-background {
+
 }
 
 #menu-button, #close-button, #option-button {
@@ -139,6 +144,7 @@ button, input {
 #title-wrapper {
 	display: inline-block;
 	position: relative;
+	z-index: 5;
 }
 
 #title {
@@ -196,14 +202,14 @@ button, input {
 
 #option-menu {
 	background-color: white;
-	border: 1px solid var(--clr-gray-light);
-	display: block;
-	padding: 10px 20px;
+	border: 0px solid var(--clr-gray-light);
+	overflow: hidden;
+	padding: 0;
 	position: absolute;
-	text-align: right;
-	top: -200px;
-	right: 0;
-	z-index: 3;
+	right: 50px;
+	top: 50px;
+	width: 0;
+	z-index: 6;
 }
 
 #option-menu a {
@@ -212,11 +218,13 @@ button, input {
 	display: block;
 	padding: 10px 0;
 	transition: .3s;
+	white-space: nowrap;
 }
 
 #option-menu a.lang {
 	border-top: none;
 	color: var(--clr-red);
+	display: none;
 	font-weight: bold;
 	margin-top: 0;
 }
@@ -305,6 +313,7 @@ button, input {
 	/* margin-left: -220px; */
 	position: absolute;
 	transform: translateX(-50%);
+	z-index: 5;
 }
 
 #player button {
@@ -559,10 +568,11 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 }
 
 #psalm {
-	position: relative;
-	margin: 0 20%;
+	max-width: 1200px;
+	margin: 0 auto;
 	padding-top: 100px;
 	padding-bottom: 40px;
+	position: relative;
 }
 
 #psalm h1 {
@@ -646,6 +656,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	}
 	#title { display: inline-block; font-size: 1.6rem; }
 	#menu-button { display: inline-block;; }
+	#option-menu { top: 40px; }
 	#search-button { left: 45px; }
 	#search-field { margin-left: 35px; width: calc(100% - 35px); }
 	#player-progress-wrapper { width: 300px; }
@@ -704,6 +715,8 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	}
 	#close-button { top: 9px; }
 	#lang a { display: none; }
+	#option-menu { top: 30px; }
+	#option-menu a.lang { display: block; }
 	aside #title {
 		display: block;
 		font-size: 1.6rem;
