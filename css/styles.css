@@ -7,7 +7,19 @@ YELLOW	#F6FF99		#DDE58A		246, 255, 153
 MAROON	#8E110B		#750E09		143, 17, 11
 GRAY	#F2F2F2		#D9D9D9		242, 242, 242
 */
-
+:root {
+	--clr-blue:			#99EEFF;
+	--clr-blue-dark:	#89D6E5;
+	--clr-green:		#96FFAA;
+	--clr-green-dark:	#8AE599;
+	--clr-yellow:		#F6FF99;
+	--clr-yellow-dark:	#DDE58A;
+	--clr-red:			#8E110B;
+	--clr-red-dark:		#750E09;
+	--clr-gray:			#777777;
+	--clr-gray-dark:	#333333;
+	--clr-gray-light:	#EEEEEE;
+}
 html {
 	font-size: 100%;
 }
@@ -15,7 +27,7 @@ html {
 body {
 	font-family: 'Libre Franklin', sans-serif;
 	font-size: .875rem;
-	background-color: #F2F2F2;
+	background-color: var(--clr-gray-light);
 }
 
 *, *:before, *:after {
@@ -33,7 +45,7 @@ a { text-decoration: none; }
 
 #choose {
 	background-color: white;
-	color: #333;
+	color: var(--clr-gray-dark);
 	height: 500px;
 	margin: -250px 0 0 -250px;
 	padding: 20px;
@@ -50,7 +62,7 @@ a { text-decoration: none; }
 #choose button {
 	background-color: white;
 	border: none;
-	color: #333;
+	color: var(--clr-gray-dark);
 	cursor: pointer;
 	display: block;
 	font-family: 'Libre Franklin', sans-serif;
@@ -65,20 +77,7 @@ a { text-decoration: none; }
 }
 
 #choose button:hover {
-	background-color: #D9D9D9;
-}
-
-#choose a {
-	background-color: transparent;
-	color: #8E110B;
-	display: block;
-	padding: 20px 0;
-	text-decoration: none;
-	transition: .3s;
-}
-
-#choose a:hover {
-	color: #777;
+	background-color: var(--clr-gray-light);
 }
 
 header {
@@ -133,7 +132,7 @@ button, input {
 #title {
 	font-size: 2.1rem;
 	font-weight: bold;
-	color: #8E110B;
+	color: var(--clr-red);
 	transition: .3s;
 }
 
@@ -149,7 +148,7 @@ button, input {
 #lang a {
 	border-top: 3px solid white;
 	border-bottom: 3px solid white;
-	color: #8E110B;
+	color: var(--clr-red);
 	display: inline-block;
 	font-weight: bold;
 	padding: 5px;
@@ -161,12 +160,12 @@ button, input {
 }
 
 #lang a.active {
-	border-bottom: 3px solid #8E110B;
+	border-bottom: 3px solid var(--clr-red);
 	/*text-decoration: underline;*/
 }
 
 #lang a:hover {
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #lang a.active:hover {
@@ -194,42 +193,34 @@ button, input {
 }
 
 #option-menu a {
-	color: #777;
+	color: var(--clr-gray);
 	cursor: pointer;
 	display: block;
 	padding: 10px 0;
 	transition: .3s;
 }
 
-#option-menu a:first-of-type {
-
-}
-
 #option-menu a.lang {
 	border-top: none;
-	color: #8E110B;
+	color: var(--clr-red);
 	font-weight: bold;
 	margin-top: 0;
 }
 
 #option-menu a:hover {
-	color: #333;
+	color: var(--clr-red);
 }
 
 #option-menu a.lang:hover {
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #option-menu .spacer {
-	background-color: #F2F2F2;
+	background-color: var(--clr-gray-light);
 	display: block;
 	height: 1px;
 	margin: 10px 0;
 	width: 100%;
-}
-
-#reset-lang {
-
 }
 
 #back-button {
@@ -258,7 +249,7 @@ button, input {
 	background: rgba(143, 17, 11, .05);
 	border: none;
 	border-radius: 17px;
-	color: #8E110B;
+	color: var(--clr-red);
 	display: inline-block;
 	font-family: 'Libre Franklin', sans-serif;
 	font-size: 1rem;
@@ -269,9 +260,9 @@ button, input {
 }
 
 #search-field::-webkit-input-placeholder { color: rgba(255, 255, 255, .5); }
-#search-field::-moz-placeholder { color: rgba(255, 255, 255, .9); }
-#search-field::-ms-input-placeholder { color: rgba(255, 255, 255, .9); }
-#search-field:-moz-placeholder { color: rgba(255, 255, 255, .9); }
+#search-field::-moz-placeholder { color: rgba(255, 255, 255, .5); }
+#search-field::-ms-input-placeholder { color: rgba(255, 255, 255, .5); }
+#search-field:-moz-placeholder { color: rgba(255, 255, 255, .5); }
 
 #search-button {
 	background: none;
@@ -324,7 +315,7 @@ button, input {
 }
 
 #player-progress-wrapper {
-	background-color: rgba(143, 17, 11, .05);
+	background-color: var(--clr-gray-light);
 	border-radius: 5px;
 	cursor: pointer;
 	height: 10px;
@@ -333,7 +324,7 @@ button, input {
 }
 
 #player-progress {
-	background-color: #8E110B;
+	background-color: var(--clr-red);
 	border-radius: 5px;
 	height: 10px;
 	width: 0;
@@ -341,7 +332,7 @@ button, input {
 
 #player-progress-wrapper p {
 	bottom: -15px;
-	color: #777;
+	color: var(--clr-gray);
 	font-size: .6rem;
 	position: absolute;
 }
@@ -355,7 +346,7 @@ button, input {
 }
 
 #no-audio {
-	color: #D9D9D9;
+	color: var(--clr-gray-light);
 	display: block;
 	font-weight: bold;
 	margin: auto;
@@ -385,12 +376,12 @@ aside::-webkit-scrollbar {
 	position: absolute;
 	top: 19px; right: 20px;
 	font-size: 2.1rem;
-	color: #D9D9D9;
+	color: var(--clr-gray);
 	transition: .3s;
 }
 
 #close-button:hover {
-	color: #777;
+	color: var(--clr-red);
 }
 
 aside #title {
@@ -400,8 +391,8 @@ aside #title {
 }
 
 aside p {
-	border-bottom: 1px solid #F2F2F2;
-	color: #777;
+	border-bottom: 1px solid var(--clr-gray-light);
+	color: var(--clr-gray);
 	display: block;
 	margin: 0 0 20px 20px;
 	padding: 10px 0;
@@ -453,7 +444,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	border: none;
 	cursor: pointer;
 	background: white;
-	color: #777;
+	color: var(--clr-gray);
 }
 
 .step-button {
@@ -472,11 +463,11 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	color: white;
 	border-radius: 50%;
 	transition: 0.3s;
-	background-color: #777;
+	background-color: var(--clr-gray);
 }
 
 .step-button:hover {
-	background-color: #D9D9D9;
+	background-color: var(--clr-gray-light);
 }
 
 #tags {
@@ -498,27 +489,27 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 }
 
 .tag-button:hover {
-	background-color: #D9D9D9;
+	background-color: var(--clr-gray-light);
 }
 
-#steps .selected { color: #8E110B; }
-#steps .selected span { background-color: #8E110B; }
+#steps .selected { color: var(--clr-red); }
+#steps .selected span { background-color: var(--clr-red); }
 
-#tags .selected { color: white; background-color: #8E110B; }
-#tags .selected:hover { background-color: #750E09; }
+#tags .selected { color: white; background-color: var(--clr-red); }
+#tags .selected:hover { background-color: var(--clr-red-dark); }
 
 #psalmlist .pre, #psalm.pre { background-color: white; }
-#psalmlist .lit, #psalm.lit { background-color: #F6FF99; }
-#psalmlist .cat, #psalm.cat { background-color: #99EEFF; }
-#psalmlist .ele, #psalm.ele { background-color: #96FFAA; }
+#psalmlist .lit, #psalm.lit { background-color: var(--clr-yellow); }
+#psalmlist .cat, #psalm.cat { background-color: var(--clr-blue); }
+#psalmlist .ele, #psalm.ele { background-color: var(--clr-green); }
 
-#psalmlist .pre:hover { background-color: #D9D9D9; }
-#psalmlist .lit:hover { background-color: #DDE58A; }
-#psalmlist .cat:hover { background-color: #89D6E5; }
-#psalmlist .ele:hover { background-color: #8AE599; }
+#psalmlist .pre:hover { background-color: var(--clr-gray-light); }
+#psalmlist .lit:hover { background-color: var(--clr-yellow-dark); }
+#psalmlist .cat:hover { background-color: var(--clr-blue-dark); }
+#psalmlist .ele:hover { background-color: var(--clr-green-dark); }
 
 #no-results {
-	color: #777;
+	color: var(--clr-gray);
 	display: block;
 	left: 320px; right: 0;
 	padding: 15px;
@@ -534,7 +525,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	padding: 15px;
 	margin-bottom: 3px;
 	text-align: left;
-	color: rgba(20, 20, 20, 0.7);
+	color: var(--clr-gray-dark);
 	text-decoration: none;
 	font-weight: bold;
 	cursor: pointer;
@@ -546,7 +537,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	float: right;
 	font-size: 0.8rem;
 	font-weight: normal;
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #psalmlist a.hide {
@@ -566,11 +557,11 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-align: center;
-	color: #8E110B;
+	color: var(--clr-red);
 }
 
 #psalm h2 {
-	color: #777;
+	color: var(--clr-gray);
 	display: block;
 	font-size: 1rem;
 	font-weight: normal;
@@ -605,7 +596,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	left: 5%; top: 130px;
 	padding-top: 0;
 	font-size: 0.8rem;
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #psalm p span[data-chord]:before {
@@ -616,7 +607,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	content: attr(data-chord);
 	white-space: nowrap;
 	font-weight: bold;
-	color: #8E110B;
+	color: var(--clr-red);
 	overflow: visible;
 }
 

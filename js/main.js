@@ -288,16 +288,20 @@ function windowResize() {
 	 	if(aside && !menuOpen) {
 			closeMenu(null);
 		}
-		headerLangLinkES.innerHTML = "ES";
-		headerLangLinkEN.innerHTML = "EN";
+		if(headerLangLinkES) {
+			headerLangLinkES.innerHTML = "ES";
+			headerLangLinkEN.innerHTML = "EN";
+		}
 	} else {
 		if(aside) {
 			aside.style.left = "0";
 			overlay.style.display = "none";
 			menuOpen = false;
 		}
-		headerLangLinkES.innerHTML = "Español";
-		headerLangLinkEN.innerHTML = "English";
+		if(headerLangLinkES) {
+			headerLangLinkES.innerHTML = "Español";
+			headerLangLinkEN.innerHTML = "English";
+		}
 	}
 }
 
