@@ -143,7 +143,7 @@ function generatePsalmList(l) {
 	lang = l;
 	psalms[lang].reduceRight((_, psalm) => {
 		noResults.insertAdjacentHTML("afterend",
-			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}[${psalm.classes}]<span>${psalm.subtitle}</span></a>`);
+			`<a id='${psalm.id}' class='${psalm.classes}' href='/${lang}/psalmus.html?id=${psalm.id}'>${psalm.title}<span>${psalm.subtitle}</span></a>`);
 	}, null);
 }
 
