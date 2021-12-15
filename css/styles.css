@@ -753,6 +753,14 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	z-index: 5;
 }
 
+footer {
+	bottom: 10px;
+	color: var(--clr-gray-light-h);
+	left: 50%;
+	position: fixed;
+	transform: translateX(-50%);
+}
+
 @media only screen and (max-width: 1400px) {
 	#psalm { margin: 0 10%; }
 }
