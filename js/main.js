@@ -122,16 +122,16 @@ function toggleOptionDiv() {
 	var headerHeight = parseInt(getComputedStyle(headerDiv).height.replace("px", ""));
 	var optionDivTop = getComputedStyle(optionDiv).top;
 	if(window.innerWidth < 600) {
-		if(optionDivTop == "-140px") {
+		if(optionDivTop == "-200px") {
 			optionDiv.style.top = headerHeight + "px";
 		} else {
-			optionDiv.style.top = "-140px";
+			optionDiv.style.top = "-2000px";
 		}
 	} else {
-		if(optionDivTop == "-140px") {
-			optionDiv.style.top = headerHeight - 95 + "px";
+		if(optionDivTop == "-200px") {
+			optionDiv.style.top = headerHeight + "px";
 		} else {
-			optionDiv.style.top = "-140px";
+			optionDiv.style.top = "-200px";
 		}
 	}
 }
