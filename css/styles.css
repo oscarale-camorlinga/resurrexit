@@ -7,7 +7,20 @@ YELLOW	#F6FF99		#DDE58A		246, 255, 153
 MAROON	#8E110B		#750E09		143, 17, 11
 GRAY	#F2F2F2		#D9D9D9		242, 242, 242
 */
-
+:root {
+	--clr-blue:			#99EEFF;
+	--clr-blue-h:		#89D6E5;
+	--clr-green:		#96FFAA;
+	--clr-green-h:		#8AE599;
+	--clr-yellow:		#F6FF99;
+	--clr-yellow-h:		#DDE58A;
+	--clr-red:			#8E110B;
+	--clr-red-h:		#750E09;
+	--clr-gray:			#777777;
+	--clr-gray-dark:	#333333;
+	--clr-gray-light:	#EEEEEE;
+	--clr-gray-light-h:	#DDDDDD;
+}
 html {
 	font-size: 100%;
 }
@@ -15,7 +28,7 @@ html {
 body {
 	font-family: 'Libre Franklin', sans-serif;
 	font-size: .875rem;
-	background-color: #F2F2F2;
+	background-color: var(--clr-gray-light);
 }
 
 *, *:before, *:after {
@@ -33,7 +46,7 @@ a { text-decoration: none; }
 
 #choose {
 	background-color: white;
-	color: #333;
+	color: var(--clr-gray-dark);
 	height: 500px;
 	margin: -250px 0 0 -250px;
 	padding: 20px;
@@ -50,7 +63,7 @@ a { text-decoration: none; }
 #choose button {
 	background-color: white;
 	border: none;
-	color: #333;
+	color: var(--clr-gray-dark);
 	cursor: pointer;
 	display: block;
 	font-family: 'Libre Franklin', sans-serif;
@@ -65,31 +78,30 @@ a { text-decoration: none; }
 }
 
 #choose button:hover {
-	background-color: #D9D9D9;
+	background-color: var(--clr-gray-light);
 }
 
-#choose a {
-	background-color: transparent;
-	color: #8E110B;
-	display: block;
-	padding: 20px 0;
-	text-decoration: none;
-	transition: .3s;
-}
-
-#choose a:hover {
-	color: #777;
+#header-background {
+	background-color: white;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: -2000px;
+	top: 0;
+	z-index: 4;
 }
 
 header {
-	background: white;
+	border-bottom: 1px solid var(--clr-gray-light);
 	display: flex;
 	gap: 20px;
 	height: 100px;
 	justify-content: space-between;
+	max-width: 1200px;
 	padding: 0 20px;
 	position: fixed;
-	top: 0; left: 320px; right: 0;
+	top: 0; left: 320px;
+	width: calc(100% - 320px);
 	align-items: center;
 	z-index: 4;
 }
@@ -133,7 +145,7 @@ button, input {
 #title {
 	font-size: 2.1rem;
 	font-weight: bold;
-	color: #8E110B;
+	color: var(--clr-red);
 	transition: .3s;
 }
 
@@ -141,19 +153,16 @@ button, input {
 	font-size: 1.4rem;
 }
 
-#title:hover {
-	color: #777;
-}
-
 #lang {
 	display: flex;
 	align-items: center;
+	z-index: 5;
 }
 
 #lang a {
 	border-top: 3px solid white;
 	border-bottom: 3px solid white;
-	color: #8E110B;
+	color: var(--clr-red);
 	display: inline-block;
 	font-weight: bold;
 	padding: 5px;
@@ -165,12 +174,12 @@ button, input {
 }
 
 #lang a.active {
-	border-bottom: 3px solid #8E110B;
+	border-bottom: 3px solid var(--clr-red);
 	/*text-decoration: underline;*/
 }
 
 #lang a:hover {
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #lang a.active:hover {
@@ -188,52 +197,45 @@ button, input {
 
 #option-menu {
 	background-color: white;
+	border: 1px solid var(--clr-gray-light);
 	display: block;
 	padding: 10px 20px;
-	position: fixed;
+	position: absolute;
 	text-align: right;
-	top: -140px;
+	top: -200px;
 	right: 0;
 	z-index: 3;
 }
 
 #option-menu a {
-	color: #777;
+	color: var(--clr-gray);
 	cursor: pointer;
 	display: block;
 	padding: 10px 0;
 	transition: .3s;
 }
 
-#option-menu a:first-of-type {
-
-}
-
 #option-menu a.lang {
 	border-top: none;
-	color: #8E110B;
+	color: var(--clr-red);
 	font-weight: bold;
 	margin-top: 0;
 }
 
 #option-menu a:hover {
-	color: #333;
+	color: var(--clr-red);
 }
 
 #option-menu a.lang:hover {
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #option-menu .spacer {
-	background-color: #F2F2F2;
+	background-color: var(--clr-gray-light);
 	display: block;
 	height: 1px;
 	margin: 10px 0;
 	width: 100%;
-}
-
-#reset-lang {
-
 }
 
 #back-button {
@@ -256,13 +258,14 @@ button, input {
 	display: inline-block;
 	position: relative;
 	width: 100%;
+	z-index: 5;
 }
 
 #search-field {
 	background: rgba(143, 17, 11, .05);
 	border: none;
 	border-radius: 17px;
-	color: #8E110B;
+	color: var(--clr-red);
 	display: inline-block;
 	font-family: 'Libre Franklin', sans-serif;
 	font-size: 1rem;
@@ -273,9 +276,9 @@ button, input {
 }
 
 #search-field::-webkit-input-placeholder { color: rgba(255, 255, 255, .5); }
-#search-field::-moz-placeholder { color: rgba(255, 255, 255, .9); }
-#search-field::-ms-input-placeholder { color: rgba(255, 255, 255, .9); }
-#search-field:-moz-placeholder { color: rgba(255, 255, 255, .9); }
+#search-field::-moz-placeholder { color: rgba(255, 255, 255, .5); }
+#search-field::-ms-input-placeholder { color: rgba(255, 255, 255, .5); }
+#search-field:-moz-placeholder { color: rgba(255, 255, 255, .5); }
 
 #search-button {
 	background: none;
@@ -328,7 +331,7 @@ button, input {
 }
 
 #player-progress-wrapper {
-	background-color: rgba(143, 17, 11, .05);
+	background-color: var(--clr-gray-light);
 	border-radius: 5px;
 	cursor: pointer;
 	height: 10px;
@@ -337,7 +340,7 @@ button, input {
 }
 
 #player-progress {
-	background-color: #8E110B;
+	background-color: var(--clr-red);
 	border-radius: 5px;
 	height: 10px;
 	width: 0;
@@ -345,7 +348,7 @@ button, input {
 
 #player-progress-wrapper p {
 	bottom: -15px;
-	color: #777;
+	color: var(--clr-gray);
 	font-size: .6rem;
 	position: absolute;
 }
@@ -359,14 +362,16 @@ button, input {
 }
 
 #no-audio {
-	color: #D9D9D9;
+	color: var(--clr-gray);
 	display: block;
 	font-weight: bold;
 	margin: auto;
+	text-align: center;
 }
 
 aside {
 	background-color: white;
+	border-right: 1px solid var(--clr-gray-light);
 	bottom: 0;
 	left: 0;
 	-ms-overflow-style: none;
@@ -388,12 +393,12 @@ aside::-webkit-scrollbar {
 	position: absolute;
 	top: 19px; right: 20px;
 	font-size: 2.1rem;
-	color: #D9D9D9;
+	color: var(--clr-gray);
 	transition: .3s;
 }
 
 #close-button:hover {
-	color: #777;
+	color: var(--clr-red);
 }
 
 aside #title {
@@ -403,8 +408,8 @@ aside #title {
 }
 
 aside p {
-	border-bottom: 1px solid #F2F2F2;
-	color: #777;
+	border-bottom: 1px solid var(--clr-gray-light);
+	color: var(--clr-gray);
 	display: block;
 	margin: 0 0 20px 20px;
 	padding: 10px 0;
@@ -416,32 +421,22 @@ aside p.spacer {
 }
 
 #psalmlist {
-	padding: 120px 20px 40px 340px;
+	left: 320px;
+	max-width: 1200px;
+	padding: 20px 20px 40px;
 	position: relative;
+	top: 100px;
+	width: calc(100% - 320px);
 	z-index: 2;
 }
 
 header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #option-menu {
-	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	-ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	-o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-
-/*
-#psalmlist a:hover {
-	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-	-ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-	-o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}*/
 
 #steps {
 	margin: 20px 0;
@@ -456,30 +451,15 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	border: none;
 	cursor: pointer;
 	background: white;
-	color: #777;
+	color: var(--clr-gray);
 }
 
 .step-button {
-	width: 100%;
+	border-left: 10px solid;
 	padding-left: 20px;
+	margin-bottom: 1px;
 	transition: all 0.25s ease-in-out;
-}
-
-.step-button span {
-	display: inline-block;
-	width: 25px; height: 25px;
-	margin-right: 10px;
-	/*font-family: 'Libre Franklin', sans-serif;*/
-	line-height: 25px;
-	text-align: center;
-	color: white;
-	border-radius: 50%;
-	transition: 0.3s;
-	background-color: #777;
-}
-
-.step-button:hover {
-	background-color: #D9D9D9;
+	width: calc(100% - 20px);
 }
 
 #tags {
@@ -490,38 +470,62 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 
 .tag-button {
 	float: left;
-	width: 137px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	padding-left: 10px;
+	width: 132px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 .tag-button:nth-child(even) {
 	margin-right: 0;
 }
 
-.tag-button:hover {
-	background-color: #D9D9D9;
+.tag-button:hover, .step-button:hover {
+	background-color: var(--clr-gray-light);
 }
 
-#steps .selected { color: #8E110B; }
-#steps .selected span { background-color: #8E110B; }
+#pre { border-color: var(--clr-gray-light); }
+#cat { border-color: var(--clr-blue); }
+#ele { border-color: var(--clr-green); }
+#lit { border-color: var(--clr-yellow); }
 
-#tags .selected { color: white; background-color: #8E110B; }
-#tags .selected:hover { background-color: #750E09; }
+#pre.selected { background-color: var(--clr-gray-light); }
+#cat.selected { background-color: var(--clr-blue); }
+#ele.selected { background-color: var(--clr-green); }
+#lit.selected { background-color: var(--clr-yellow); }
+
+#pre.selected:hover {
+	background-color: var(--clr-gray-light-h);
+	border-color: var(--clr-gray-light-h);
+}
+#cat.selected:hover {
+	background-color: var(--clr-blue-h);
+	border-color: var(--clr-blue-h);
+}
+#ele.selected:hover {
+	background-color: var(--clr-green-h);
+	border-color: var(--clr-green-h);
+}
+#lit.selected:hover {
+	background-color: var(--clr-yellow-h);
+	border-color: var(--clr-yellow-h);
+}
+
+#tags .selected { color: white; background-color: var(--clr-red); }
+#tags .selected:hover { background-color: var(--clr-red-h); }
 
 #psalmlist .pre, #psalm.pre { background-color: white; }
-#psalmlist .lit, #psalm.lit { background-color: #F6FF99; }
-#psalmlist .cat, #psalm.cat { background-color: #99EEFF; }
-#psalmlist .ele, #psalm.ele { background-color: #96FFAA; }
+#psalmlist .lit, #psalm.lit { background-color: var(--clr-yellow); }
+#psalmlist .cat, #psalm.cat { background-color: var(--clr-blue); }
+#psalmlist .ele, #psalm.ele { background-color: var(--clr-green); }
 
-#psalmlist .pre:hover { background-color: #D9D9D9; }
-#psalmlist .lit:hover { background-color: #DDE58A; }
-#psalmlist .cat:hover { background-color: #89D6E5; }
-#psalmlist .ele:hover { background-color: #8AE599; }
+#psalmlist .pre:hover { background-color: var(--clr-gray-light-h); }
+#psalmlist .lit:hover { background-color: var(--clr-yellow-h); }
+#psalmlist .cat:hover { background-color: var(--clr-blue-h); }
+#psalmlist .ele:hover { background-color: var(--clr-green-h); }
 
 #no-results {
-	color: #777;
+	color: var(--clr-gray);
 	display: block;
 	left: 320px; right: 0;
 	padding: 15px;
@@ -533,11 +537,10 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 #psalmlist a {
 	display: block;
 	width: 100%;
-	max-width: 1200px;
 	padding: 15px;
-	margin-bottom: 3px;
+	margin-bottom: 1px;
 	text-align: left;
-	color: rgba(20, 20, 20, 0.7);
+	color: var(--clr-gray-dark);
 	text-decoration: none;
 	font-weight: bold;
 	cursor: pointer;
@@ -549,7 +552,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	float: right;
 	font-size: 0.8rem;
 	font-weight: normal;
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #psalmlist a.hide {
@@ -569,11 +572,11 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	font-size: 1.6rem;
 	font-weight: bold;
 	text-align: center;
-	color: #8E110B;
+	color: var(--clr-red);
 }
 
 #psalm h2 {
-	color: #777;
+	color: var(--clr-gray);
 	display: block;
 	font-size: 1rem;
 	font-weight: normal;
@@ -608,7 +611,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	left: 5%; top: 130px;
 	padding-top: 0;
 	font-size: 0.8rem;
-	color: #777;
+	color: var(--clr-gray);
 }
 
 #psalm p span[data-chord]:before {
@@ -619,7 +622,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	content: attr(data-chord);
 	white-space: nowrap;
 	font-weight: bold;
-	color: #8E110B;
+	color: var(--clr-red);
 	overflow: visible;
 }
 
@@ -638,20 +641,19 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 
 @media only screen and (max-width: 1000px) {
 	header {
-		border: none;
 		height: 80px;
 		left: 0;
+		width: 100%;
 	}
 	#title { display: inline-block; font-size: 1.6rem; }
 	#menu-button { display: inline-block;; }
 	#search-button { left: 45px; }
 	#search-field { margin-left: 35px; width: calc(100% - 35px); }
-	#player { margin-left: 0; left: inherit; right: inherit; position: static; }
 	#player-progress-wrapper { width: 300px; }
 	#player button { width: 1.1rem; height: 1.1rem; }
 	#back-button img { height: 1.1rem; }
 	#close-button { display: block; }
-	#psalmlist { padding: 80px 0 0; }
+	#psalmlist { padding: 0; left: 0; top: 80px; width: 100%; }
 	#no-results { left: 0; }
 	aside {
 		position: fixed;
@@ -711,7 +713,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	}
 	#player-progress-wrapper { width: 200px; }
 	#title, #search-field, { font-size: 1rem; }
-	#psalmlist { padding: 60px 0 20px; }
+	#psalmlist { top: 60px; }
 }
 
 @media only screen and (max-width: 400px) {

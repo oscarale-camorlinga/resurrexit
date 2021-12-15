@@ -63,6 +63,7 @@ if(resetLangBtn) resetLangBtn.addEventListener("click", resetLanguage);
 if(searchInput) searchInput.addEventListener("input", search);
 if(menuBtn) menuBtn.addEventListener("click", openMenu);
 if(closeBtn) closeBtn.addEventListener("click", closeMenu);
+if(overlay) overlay.addEventListener("click", closeMenu);
 
 if(stepBtns) stepBtns.forEach(function(button) {
 	button.addEventListener("click", updatePsalmList);
@@ -121,16 +122,16 @@ function toggleOptionDiv() {
 	var headerHeight = parseInt(getComputedStyle(headerDiv).height.replace("px", ""));
 	var optionDivTop = getComputedStyle(optionDiv).top;
 	if(window.innerWidth < 600) {
-		if(optionDivTop == "-140px") {
+		if(optionDivTop == "-200px") {
 			optionDiv.style.top = headerHeight + "px";
 		} else {
-			optionDiv.style.top = "-140px";
+			optionDiv.style.top = "-2000px";
 		}
 	} else {
-		if(optionDivTop == "-140px") {
-			optionDiv.style.top = headerHeight - 95 + "px";
+		if(optionDivTop == "-200px") {
+			optionDiv.style.top = headerHeight + "px";
 		} else {
-			optionDiv.style.top = "-140px";
+			optionDiv.style.top = "-200px";
 		}
 	}
 }
@@ -283,17 +284,21 @@ function search(e) {
 }
 
 function windowResize() {
-	if(aside) {
-		if(window.innerWidth < 1000) {
-		 	if(!menuOpen) {
-				closeMenu(null);
-			}
+	if(window.innerWidth < 1000) {
+	 	if(aside && !menuOpen) {
+			closeMenu(null);
+		}
+		if(headerLangLinkES) {
 			headerLangLinkES.innerHTML = "ES";
 			headerLangLinkEN.innerHTML = "EN";
-		} else {
+		}
+	} else {
+		if(aside) {
 			aside.style.left = "0";
 			overlay.style.display = "none";
 			menuOpen = false;
+		}
+		if(headerLangLinkES) {
 			headerLangLinkES.innerHTML = "Español";
 			headerLangLinkEN.innerHTML = "English";
 		}
