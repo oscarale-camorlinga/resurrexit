@@ -41,16 +41,6 @@ const timeline = document.querySelector("#player-progress-wrapper");
 const playingTime = document.querySelector("#player-start");
 const endingTime = document.querySelector("#player-end");
 
-/*----------------------------- PWS -----------------------------*/
-
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/sw.js').then(function(registration) {
-		console.log('Registration successful, scope is:', registration.scope);
-	}).catch(function(error) {
-		console.log('Service worker registration failed, error:', error);
-	});
-}
-
 /*----------------------------- EVENT LISTENERS -----------------------------*/
 
 if(langBtn) langBtn.forEach(function(button) {
@@ -119,20 +109,14 @@ function setLanguage(e) {
 
 function toggleOptionDiv() {
 	// Open/close the option-menu div
-	var headerHeight = parseInt(getComputedStyle(headerDiv).height.replace("px", ""));
-	var optionDivTop = getComputedStyle(optionDiv).top;
-	if(window.innerWidth < 600) {
-		if(optionDivTop == "-200px") {
-			optionDiv.style.top = headerHeight + "px";
-		} else {
-			optionDiv.style.top = "-2000px";
-		}
+	if(optionDiv.style.width == "280px") {
+		optionDiv.style.width = "0";
+		optionDiv.style.borderWidth = "0"
+		optionDiv.style.padding = "0";
 	} else {
-		if(optionDivTop == "-200px") {
-			optionDiv.style.top = headerHeight + "px";
-		} else {
-			optionDiv.style.top = "-200px";
-		}
+		optionDiv.style.width = "280px";
+		optionDiv.style.borderWidth = "1px"
+		optionDiv.style.padding = "10px 20px";
 	}
 }
 
@@ -372,3 +356,10 @@ function updatePsalmList(e) {
 
 windowResize();
 window.onresize = windowResize;
+
+window.onload = () => {
+	'use strict';
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/sw.js');
+	}
+}

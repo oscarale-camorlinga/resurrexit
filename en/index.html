@@ -8,12 +8,12 @@
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="/images/icons/res-icon-152.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="white">
+	<meta name="theme-color" content="#8E110B">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#8E110B">
 	<meta name="apple-mobile-web-app-title" content="Resurrexit">
 	<meta name="msapplication-TileImage" content="/images/icons/res-icon-144.png">
-	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileColor" content="#8E110B">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
@@ -35,7 +35,6 @@
 		<div id="option-menu">
 			<a class="lang" href="/es/">Español</a>
 			<a class="lang active" href="/en/">English</a>
-			<div class="spacer"></div>
 			<a id="reset-lang">Reset Language Preference</a>
 			<a href="/en/contact">Contact</a>
 		</div>
@@ -71,8 +70,8 @@
 		<div id="no-results">No results</div>
 	</section>
 	<div id="overlay"></div>
+	<script src="/js/psalms.js"></script>
+	<script src="/js/main.js"></script>
+	<script>generatePsalmList("en");</script>
 </body>
-<script src="/js/psalms.js"></script>
-<script src="/js/main.js"></script>
-<script>generatePsalmList("en");</script>
 </html>
