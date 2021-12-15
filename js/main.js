@@ -63,6 +63,7 @@ if(resetLangBtn) resetLangBtn.addEventListener("click", resetLanguage);
 if(searchInput) searchInput.addEventListener("input", search);
 if(menuBtn) menuBtn.addEventListener("click", openMenu);
 if(closeBtn) closeBtn.addEventListener("click", closeMenu);
+if(overlay) overlay.addEventListener("click", closeMenu);
 
 if(stepBtns) stepBtns.forEach(function(button) {
 	button.addEventListener("click", updatePsalmList);
