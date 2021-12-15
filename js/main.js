@@ -41,16 +41,6 @@ const timeline = document.querySelector("#player-progress-wrapper");
 const playingTime = document.querySelector("#player-start");
 const endingTime = document.querySelector("#player-end");
 
-/*----------------------------- PWS -----------------------------*/
-
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/sw.js').then(function(registration) {
-		console.log('Registration successful, scope is:', registration.scope);
-	}).catch(function(error) {
-		console.log('Service worker registration failed, error:', error);
-	});
-}
-
 /*----------------------------- EVENT LISTENERS -----------------------------*/
 
 if(langBtn) langBtn.forEach(function(button) {
@@ -372,3 +362,10 @@ function updatePsalmList(e) {
 
 windowResize();
 window.onresize = windowResize;
+
+window.onload = () => {
+	'use strict';
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/sw.js');
+	}
+}

@@ -45,7 +45,6 @@ a { text-decoration: none; }
 }
 
 #choose {
-	background-color: white;
 	color: var(--clr-gray-dark);
 	height: 500px;
 	margin: -250px 0 0 -250px;
@@ -78,7 +77,7 @@ a { text-decoration: none; }
 }
 
 #choose button:hover {
-	background-color: var(--clr-gray-light);
+	background-color: var(--clr-gray-light-h);
 }
 
 #header-background {
