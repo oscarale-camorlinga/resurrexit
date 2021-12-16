@@ -682,6 +682,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	padding-top: 100px;
 	padding-bottom: 40px;
 	position: relative;
+	z-index: 2;
 }
 
 #psalm h1 {
@@ -759,6 +760,7 @@ footer {
 	left: 50%;
 	position: fixed;
 	transform: translateX(-50%);
+	z-index: 1;
 }
 
 @media only screen and (max-width: 1400px) {
