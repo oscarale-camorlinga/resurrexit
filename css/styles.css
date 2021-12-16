@@ -117,7 +117,7 @@ header.full #header-background {
 
 }
 
-#menu-button, #close-button, #option-button {
+#menu-button, #close-button, #option-button, #back-button {
 	cursor: pointer;
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
@@ -134,7 +134,7 @@ header.full #header-background {
 
 #menu-button img, #option-button img {
 	height: 100%;
-	transition: .3s filter;
+	transition: filter .3s ease-in-out;
 }
 
 @media (hover: hover) {
@@ -285,7 +285,7 @@ header.full #header-background {
 
 #back-button img {
 	height: 100%;
-	transition: .3s filter;
+	transition: filter .3s ease-in-out;
 }
 
 @media (hover: hover) {
@@ -336,7 +336,7 @@ header.full #header-background {
 
 #search-button img {
 	height: 100%;
-	transition: .3s filter;
+	transition: filter .3s ease-in-out;
 }
 
 @media (hover: hover) {
@@ -367,7 +367,7 @@ header.full #header-background {
 	height: 21px;
 	margin-right: 15px;
 	width: 21px;
-	transition: .3s filter;
+	transition: filter .3s ease-in-out;
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
