@@ -9,6 +9,8 @@ var duration;
 
 /*----------------------------- CONSTANTS -----------------------------*/
 
+const receiver = new BroadcastChannel("sw-messages");
+
 const langBtn = document.querySelectorAll(".default-lang"); // Language button
 const optionBtn = document.querySelector("#option-button"); // option button (three dots)
 const optionDiv = document.querySelector("#option-menu"); // option menu div
@@ -40,8 +42,13 @@ const audioProgress = document.querySelector("#player-progress");
 const timeline = document.querySelector("#player-progress-wrapper");
 const playingTime = document.querySelector("#player-start");
 const endingTime = document.querySelector("#player-end");
+const footer = document.querySelector("footer");
 
 /*----------------------------- EVENT LISTENERS -----------------------------*/
+
+receiver.addEventListener("message", function(e) {
+	if(footer) footer.innerHTML = e.data;
+});
 
 if(langBtn) langBtn.forEach(function(button) {
 	// Setting language button event listeners
