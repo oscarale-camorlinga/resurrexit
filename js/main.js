@@ -4,6 +4,7 @@ var tagList = [];
 var stepList = [];
 var searchList = [];
 var menuOpen = false;
+var optionOpen = false;
 var searching = false;
 var duration;
 
@@ -33,6 +34,7 @@ const menuBtn = document.querySelector("#menu-button"); // left side hamburger m
 const closeBtn = document.querySelector("#close-button"); // left side menu close button
 const aside = document.querySelector("aside"); //left side menu
 const overlay = document.querySelector("#overlay"); // black transparent overlay when menus is open
+const optionOverlay = document.querySelector("#option-overlay");
 const tagBtns = document.querySelectorAll(".tag-button");
 const stepBtns = document.querySelectorAll(".step-button");
 const playerWrapper = document.querySelector("#player");
@@ -61,6 +63,7 @@ if(searchInput) searchInput.addEventListener("input", search);
 if(menuBtn) menuBtn.addEventListener("click", openMenu);
 if(closeBtn) closeBtn.addEventListener("click", closeMenu);
 if(overlay) overlay.addEventListener("click", closeMenu);
+if(optionOverlay) optionOverlay.addEventListener("click", toggleOptionDiv);
 
 if(stepBtns) stepBtns.forEach(function(button) {
 	button.addEventListener("click", updatePsalmList);
@@ -116,14 +119,18 @@ function setLanguage(e) {
 
 function toggleOptionDiv() {
 	// Open/close the option-menu div
-	if(optionDiv.style.width == "280px") {
+	if(optionOpen) {
 		optionDiv.style.width = "0";
 		optionDiv.style.borderWidth = "0"
 		optionDiv.style.padding = "0";
+		optionOverlay.style.display = "none";
+		optionOpen = false;
 	} else {
 		optionDiv.style.width = "280px";
 		optionDiv.style.borderWidth = "1px"
 		optionDiv.style.padding = "10px 20px";
+		optionOverlay.style.display = "block";
+		optionOpen = true;
 	}
 }
 
@@ -134,13 +141,13 @@ function resetLanguage(e) {
 	window.location.href = "/";
 }
 
-function openMenu(e) {
+function openMenu() {
 	aside.style.left = "0";
 	overlay.style.display = "block";
 	menuOpen = true;
 }
 
-function closeMenu(e) {
+function closeMenu() {
 	aside.style.left = "-320px";
 	overlay.style.display = "none";
 	menuOpen = false;
@@ -277,7 +284,7 @@ function search(e) {
 function windowResize() {
 	if(window.innerWidth < 1000) {
 	 	if(aside && !menuOpen) {
-			closeMenu(null);
+			closeMenu();
 		}
 		if(headerLangLinkES) {
 			headerLangLinkES.innerHTML = "ES";
