@@ -47,7 +47,7 @@ const endingTime = document.querySelector("#player-end");
 const footer = document.querySelector("footer");
 
 /*----------------------------- EVENT LISTENERS -----------------------------*/
-
+/*
 window.addEventListener("load", function() { // hw back button goes to home
 	window.history.pushState({}, '');
 });
@@ -55,7 +55,7 @@ window.addEventListener("load", function() { // hw back button goes to home
 window.addEventListener("popstate", function(e) { // hw back button goes to home
 	window.history.pushState({}, '');
 });
-
+*/
 receiver.addEventListener("message", function(e) {
 	if(footer) footer.innerHTML = e.data;
 });
@@ -174,21 +174,21 @@ function closeMenu() {
 }
 
 function openPsalm(e) {
-	var getUrl = window.location.origin;
-	window.location.replace(`${getUrl}/${lang}/psalmus.html?id=${this.id}`);
+	var home = window.location.origin;
+	window.location.replace(`${home}/${lang}/psalmus.html?id=${this.id}`);
 }
 
 function goHome(e) {
-	var getUrl = window.location.origin;
-	window.location.replace(`${getUrl}/${lang}`);
+	var home = window.location.origin;
+	window.location.replace(`${home}/${lang}`);
 }
 
 function goToLang(e) {
-	var getUrl = window.location.origin;
+	var home = window.location.origin;
 	if(psalmList) { // if the psalmlist exists we are in index.html
-		window.location.replace(`${getUrl}/${this.name}`);
+		window.location.replace(`${home}/${this.name}`);
 	} else { // otherwise we are in psalmus.html
-		window.location.replace(`${getUrl}/${this.name}/psalmus.html?id=${getPsalmId()}`);
+		window.location.replace(`${home}/${this.name}/psalmus.html?id=${getPsalmId()}`);
 	}
 }
 
