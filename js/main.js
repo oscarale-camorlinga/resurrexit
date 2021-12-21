@@ -48,6 +48,16 @@ const footer = document.querySelector("footer");
 
 /*----------------------------- EVENT LISTENERS -----------------------------*/
 
+window.addEventListener("load", function() { // hw back button goes to home
+	window.history.pushState({ noBackExitsApp: true }, '');
+});
+
+window.addEventListener("popstate", function(e) { // hw back button goes to home
+	if(e.state && e.state.noBackExitsApp) {
+		window.history.pushState({ noBackExitsApp: true }, '');
+	}
+});
+
 receiver.addEventListener("message", function(e) {
 	if(footer) footer.innerHTML = e.data;
 });
