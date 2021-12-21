@@ -1,4 +1,4 @@
-var cacheName = 'resurrexit-v0.4.4';
+var cacheName = 'resurrexit-v0.4.5';
 var filesToCache = [
 	// '/',
 	// '/es/',
