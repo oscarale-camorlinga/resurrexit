@@ -11,6 +11,8 @@
 	--clr-gray-dark:	#333333;
 	--clr-gray-light:	#EEEEEE;
 	--clr-gray-light-h:	#DDDDDD;
+
+	--fnt-main: 'Libre Franklin', sans-serif;
 }
 
 html {
@@ -18,7 +20,7 @@ html {
 }
 
 body {
-	font-family: 'Libre Franklin', sans-serif;
+	font-family: var(--fnt-main);
 	font-size: .875rem;
 	background-color: var(--clr-gray-light);
 }
@@ -31,7 +33,12 @@ body {
 a { text-decoration: none; }
 
 button, input {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-family: var(--fnt-main);
 	outline: none;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 #choose #logo {
@@ -59,14 +66,11 @@ button, input {
 	background-color: white;
 	border: none;
 	color: var(--clr-gray-dark);
-	cursor: pointer;
 	display: block;
-	font-family: 'Libre Franklin', sans-serif;
 	font-weight: bold;
 	margin: 0 auto 20px;
 	padding: 20px;
 	width: 200px;
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 #choose button:first-of-type {
@@ -117,14 +121,7 @@ header.full #header-background {
 
 }
 
-#menu-button, #close-button, #option-button, #back-button {
-	cursor: pointer;
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
-}
-
 #menu-button {
-	background: none;
-	border: none;
 	display: none;
 	height: 21px;
 	position: absolute;
@@ -170,7 +167,7 @@ header.full #header-background {
 	z-index: 5;
 }
 
-#lang a {
+#lang button.lang {
 	border-top: 3px solid white;
 	border-bottom: 3px solid white;
 	color: var(--clr-red);
@@ -180,38 +177,36 @@ header.full #header-background {
 	transition: .3s;
 }
 
-#lang a:first-of-type {
+#lang button.lang:first-of-type {
 	margin-right: 20px;
 }
 
-#lang a.active {
+#lang button.active {
 	border-bottom: 3px solid var(--clr-red);
 	/*text-decoration: underline;*/
 }
 
 @media (hover: hover) {
-	#lang a:hover {
+	#lang button.lang:hover {
 		color: var(--clr-gray);
 	}
 }
 
-#lang a:active {
+#lang button.lang:active {
 	color: var(--clr-gray);
 }
 
 @media (hover: hover) {
-	#lang a.active:hover {
+	#lang button.active:hover {
 		border-bottom: 3px solid #777;
 	}
 }
 
-#lang a.active:active {
+#lang button.active:active {
 	border-bottom: 3px solid #777;
 }
 
 #option-button {
-	background: none;
-	border: none;
 	display: inline-block;
 	height: 21px;
 	margin-left: 20px;
@@ -231,7 +226,7 @@ header.full #header-background {
 	z-index: 9;
 }
 
-#option-menu a {
+#option-menu button, #option-menu a {
 	color: var(--clr-gray);
 	cursor: pointer;
 	display: block;
@@ -241,8 +236,7 @@ header.full #header-background {
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
-#option-menu a.lang {
-	border-top: none;
+#option-menu button.lang {
 	color: var(--clr-red);
 	display: none;
 	font-weight: bold;
@@ -250,22 +244,22 @@ header.full #header-background {
 }
 
 @media (hover: hover) {
-	#option-menu a:hover {
+	#option-menu button:hover {
 		color: var(--clr-red);
 	}
 }
 
-#option-menu a:active {
+#option-menu button:active {
 	color: var(--clr-red);
 }
 
 @media (hover: hover) {
-	#option-menu a.lang:hover {
+	#option-menu button.lang:hover {
 		color: var(--clr-gray);
 	}
 }
 
-#option-menu a.lang:active {
+#option-menu button.lang:active {
 	color: var(--clr-gray);
 }
 
@@ -308,11 +302,9 @@ header.full #header-background {
 
 #search-field {
 	background: rgba(143, 17, 11, .05);
-	border: none;
 	border-radius: 17px;
 	color: var(--clr-red);
 	display: inline-block;
-	font-family: 'Libre Franklin', sans-serif;
 	font-size: 1rem;
 	font-weight: bold;
 	height: 35px;
@@ -326,13 +318,9 @@ header.full #header-background {
 #search-field:-moz-placeholder { color: rgba(255, 255, 255, .5); }
 
 #search-button {
-	background: none;
-	border: none;
-	cursor: pointer;
 	height: 20px;
 	position: absolute;
 	top: 8px; left: 10px;
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 #search-button img {
@@ -362,14 +350,11 @@ header.full #header-background {
 }
 
 #player button {
-	border: none;
 	color: white;
-	cursor: pointer;
 	height: 21px;
 	margin-right: 15px;
 	width: 21px;
 	transition: filter .3s ease-in-out;
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 @media (hover: hover) {
@@ -513,13 +498,9 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	display: block;
 	padding: 10px 0;
 	text-align: left;
-	font-family: 'Libre Franklin', sans-serif;
 	font-weight: bold;
-	border: none;
-	cursor: pointer;
 	background: white;
 	color: var(--clr-gray);
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 .step-button {
@@ -651,7 +632,7 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	z-index: -1;
 }
 
-#psalmlist a {
+#psalmlist button {
 	display: block;
 	width: 100%;
 	padding: 15px;
@@ -660,20 +641,18 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	color: var(--clr-gray-dark);
 	text-decoration: none;
 	font-weight: bold;
-	cursor: pointer;
 	transition-duration: 0.3s;
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
 	z-index: 2;
 }
 
-#psalmlist a span {
+#psalmlist button span {
 	float: right;
 	font-size: 0.8rem;
 	font-weight: normal;
 	color: var(--clr-gray);
 }
 
-#psalmlist a.hide {
+#psalmlist .hide {
 	display: none;
 }
 
@@ -804,8 +783,8 @@ footer {
 	}
 	#language { bottom: 20px; }
 	#tags, aside p { margin-left: 20px; }
-	#psalmlist a { padding: 15px 5%; }
-	#psalmlist a span { display: block; float: none; margin-top: 5px; }
+	#psalmlist button { padding: 15px 5%; }
+	#psalmlist button span { display: block; float: none; margin-top: 5px; }
 	#psalm { padding-top: 80px; margin: 0 5%; }
 	#psalm a.psalm { font-size: 1.3rem; }
 	#psalm p.capo { left: 5%; top: 80px; }
@@ -838,9 +817,9 @@ footer {
 		width: 100%;
 	}
 	#close-button { top: 9px; }
-	#lang a { display: none; }
+	#lang button.lang { display: none; }
 	#option-menu { top: 30px; }
-	#option-menu a.lang { display: block; }
+	#option-menu button.lang { display: block; }
 	aside #title {
 		display: block;
 		font-size: 1.6rem;
