@@ -6,6 +6,7 @@ psalms = {
             "id": "p219",
             "classes": "ele pas off ini",
             "capo": "",
+            "audio": "a-la-cena-del-cordero.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -48,6 +49,7 @@ psalms = {
             "id": "p1",
             "classes": "pre pas pen ini com off",
             "capo": "Capo 5",
+            "audio": "a-la-victima-pascual.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -74,6 +76,7 @@ psalms = {
             "id": "p2",
             "classes": "pre",
             "capo": "",
+            "audio": "a-nadie-demos-ocasion-de-tropiezo.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -124,6 +127,7 @@ psalms = {
             "id": "p3",
             "classes": "pre qua",
             "capo": "Capo 3",
+            "audio": "a-ti-levanto-mis-ojos.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -165,6 +169,7 @@ psalms = {
             "id": "p4",
             "classes": "pre qua",
             "capo": "Capo 2",
+            "audio": "a-ti-senor-en-mi-clamor-imploro.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -203,6 +208,7 @@ psalms = {
             "id": "p5",
             "classes": "pre qua",
             "capo": "Capo 3",
+            "audio": "a-ti-senor-levanto-mi-alma.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -236,6 +242,7 @@ psalms = {
             "id": "p6",
             "classes": "pre qua off",
             "capo": "Capo 3",
+            "audio": "a-ti-senor-se-debe-la-alabanza-en-sion.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -274,6 +281,7 @@ psalms = {
             "id": "p152",
             "classes": "lit",
             "capo": "",
+            "audio": "aleluya-pascual.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -307,6 +315,7 @@ psalms = {
             "id": "p191",
             "classes": "cat qua",
             "capo": "",
+            "audio": "asi-habla-el-amen.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -343,6 +352,7 @@ psalms = {
             "id": "p152",
             "classes": "lit",
             "capo": "",
+            "audio": "alleluia-easter.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -380,6 +390,7 @@ psalms = {
             "id": "p219",
             "classes": "ele pas off ini",
             "capo": "",
+            "audio": "at-the-banquet-of-the-lamb.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -430,6 +441,7 @@ psalms = {
             "id": "p2",
             "classes": "pre",
             "capo": "",
+            "audio": "brothers.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -451,7 +463,7 @@ psalms = {
                 ],
                 "col2": [
                     {
-                        "type": "C",
+                        "type": "A",
                         "verse": "<span data-chord='Dm'></span>DO NOT TIE YOURSELVES TO<br>AN UNEQUAL YOKE WITH THE P<span data-chord='E'></span>AGANS.<br>"
                     },
                     {
@@ -467,7 +479,7 @@ psalms = {
                         "verse": "<span data-chord='A7'></span>Brothers! We have full confidence<br>in speaking to you,<br><span data-chord='F'></span>because we are proud of you;<br>"
                     },
                     {
-                        "type": "C",
+                        "type": "A",
                         "verse": "<span data-chord='Dm'></span>DO NOT TIE YOURSELVES TO<br>AN UNEQUAL YOKE WITH THE P<span data-chord='E'></span>AGANS.<br>"
                     },
                     {
@@ -488,6 +500,7 @@ psalms = {
             "id": "p191",
             "classes": "cat qua",
             "capo": "",
+            "audio": "thus-speak-the-amen.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -534,6 +547,7 @@ psalms = {
             "id": "p1",
             "classes": "pre pas pen ini com off",
             "capo": "Capo 5",
+            "audio": "to-the-paschal-victim.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -572,6 +586,7 @@ psalms = {
             "id": "p3",
             "classes": "pre qua",
             "capo": "Capo 3",
+            "audio": "to-you-i-lift-up-my-eyes.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -613,6 +628,7 @@ psalms = {
             "id": "p5",
             "classes": "pre qua",
             "capo": "Capo 3",
+            "audio": "to-you-o-lord-i-lift-up-my-soul.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -646,6 +662,7 @@ psalms = {
             "id": "p4",
             "classes": "pre qua",
             "capo": "Capo 2",
+            "audio": "to-you-o-lord-with-my-voice-i-cry-for-help.mp3",
             "psalm": {
                 "col1": [
                     {
@@ -684,6 +701,7 @@ psalms = {
             "id": "p6",
             "classes": "pre qua off",
             "capo": "Capo 3",
+            "audio": "to-you-o-lord.mp3",
             "psalm": {
                 "col1": [
                     {

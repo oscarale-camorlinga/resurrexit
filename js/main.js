@@ -213,10 +213,12 @@ function generatePsalm(l) {
 			});
 		}
 		if(player) {
-			player.src = "/audio/" + lang + "/" +
-				psalm.title.replace(/\s/g, "-").toLowerCase()
-				.normalize("NFD").replace(/[\u0300-\u036f]/g, "") + ".mp3";
-			console.log(player.src);
+			if(psalm.audio) {
+				player.src = "/audio/" + lang + "/" + psalm.audio;
+			} else {
+				if(lang == "en") playerWrapper.innerHTML = "<p id='no-audio'>NO AUDIO AVAILABLE</p>"
+				if(lang == "es") playerWrapper.innerHTML = "<p id='no-audio'>NO HAY AUDIO DISPONIBLE</p>"
+			}
 		}
 	} else {
 		console.log(`Could not find psalm with id: ${psalmId}`);

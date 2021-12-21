@@ -86,6 +86,7 @@ for language in languages: # run loop for all languages
 				"id": id,
 				"classes": classes,
 				"capo": capo,
+				"audio": file.split(".txt")[0] + ".mp3",
 				"psalm": psalm,
 				"text": normalize(text)
 			})
