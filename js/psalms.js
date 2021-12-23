@@ -6,7 +6,7 @@ psalms = {
             "id": "p219",
             "classes": "ele pas off ini",
             "capo": "",
-            "audio": "a-la-cena-del-cordero.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -127,7 +127,7 @@ psalms = {
             "id": "p3",
             "classes": "pre qua",
             "capo": "Capo 3",
-            "audio": "a-ti-levanto-mis-ojos.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -169,7 +169,7 @@ psalms = {
             "id": "p4",
             "classes": "pre qua",
             "capo": "Capo 2",
-            "audio": "a-ti-senor-en-mi-clamor-imploro.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -208,7 +208,7 @@ psalms = {
             "id": "p5",
             "classes": "pre qua",
             "capo": "Capo 3",
-            "audio": "a-ti-senor-levanto-mi-alma.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -242,7 +242,7 @@ psalms = {
             "id": "p6",
             "classes": "pre qua off",
             "capo": "Capo 3",
-            "audio": "a-ti-senor-se-debe-la-alabanza-en-sion.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -281,7 +281,7 @@ psalms = {
             "id": "p152",
             "classes": "lit",
             "capo": "",
-            "audio": "aleluya-pascual.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -315,7 +315,7 @@ psalms = {
             "id": "p191",
             "classes": "cat qua",
             "capo": "",
-            "audio": "asi-habla-el-amen.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -352,7 +352,7 @@ psalms = {
             "id": "p152",
             "classes": "lit",
             "capo": "",
-            "audio": "alleluia-easter.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -390,7 +390,7 @@ psalms = {
             "id": "p219",
             "classes": "ele pas off ini",
             "capo": "",
-            "audio": "at-the-banquet-of-the-lamb.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -441,7 +441,7 @@ psalms = {
             "id": "p2",
             "classes": "pre",
             "capo": "",
-            "audio": "brothers.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -500,7 +500,7 @@ psalms = {
             "id": "p191",
             "classes": "cat qua",
             "capo": "",
-            "audio": "thus-speak-the-amen.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -547,7 +547,7 @@ psalms = {
             "id": "p1",
             "classes": "pre pas pen ini com off",
             "capo": "Capo 5",
-            "audio": "to-the-paschal-victim.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -586,7 +586,7 @@ psalms = {
             "id": "p3",
             "classes": "pre qua",
             "capo": "Capo 3",
-            "audio": "to-you-i-lift-up-my-eyes.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -628,7 +628,7 @@ psalms = {
             "id": "p5",
             "classes": "pre qua",
             "capo": "Capo 3",
-            "audio": "to-you-o-lord-i-lift-up-my-soul.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -662,7 +662,7 @@ psalms = {
             "id": "p4",
             "classes": "pre qua",
             "capo": "Capo 2",
-            "audio": "to-you-o-lord-with-my-voice-i-cry-for-help.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {
@@ -701,7 +701,7 @@ psalms = {
             "id": "p6",
             "classes": "pre qua off",
             "capo": "Capo 3",
-            "audio": "to-you-o-lord.mp3",
+            "audio": "NO AUDIO",
             "psalm": {
                 "col1": [
                     {

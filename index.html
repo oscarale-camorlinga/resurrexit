@@ -20,16 +20,60 @@
 	<link href="/css/styles.css" rel="stylesheet">
 </head>
 <body>
+	<header>
+		<button id="menu-button"><img src="/images/menu.svg"></button>
+		<div id="header-background"></div>
+		<form id="search" name="search" onsubmit="return false">
+			<button id="search-button" name="search-button"><img src="/images/search.svg" /></button>
+			<input id="search-field" type="text" name="search-field">
+		</form>
+		<div id="player">
+			<audio src=""></audio>
+			<button id="player-button" class="play"></button>
+			<div id="player-progress-wrapper">
+				<div id="player-progress"></div>
+				<p id="player-start">0:00</p>
+				<p id="player-end">0:00</p>
+			</div>
+		</div>
+		<div id="player-message" class="hide"></div>
+		<nav id="lang">
+			<input type="checkbox" id="lang-check"/>
+			<label for="lang-check"></label>
+			<ul id="lang-menu"></ul>
+		</nav>
+		<button id="option-button"><img src="/images/option.svg" /></button>
+		<div id="option-menu">
+			<button id="reset-lang"></button>
+		</div>
+	</header>
+	<aside>
+		<h1 id="title"></h1>
+		<button id="close-button">&times;</button>
+		<p class="spacer"></p>
+		<div id="steps"></div>
+		<p>Categories</p>
+		<div id="tags"></div>
+	</aside>
+	<section id="psalmlist">
+		<div id="no-results"></div>
+	</section>
+	<section id="psalm">
+		<h1></h1>
+		<h2></h2>
+		<p class="capo"></p>
+		<div id="text">
+			<div id="col1" class="col"></div>
+			<div id="col2" class="col"></div>
+		</div>
+	</section>
 	<section id="choose">
 		<img id="logo" src="/images/res-logo-NOBKG.svg" />
-		<p>Please choose your preferred language</p>
-		<p>Por favor elija su idioma preferido</p>
-		<button name="en" class="default-lang" href="/en/">ENGLISH</button>
-		<button name="es" class="default-lang" href="/es/">ESPAÑOL</button>
 	</section>
 	<footer>Resurrexit</footer>
-
+	<div id="overlay"></div>
+	<script src="/js/languages.js"></script>
+	<script src="/js/psalms.js"></script>
 	<script src="/js/main.js"></script>
-	<script>checkLanguage();</script>
 </body>
 </html>

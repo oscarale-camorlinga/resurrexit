@@ -26,6 +26,10 @@ for language in languages: # run loop for all languages
 			id = "p" + reader.readline().split('\n')[0]
 			classes = reader.readline().split('\n')[0]
 			capo = reader.readline().split('\n')[0]
+			audio = reader.readline().split('\n')[0]
+
+			if audio != "NO AUDIO":
+				audio = file.split(".txt")[0] + ".mp3"
 
 			psalm = {}
 			psalm["col1"] = []
@@ -86,7 +90,7 @@ for language in languages: # run loop for all languages
 				"id": id,
 				"classes": classes,
 				"capo": capo,
-				"audio": file.split(".txt")[0] + ".mp3",
+				"audio": audio,
 				"psalm": psalm,
 				"text": normalize(text)
 			})

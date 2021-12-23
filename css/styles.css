@@ -88,27 +88,29 @@ button, input {
 }
 
 header {
-	border-bottom: 1px solid var(--clr-gray-light);
 	display: flex;
 	gap: 20px;
 	height: 100px;
 	justify-content: space-between;
-	max-width: 1200px;
-	padding: 0 20px;
+	max-width: 1520px;
+	padding: 0 20px 0 340px;
 	position: fixed;
-	top: 0; left: 320px;
-	width: calc(100% - 320px);
+	top: -100px;
+	width: 100%;
 	align-items: center;
 	z-index: 4;
 }
 
 header.full {
 	left: 50%;
+	max-width: 1200px;
+	padding: 0 20px;
 	transform: translateX(-50%);
 }
 
 #header-background {
 	background-color: white;
+	border-bottom: 1px solid var(--clr-gray-light);
 	height: 100%;
 	left: -2000px;
 	position: absolute;
@@ -117,16 +119,11 @@ header.full {
 	z-index: 4;
 }
 
-header.full #header-background {
-
-}
-
 #menu-button {
 	display: none;
 	height: 21px;
-	position: absolute;
-	top: 7px;
 	width: 21px;
+	z-index: 5;
 }
 
 #menu-button img, #option-button img {
@@ -145,7 +142,7 @@ header.full #header-background {
 }
 
 #title-wrapper {
-	display: inline-block;
+	display: block;
 	position: relative;
 	z-index: 5;
 }
@@ -162,55 +159,56 @@ header.full #header-background {
 }
 
 #lang {
-	display: flex;
-	align-items: center;
+	position: relative;
 	z-index: 5;
 }
 
-#lang button.lang {
-	border-top: 3px solid white;
-	border-bottom: 3px solid white;
+#lang input {
+	display: none;
+}
+
+#lang-menu {
+	background: white;
+	border: 0px solid var(--clr-gray-light);
+	list-style: none;
+	max-height: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 40px;
+	right: 0;
+}
+
+#lang li, #lang label {
 	color: var(--clr-red);
-	display: inline-block;
+	cursor: pointer;
+	display: block;
 	font-weight: bold;
-	padding: 5px;
-	transition: .3s;
-}
-
-#lang button.lang:first-of-type {
-	margin-right: 20px;
-}
-
-#lang button.active {
-	border-bottom: 3px solid var(--clr-red);
-	/*text-decoration: underline;*/
+	padding: 10px;
+	position: relative;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
 @media (hover: hover) {
-	#lang button.lang:hover {
+	#lang li:hover, #lang label:hover {
 		color: var(--clr-gray);
 	}
 }
 
-#lang button.lang:active {
+#lang li:active {
 	color: var(--clr-gray);
 }
 
-@media (hover: hover) {
-	#lang button.active:hover {
-		border-bottom: 3px solid #777;
-	}
-}
-
-#lang button.active:active {
-	border-bottom: 3px solid #777;
+#lang input:checked ~ #lang-menu {
+	max-height: 200px;
+	border-width: 1px;
 }
 
 #option-button {
-	display: inline-block;
+	display: block;
 	height: 21px;
-	margin-left: 20px;
 	width: 21px;
+	z-index: 5;
 }
 
 #option-menu {
@@ -222,7 +220,7 @@ header.full #header-background {
 	position: absolute;
 	right: 50px;
 	top: 50px;
-	width: 0;
+	max-height: 0;
 	z-index: 9;
 }
 
@@ -236,13 +234,6 @@ header.full #header-background {
 	-webkit-tap-highlight-color: rgba(255,255,255,0);
 }
 
-#option-menu button.lang {
-	color: var(--clr-red);
-	display: none;
-	font-weight: bold;
-	margin-top: 0;
-}
-
 @media (hover: hover) {
 	#option-menu button:hover {
 		color: var(--clr-red);
@@ -251,16 +242,6 @@ header.full #header-background {
 
 #option-menu button:active {
 	color: var(--clr-red);
-}
-
-@media (hover: hover) {
-	#option-menu button.lang:hover {
-		color: var(--clr-gray);
-	}
-}
-
-#option-menu button.lang:active {
-	color: var(--clr-gray);
 }
 
 #option-menu .spacer {
@@ -294,16 +275,21 @@ header.full #header-background {
 }
 
 #search {
-	display: inline-block;
+	display: block;
 	position: relative;
 	width: 100%;
 	z-index: 5;
+}
+
+#search.hide {
+	display: none;
 }
 
 #search-field {
 	background: rgba(143, 17, 11, .05);
 	border-radius: 17px;
 	color: var(--clr-red);
+	cursor: text;
 	display: inline-block;
 	font-size: 1rem;
 	font-weight: bold;
@@ -341,18 +327,20 @@ header.full #header-background {
 #player {
 	align-items: center;
 	display: flex;
-	justify-content: space-between;
-	left: 50%;
-	/* margin-left: -220px; */
-	position: absolute;
-	transform: translateX(-50%);
+	gap: 15px;
+	justify-content: center;
+	position: relative;
+	width: 100%;
 	z-index: 5;
+}
+
+#player.hide {
+	display: none;
 }
 
 #player button {
 	color: white;
 	height: 21px;
-	margin-right: 15px;
 	width: 21px;
 	transition: filter .3s ease-in-out;
 }
@@ -407,19 +395,20 @@ header.full #header-background {
 	right: 0;
 }
 
-#no-audio {
+#player-message {
 	color: var(--clr-gray);
 	display: block;
 	font-weight: bold;
 	margin: auto;
 	text-align: center;
+	z-index: 5;
 }
 
 aside {
 	background-color: white;
 	border-right: 1px solid var(--clr-gray-light);
 	bottom: 0;
-	left: 0;
+	left: -320px;
 	-ms-overflow-style: none;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -473,16 +462,26 @@ aside p.spacer {
 }
 
 #psalmlist {
-	left: 320px;
-	max-width: 1200px;
-	padding: 20px 20px 40px;
-	position: relative;
+	left: -1520px;
+	max-width: 1520px;
+	padding: 20px 20px 40px 340px;
+	position: absolute;
 	top: 100px;
-	width: calc(100% - 320px);
+	width: 100%;
 	z-index: 2;
 }
 
-header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #option-menu {
+header,
+aside,
+#psalmlist,
+.step-button,
+.tag-button,
+#psalmlist button,
+#psalm,
+#choose,
+#choose button,
+#option-menu,
+#lang ul {
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
@@ -645,6 +644,10 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	z-index: 2;
 }
 
+#psalmlist button.hide {
+	display: none;
+}
+
 #psalmlist button span {
 	float: right;
 	font-size: 0.8rem;
@@ -652,16 +655,12 @@ header, aside, .tag-button, #psalmlist a, #psalm, #choose, #choose button, #opti
 	color: var(--clr-gray);
 }
 
-#psalmlist .hide {
-	display: none;
-}
-
 #psalm {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding-top: 100px;
-	padding-bottom: 40px;
+	padding: 100px 0 40px;
 	position: relative;
+	top: -2000px;
 	z-index: 2;
 }
 
@@ -747,26 +746,24 @@ footer {
 	z-index: 1;
 }
 
-@media only screen and (max-width: 1400px) {
-	#psalm { margin: 0 10%; }
+.hide {
+	display: none;
 }
 
 @media only screen and (max-width: 1000px) {
 	header {
 		height: 80px;
-		left: 0;
+		padding-left: 20px;
 		width: 100%;
 	}
 	#title { display: inline-block; font-size: 1.6rem; }
 	#menu-button { display: inline-block;; }
 	#option-menu { top: 40px; }
-	#search-button { left: 45px; }
-	#search-field { margin-left: 35px; width: calc(100% - 35px); }
 	#player-progress-wrapper { width: 300px; }
 	#player button { width: 1.1rem; height: 1.1rem; }
 	#back-button img { height: 1.1rem; }
 	#close-button { display: block; }
-	#psalmlist { padding: 0; left: 0; top: 80px; width: 100%; }
+	#psalmlist { padding: 0; top: 80px; width: 100%; }
 	#no-results { left: 0; }
 	aside {
 		position: fixed;
@@ -781,11 +778,10 @@ footer {
 		height: 80px;
 		line-height: 80px;
 	}
-	#language { bottom: 20px; }
 	#tags, aside p { margin-left: 20px; }
 	#psalmlist button { padding: 15px 5%; }
 	#psalmlist button span { display: block; float: none; margin-top: 5px; }
-	#psalm { padding-top: 80px; margin: 0 5%; }
+	#psalm { padding-top: 80px; }
 	#psalm a.psalm { font-size: 1.3rem; }
 	#psalm p.capo { left: 5%; top: 80px; }
 }
@@ -802,24 +798,8 @@ footer {
 
 @media only screen and (max-width: 600px) {
 	header { height: 60px; }
-	#choose {
-		background-color: transparent;
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-		-ms-box-shadow: none;
-		-o-box-shadow: none;
-		box-shadow: none;
-		height: 100%;
-		margin: 0;
-		padding: 80px 20px 0;
-		position: static;
-		top: inherit; left: inherit;
-		width: 100%;
-	}
 	#close-button { top: 9px; }
-	#lang button.lang { display: none; }
 	#option-menu { top: 30px; }
-	#option-menu button.lang { display: block; }
 	aside #title {
 		display: block;
 		font-size: 1.6rem;
